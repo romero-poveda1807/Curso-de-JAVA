@@ -3319,7 +3319,7 @@ Qué bonito es el 4
 Dime un número: <span class="in">10</span>
 Qué bonito es el 10
 Dime un número: <span class="in">7</span>
-No me gustan los números impares, adiós.</pre></figure><p>Te invito a que realices una modificación sobre este último ejemplo. Después de pedir un número, haz que el programa diga ¿Quiere continuar? (s/n). Si el usuario introduce una s o una S, el programa deberá continuar pidiendo números.</p><p>Cualquier bucle que un programador quiera realizar en Java lo puede implementar con <code>for</code>, <code>while</code> o <code>do-while</code>; por tanto, con una sola de estas tres opciones tendría suficiente. No obstante, según el programa en cuestión, una u otra posibilidad se adapta mejor que las otras y resulta más elegante. Con la experiencia, te irás dando cuenta cuándo es mejor utilizar cada una.</p></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li><code>do-while</code> evalúa la condición <strong>al final</strong> de la iteración, por lo que las sentencias se ejecutan <strong>como mínimo una vez</strong>.</li><li>Con <code>for</code>, <code>while</code> o <code>do-while</code> se puede implementar cualquier bucle; se elige el que resulte más elegante para cada programa.</li></ul></aside></section><section class="sec" id="q5" data-spy data-title="Autoevaluación"><h2><a href="#u5-q5">Autoevaluación</a></h2><p style="margin-bottom:14px;color:var(--muted)">Comprueba lo aprendido en esta unidad con unas preguntas rápidas.</p><div class="qs"><div class="q" data-a="0"><p class="qt">¿Qué bucle se suele utilizar cuando se conoce de antemano el número exacto de iteraciones?</p><div class="opts"><button type="button" class="opt">for</button><button type="button" class="opt">while</button><button type="button" class="opt">do-while</button><button type="button" class="opt">switch</button></div><p class="why" hidden>El bucle <code>for</code> se suele usar cuando se conoce previamente el número exacto de repeticiones.</p></div><div class="q" data-a="1"><p class="qt">¿Qué ocurre si la condición de salida de un bucle no se cumple nunca?</p><div class="opts"><button type="button" class="opt">El programa se detiene solo</button><button type="button" class="opt">Se produce un bucle infinito</button><button type="button" class="opt">El bucle se ejecuta una vez</button><button type="button" class="opt">Da error de compilación</button></div><p class="why" hidden>Sin condición de salida, o si nunca se cumple, el bucle no termina: es un bucle infinito.</p></div><div class="q" data-a="1"><p class="qt">¿Cuántas veces se ejecutan como mínimo las sentencias de un do-while?</p><div class="opts"><button type="button" class="opt">Ninguna</button><button type="button" class="opt">Una</button><button type="button" class="opt">Dos</button><button type="button" class="opt">Depende de la condición inicial</button></div><p class="why" hidden><code>do-while</code> evalúa la condición al final de la iteración, así que el cuerpo se ejecuta al menos una vez.</p></div><div class="q" data-a="0"><p class="qt">Si <code>i</code> vale 12 al llegar a <code>while (i &lt; 11)</code>, ¿cuántas veces se ejecuta el cuerpo?</p><div class="opts"><button type="button" class="opt">Ninguna</button><button type="button" class="opt">Una</button><button type="button" class="opt">11</button><button type="button" class="opt">Infinitas</button></div><p class="why" hidden><code>while</code> comprueba la condición al comienzo; como es falsa desde el principio, el bucle no se ejecuta nunca.</p></div><div class="q" data-a="1"><p class="qt">¿A qué equivale <code>suma += numeroIntroducido;</code>?</p><div class="opts"><button type="button" class="opt">suma = numeroIntroducido;</button><button type="button" class="opt">suma = suma + numeroIntroducido;</button><button type="button" class="opt">suma++;</button><button type="button" class="opt">suma = suma - numeroIntroducido;</button></div><p class="why" hidden>Así lo indica el comentario del ejemplo <code>CuentaPositivos</code>: equivale a <code>suma = suma + numeroIntroducido</code>.</p></div></div><div class="score" hidden style="margin-top:14px"><span class="score-t"></span><button type="button" class="btn qreset">Repetir</button></div></section><section class="sec exs" id="x5" data-spy data-title="Ejercicios"><h2><a href="#u5-x5">Ejercicios</a></h2><div class="ex-tabs" role="tablist"><button type="button" class="ex-tab" role="tab" data-pane="libro" aria-selected="true">Ejercicios libro Java <span class="ex-count">69</span></button><button type="button" class="ex-tab" role="tab" data-pane="clase" aria-selected="false">Ejercicios de clase <span class="ex-count">15</span></button></div><div class="ex-tools"><button type="button" class="pill chipf" data-f="all" aria-pressed="true">Todos</button><button type="button" class="pill chipf" data-f="pending" aria-pressed="false">Pendientes</button><button type="button" class="pill chipf" data-f="done" aria-pressed="false">Hechos</button></div><div class="ex-list"><div class="ex-pane" data-pane="libro"><article class="ex" id="e5-1" data-ex="5-1" data-n="1"><div class="ex-h"><span class="ex-n">1</span><h4>Ejercicio 1</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle for.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Ejercicio1.java · Eclipse</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ejercicio1</span> {
+No me gustan los números impares, adiós.</pre></figure><p>Te invito a que realices una modificación sobre este último ejemplo. Después de pedir un número, haz que el programa diga ¿Quiere continuar? (s/n). Si el usuario introduce una s o una S, el programa deberá continuar pidiendo números.</p><p>Cualquier bucle que un programador quiera realizar en Java lo puede implementar con <code>for</code>, <code>while</code> o <code>do-while</code>; por tanto, con una sola de estas tres opciones tendría suficiente. No obstante, según el programa en cuestión, una u otra posibilidad se adapta mejor que las otras y resulta más elegante. Con la experiencia, te irás dando cuenta cuándo es mejor utilizar cada una.</p></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li><code>do-while</code> evalúa la condición <strong>al final</strong> de la iteración, por lo que las sentencias se ejecutan <strong>como mínimo una vez</strong>.</li><li>Con <code>for</code>, <code>while</code> o <code>do-while</code> se puede implementar cualquier bucle; se elige el que resulte más elegante para cada programa.</li></ul></aside></section><section class="sec" id="q5" data-spy data-title="Autoevaluación"><h2><a href="#u5-q5">Autoevaluación</a></h2><p style="margin-bottom:14px;color:var(--muted)">Comprueba lo aprendido en esta unidad con unas preguntas rápidas.</p><div class="qs"><div class="q" data-a="0"><p class="qt">¿Qué bucle se suele utilizar cuando se conoce de antemano el número exacto de iteraciones?</p><div class="opts"><button type="button" class="opt">for</button><button type="button" class="opt">while</button><button type="button" class="opt">do-while</button><button type="button" class="opt">switch</button></div><p class="why" hidden>El bucle <code>for</code> se suele usar cuando se conoce previamente el número exacto de repeticiones.</p></div><div class="q" data-a="1"><p class="qt">¿Qué ocurre si la condición de salida de un bucle no se cumple nunca?</p><div class="opts"><button type="button" class="opt">El programa se detiene solo</button><button type="button" class="opt">Se produce un bucle infinito</button><button type="button" class="opt">El bucle se ejecuta una vez</button><button type="button" class="opt">Da error de compilación</button></div><p class="why" hidden>Sin condición de salida, o si nunca se cumple, el bucle no termina: es un bucle infinito.</p></div><div class="q" data-a="1"><p class="qt">¿Cuántas veces se ejecutan como mínimo las sentencias de un do-while?</p><div class="opts"><button type="button" class="opt">Ninguna</button><button type="button" class="opt">Una</button><button type="button" class="opt">Dos</button><button type="button" class="opt">Depende de la condición inicial</button></div><p class="why" hidden><code>do-while</code> evalúa la condición al final de la iteración, así que el cuerpo se ejecuta al menos una vez.</p></div><div class="q" data-a="0"><p class="qt">Si <code>i</code> vale 12 al llegar a <code>while (i &lt; 11)</code>, ¿cuántas veces se ejecuta el cuerpo?</p><div class="opts"><button type="button" class="opt">Ninguna</button><button type="button" class="opt">Una</button><button type="button" class="opt">11</button><button type="button" class="opt">Infinitas</button></div><p class="why" hidden><code>while</code> comprueba la condición al comienzo; como es falsa desde el principio, el bucle no se ejecuta nunca.</p></div><div class="q" data-a="1"><p class="qt">¿A qué equivale <code>suma += numeroIntroducido;</code>?</p><div class="opts"><button type="button" class="opt">suma = numeroIntroducido;</button><button type="button" class="opt">suma = suma + numeroIntroducido;</button><button type="button" class="opt">suma++;</button><button type="button" class="opt">suma = suma - numeroIntroducido;</button></div><p class="why" hidden>Así lo indica el comentario del ejemplo <code>CuentaPositivos</code>: equivale a <code>suma = suma + numeroIntroducido</code>.</p></div></div><div class="score" hidden style="margin-top:14px"><span class="score-t"></span><button type="button" class="btn qreset">Repetir</button></div></section><section class="sec exs" id="x5" data-spy data-title="Ejercicios"><h2><a href="#u5-x5">Ejercicios</a></h2><div class="ex-tabs" role="tablist"><button type="button" class="ex-tab" role="tab" data-pane="libro" aria-selected="true">Ejercicios libro Java <span class="ex-count">69</span></button><button type="button" class="ex-tab" role="tab" data-pane="clase" aria-selected="false">Ejercicios de clase <span class="ex-count">24</span></button></div><div class="ex-tools"><button type="button" class="pill chipf" data-f="all" aria-pressed="true">Todos</button><button type="button" class="pill chipf" data-f="pending" aria-pressed="false">Pendientes</button><button type="button" class="pill chipf" data-f="done" aria-pressed="false">Hechos</button></div><div class="ex-list"><div class="ex-pane" data-pane="libro"><article class="ex" id="e5-1" data-ex="5-1" data-n="1"><div class="ex-h"><span class="ex-n">1</span><h4>Ejercicio 1</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle for.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Ejercicio1.java · Eclipse</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ejercicio1</span> {
     <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
         for (<span class="k">int</span> i = <span class="n">0</span>; i &lt;= <span class="n">100</span>; i += <span class="n">5</span>) {
             <span class="t">System</span>.out.<span class="f">println</span>(i);
@@ -5897,7 +5897,7 @@ Dislocando el 137 sale el 26.</pre></figure><h5>Cómo funciona</h5><ul><li>Cada 
    **************
   ******    ******
  ******************
-********    ********</pre></figure><h5>Cómo funciona</h5><ul><li>La fila <code>fila</code> mide <code>2 * fila + 4</code> columnas (la terraza, 6). Las filas impares van completas y las pares dejan un hueco central de 4 espacios entre dos tramos de <code>fila</code> asteriscos.</li></ul></div></details></article></div><div class="ex-pane" data-pane="clase" hidden><div class="ex-note">Ejercicios de clase «Repetitivas. Condiciones de fin». Soluciones en Java (Eclipse, <code>Scanner</code>).</div><article class="ex" id="e5-c1" data-ex="5-c1" data-n="1"><div class="ex-h"><span class="ex-n">1</span><h4>Ejercicio 1</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Programa que visualice los números pares menores de 100.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Clase01.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+********    ********</pre></figure><h5>Cómo funciona</h5><ul><li>La fila <code>fila</code> mide <code>2 * fila + 4</code> columnas (la terraza, 6). Las filas impares van completas y las pares dejan un hueco central de 4 espacios entre dos tramos de <code>fila</code> asteriscos.</li></ul></div></details></article></div><div class="ex-pane" data-pane="clase" hidden><div class="ex-note">Ejercicios de clase «Repetitivas. Condiciones de fin». Soluciones en Java (Eclipse, <code>Scanner</code>).</div><h3 class="ex-group" style="margin:26px 0 8px">Hoja «Repetitivas. Condiciones de fin»</h3><article class="ex" id="e5-c1" data-ex="5-c1" data-n="1"><div class="ex-h"><span class="ex-n">1</span><h4>Ejercicio 1</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Programa que visualice los números pares menores de 100.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Clase01.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
 
 <span class="k">public</span> <span class="k">class</span> <span class="t">Clase01</span> {
     <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
@@ -6371,7 +6371,644 @@ El 6 es perfecto.</pre></figure><figure class="out console"><figcaption><span>Re
 El 28 es perfecto.</pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse · 496</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Introduzca un número: <span class="in">496</span>
 El 496 es perfecto.</pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse · 8128</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Introduzca un número: <span class="in">8128</span>
 El 8128 es perfecto.</pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse · 12</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Introduzca un número: <span class="in">12</span>
-El 12 no es perfecto (la suma de sus divisores es 16).</pre></figure><h5>Cómo funciona</h5><ul><li>Se suman los divisores propios (menores que n) y se compara la suma con el número.</li><li>6, 28, 496 y 8128 dan «perfecto»; el 12 no (suma 16).</li></ul></div></details></article></div></div></section><nav class="pager" aria-label="Cambiar de unidad"><a class="prev" href="#u4"><small>← Unidad anterior</small><b>4. Sentencia condicional (if y switch)</b></a><a class="next" href="#u6"><small>Unidad siguiente →</small><b>6. Números aleatorios</b></a></nav></article><article class="unit" id="unit-6" data-unit="6" hidden><header class="unit-head"><span class="unit-num" aria-hidden="true">06</span><div><p class="eyebrow">Unidad 6</p><h1>Números aleatorios</h1><p class="blurb">Math.random(), enteros y decimales, rangos y palabras al azar.</p><p class="meta">2 apartados · 32 ejercicios</p></div></header><section class="sec" id="s6-0" data-spy data-title="Introducción"><h2><a href="#u6-s6-0">Introducción</a></h2><div class="sec-body"><p>Los números aleatorios se utilizan con frecuencia en programación para emular el comportamiento de algún fenómeno natural, el resultado de un juego de azar o, en general, para generar cualquier valor impredecible a priori.</p><p>Por ejemplo, se pueden utilizar números aleatorios para generar tiradas de dados de tal forma que, de antemano, no se puede saber el resultado. Antes de tirar un dado no sabemos si saldrá un 3 o un 5; se tratará pues de un número impredecible; lo que sí sabemos es que saldrá un número entre el 1 y el 6, es decir, podemos acotar el rango de los valores que vamos a obtener de forma aleatoria.</p></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li>Un número aleatorio es <strong>impredecible a priori</strong>, pero se puede acotar el rango de valores posibles (un dado: del 1 al 6).</li></ul></aside></section><section class="sec" id="s6-1" data-spy data-title="6.1 Generación de números aleatorios con y sin decimales"><h2><a href="#u6-s6-1">6.1 Generación de números aleatorios con y sin decimales</a></h2><div class="sec-body"><p>Para generar valores aleatorios utilizaremos <code>Math.random()</code>. Esta función genera un número con decimales (de tipo <code>double</code>) en el intervalo [0 - 1), es decir, genera un número mayor o igual que 0 y menor que 1.</p><p>El siguiente programa genera diez números aleatorios:</p><figure class="code"><figcaption><span>Aleatorio01.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Aleatorio01</span> {
+El 12 no es perfecto (la suma de sus divisores es 16).</pre></figure><h5>Cómo funciona</h5><ul><li>Se suman los divisores propios (menores que n) y se compara la suma con el número.</li><li>6, 28, 496 y 8128 dan «perfecto»; el 12 no (suma 16).</li></ul></div></details></article><h3 class="ex-group" style="margin:26px 0 8px">Hoja «Bucles anidados»</h3><article class="ex" id="e5-n1" data-ex="5-n1" data-n="1"><div class="ex-h"><span class="ex-n">1</span><h4>Ejercicio 1</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Introducir datos de los 10 alumnos de una clase. Por cada alumno se deberá pedir la introducción de: un código y las notas de sus 5 asignaturas. Visualizar: nota máxima y mínima por alumno; media de las notas de la primera asignatura; cuántos alumnos tienen una nota máxima mayor a 8; código del alumno de nota mínima.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Anid01.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Anid01</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="k">final</span> <span class="k">int</span> <span class="n">NUM_ALUMNOS</span> = <span class="n">3</span>;   <span class="c">// El enunciado pide 10; aquí se usa 3 para que el ejemplo sea corto</span>
+        <span class="k">final</span> <span class="k">int</span> <span class="n">NUM_ASIGNATURAS</span> = <span class="n">5</span>;
+        <span class="k">int</span> sumaPrimera = <span class="n">0</span>;
+        <span class="k">int</span> alumnosMaxMayorQue8 = <span class="n">0</span>;
+        <span class="k">int</span> notaMinimaGlobal = <span class="n">11</span>;
+        <span class="k">int</span> codigoNotaMinima = <span class="n">0</span>;
+        <span class="k">for</span> (<span class="k">int</span> alumno = <span class="n">1</span>; alumno &lt;= <span class="n">NUM_ALUMNOS</span>; alumno++) {
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Código del alumno "</span> + alumno + <span class="s">": "</span>);
+            <span class="k">int</span> codigo = entrada.<span class="f">nextInt</span>();
+            <span class="k">int</span> maxima = <span class="n">0</span>;
+            <span class="k">int</span> minima = <span class="n">10</span>;
+            <span class="k">for</span> (<span class="k">int</span> asignatura = <span class="n">1</span>; asignatura &lt;= <span class="n">NUM_ASIGNATURAS</span>; asignatura++) {
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Nota de la asignatura "</span> + asignatura + <span class="s">": "</span>);
+                <span class="k">int</span> nota = entrada.<span class="f">nextInt</span>();
+                <span class="k">if</span> (asignatura == <span class="n">1</span>) {
+                    sumaPrimera += nota;
+                }
+                <span class="k">if</span> (nota &gt; maxima) {
+                    maxima = nota;
+                }
+                <span class="k">if</span> (nota &lt; minima) {
+                    minima = nota;
+                }
+            }
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"  Alumno "</span> + codigo + <span class="s">": nota máxima "</span> + maxima + <span class="s">", nota mínima "</span> + minima);
+            <span class="k">if</span> (maxima &gt; <span class="n">8</span>) {
+                alumnosMaxMayorQue8++;
+            }
+            <span class="k">if</span> (minima &lt; notaMinimaGlobal) {
+                notaMinimaGlobal = minima;
+                codigoNotaMinima = codigo;
+            }
+        }
+        <span class="t">System</span>.out.<span class="f">printf</span>(<span class="s">"Media de la primera asignatura: %.2f\n"</span>, (<span class="k">double</span>) sumaPrimera / <span class="n">NUM_ALUMNOS</span>);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Alumnos con nota máxima mayor que 8: "</span> + alumnosMaxMayorQue8);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Código del alumno de nota mínima: "</span> + codigoNotaMinima + <span class="s">" (nota "</span> + notaMinimaGlobal + <span class="s">")"</span>);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Código del alumno 1: <span class="in">101</span>
+  Nota de la asignatura 1: <span class="in">7</span>
+  Nota de la asignatura 2: <span class="in">9</span>
+  Nota de la asignatura 3: <span class="in">5</span>
+  Nota de la asignatura 4: <span class="in">8</span>
+  Nota de la asignatura 5: <span class="in">6</span>
+  Alumno 101: nota máxima 9, nota mínima 5
+Código del alumno 2: <span class="in">102</span>
+  Nota de la asignatura 1: <span class="in">10</span>
+  Nota de la asignatura 2: <span class="in">8</span>
+  Nota de la asignatura 3: <span class="in">9</span>
+  Nota de la asignatura 4: <span class="in">7</span>
+  Nota de la asignatura 5: <span class="in">9</span>
+  Alumno 102: nota máxima 10, nota mínima 7
+Código del alumno 3: <span class="in">103</span>
+  Nota de la asignatura 1: <span class="in">4</span>
+  Nota de la asignatura 2: <span class="in">6</span>
+  Nota de la asignatura 3: <span class="in">3</span>
+  Nota de la asignatura 4: <span class="in">7</span>
+  Nota de la asignatura 5: <span class="in">5</span>
+  Alumno 103: nota máxima 7, nota mínima 3
+Media de la primera asignatura: 7,00
+Alumnos con nota máxima mayor que 8: 2
+Código del alumno de nota mínima: 103 (nota 3)</pre></figure><h5>Cómo funciona</h5><ul><li>Dos bucles anidados: el exterior recorre los alumnos y el interior sus 5 notas. Las variables de cada alumno (<code>maxima</code>, <code>minima</code>) se reinician al empezar cada vuelta del bucle exterior; las globales (<code>sumaPrimera</code>, contadores, nota mínima global) se declaran antes de los bucles.</li><li>La media de la primera asignatura se calcula sumando solo cuando <code>asignatura == 1</code>.</li><li>El código del alumno de nota mínima se guarda cada vez que se encuentra una nota mínima menor que la mejor hasta el momento.</li><li>El enunciado pide 10 alumnos. Para que el ejemplo sea corto se ha ejecutado con <code>NUM_ALUMNOS = 3</code>: para resolver exactamente lo pedido basta cambiar esa constante por 10. Las notas se introducen como números enteros.</li></ul></div></details></article><article class="ex" id="e5-n2" data-ex="5-n2" data-n="2"><div class="ex-h"><span class="ex-n">2</span><h4>Ejercicio 2</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Se introducirán datos de 10 familias. Por cada una de ellas se pedirá: código, salario, número de hijos y, por cada hijo, edad y sexo. Visualizar: cuántos hijos varones mayores de edad tiene cada familia; edad mínima de los hijos de cada familia; salario medio de las familias con más de 3 hijos; código de la familia con mayor número de hijos.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Anid02.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Anid02</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="k">final</span> <span class="k">int</span> <span class="n">NUM_FAMILIAS</span> = <span class="n">3</span>;   <span class="c">// El enunciado pide 10; aquí se usa 3 para que el ejemplo sea corto</span>
+        <span class="k">int</span> sumaSalarios = <span class="n">0</span>;
+        <span class="k">int</span> familiasMasDe3 = <span class="n">0</span>;
+        <span class="k">int</span> maxHijos = -<span class="n">1</span>;
+        <span class="k">int</span> codigoMaxHijos = <span class="n">0</span>;
+        <span class="k">for</span> (<span class="k">int</span> familia = <span class="n">1</span>; familia &lt;= <span class="n">NUM_FAMILIAS</span>; familia++) {
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Código de la familia "</span> + familia + <span class="s">": "</span>);
+            <span class="k">int</span> codigo = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Salario: "</span>);
+            <span class="k">int</span> salario = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Número de hijos: "</span>);
+            <span class="k">int</span> hijos = entrada.<span class="f">nextInt</span>();
+            <span class="k">int</span> varonesMayores = <span class="n">0</span>;
+            <span class="k">int</span> edadMinima = <span class="n">1000</span>;
+            <span class="k">for</span> (<span class="k">int</span> hijo = <span class="n">1</span>; hijo &lt;= hijos; hijo++) {
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Hijo "</span> + hijo + <span class="s">", edad: "</span>);
+                <span class="k">int</span> edad = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Hijo "</span> + hijo + <span class="s">", sexo (V/M): "</span>);
+                <span class="t">String</span> sexo = entrada.<span class="f">next</span>();
+                <span class="k">if</span> (sexo.<span class="f">equals</span>(<span class="s">"V"</span>) &amp;&amp; edad &gt;= <span class="n">18</span>) {
+                    varonesMayores++;
+                }
+                <span class="k">if</span> (edad &lt; edadMinima) {
+                    edadMinima = edad;
+                }
+            }
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"  Familia "</span> + codigo + <span class="s">": hijos varones mayores de edad = "</span> + varonesMayores);
+            <span class="k">if</span> (hijos &gt; <span class="n">0</span>) {
+                <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"  Familia "</span> + codigo + <span class="s">": edad mínima de los hijos = "</span> + edadMinima);
+            } <span class="k">else</span> {
+                <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"  Familia "</span> + codigo + <span class="s">": no tiene hijos"</span>);
+            }
+            <span class="k">if</span> (hijos &gt; <span class="n">3</span>) {
+                sumaSalarios += salario;
+                familiasMasDe3++;
+            }
+            <span class="k">if</span> (hijos &gt; maxHijos) {
+                maxHijos = hijos;
+                codigoMaxHijos = codigo;
+            }
+        }
+        <span class="k">if</span> (familiasMasDe3 &gt; <span class="n">0</span>) {
+            <span class="t">System</span>.out.<span class="f">printf</span>(<span class="s">"Salario medio de las familias con más de 3 hijos: %.2f\n"</span>, (<span class="k">double</span>) sumaSalarios / familiasMasDe3);
+        } <span class="k">else</span> {
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Ninguna familia tiene más de 3 hijos"</span>);
+        }
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Familia con más hijos: "</span> + codigoMaxHijos + <span class="s">" ("</span> + maxHijos + <span class="s">" hijos)"</span>);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Código de la familia 1: <span class="in">101</span>
+  Salario: <span class="in">1800</span>
+  Número de hijos: <span class="in">2</span>
+    Hijo 1, edad: <span class="in">20</span>
+    Hijo 1, sexo (V/M): <span class="in">V</span>
+    Hijo 2, edad: <span class="in">15</span>
+    Hijo 2, sexo (V/M): <span class="in">M</span>
+  Familia 101: hijos varones mayores de edad = 1
+  Familia 101: edad mínima de los hijos = 15
+Código de la familia 2: <span class="in">102</span>
+  Salario: <span class="in">2500</span>
+  Número de hijos: <span class="in">4</span>
+    Hijo 1, edad: <span class="in">10</span>
+    Hijo 1, sexo (V/M): <span class="in">V</span>
+    Hijo 2, edad: <span class="in">19</span>
+    Hijo 2, sexo (V/M): <span class="in">V</span>
+    Hijo 3, edad: <span class="in">22</span>
+    Hijo 3, sexo (V/M): <span class="in">M</span>
+    Hijo 4, edad: <span class="in">18</span>
+    Hijo 4, sexo (V/M): <span class="in">V</span>
+  Familia 102: hijos varones mayores de edad = 2
+  Familia 102: edad mínima de los hijos = 10
+Código de la familia 3: <span class="in">103</span>
+  Salario: <span class="in">2100</span>
+  Número de hijos: <span class="in">4</span>
+    Hijo 1, edad: <span class="in">5</span>
+    Hijo 1, sexo (V/M): <span class="in">V</span>
+    Hijo 2, edad: <span class="in">8</span>
+    Hijo 2, sexo (V/M): <span class="in">M</span>
+    Hijo 3, edad: <span class="in">12</span>
+    Hijo 3, sexo (V/M): <span class="in">V</span>
+    Hijo 4, edad: <span class="in">25</span>
+    Hijo 4, sexo (V/M): <span class="in">M</span>
+  Familia 103: hijos varones mayores de edad = 0
+  Familia 103: edad mínima de los hijos = 5
+Salario medio de las familias con más de 3 hijos: 2300,00
+Familia con más hijos: 102 (4 hijos)</pre></figure><h5>Cómo funciona</h5><ul><li>Tres niveles: el bucle de familias contiene el de hijos. El número de vueltas del bucle de hijos lo marca el dato <code>hijos</code> leído antes.</li><li>Por cada familia se reinician el contador de varones mayores de edad y la edad mínima; para la edad mínima se parte de un valor muy alto (1000) y se guarda cualquier edad menor. Si no hay hijos se avisa.</li><li>El sexo se lee con <code>next()</code> y se compara con <code>equals</code> («V» o «M»).</li><li>El salario medio solo incluye las familias con más de 3 hijos: se acumulan salario y número de familias dentro del <code>if (hijos &gt; 3)</code>. El código de la familia con más hijos se actualiza con <code>&gt;</code>, así que en un empate gana la primera.</li><li>Se ha ejecutado con <code>NUM_FAMILIAS = 3</code> (el enunciado pide 10); basta cambiar la constante.</li></ul></div></details></article><article class="ex" id="e5-n3" data-ex="5-n3" data-n="3"><div class="ex-h"><span class="ex-n">3</span><h4>Ejercicio 3</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Pedir la introducción de datos de 8 asignaturas. Por cada asignatura se pedirá: código, número de horas, número de alumnos que la cursan y, para cada uno de dichos alumnos en dicha asignatura, sexo, nota práctica y nota teórica. Visualizar: nota media práctica y nota media teórica en las asignaturas de más de 8 horas; sexo del alumno con máxima nota práctica en cada asignatura; la media de horas de todas las asignaturas; la nota media ((práctica + teórica) / 2) de cada alumno en las asignaturas que tengan un número de horas comprendido entre 5 y 15.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Anid03.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Anid03</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="k">final</span> <span class="k">int</span> <span class="n">NUM_ASIGNATURAS</span> = <span class="n">3</span>;   <span class="c">// El enunciado pide 8; aquí se usa 3 para que el ejemplo sea corto</span>
+        <span class="k">int</span> sumaHoras = <span class="n">0</span>;
+        <span class="k">for</span> (<span class="k">int</span> asignatura = <span class="n">1</span>; asignatura &lt;= <span class="n">NUM_ASIGNATURAS</span>; asignatura++) {
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Código de la asignatura "</span> + asignatura + <span class="s">": "</span>);
+            <span class="k">int</span> codigo = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Número de horas: "</span>);
+            <span class="k">int</span> horas = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Número de alumnos: "</span>);
+            <span class="k">int</span> alumnos = entrada.<span class="f">nextInt</span>();
+            sumaHoras += horas;
+            <span class="k">int</span> sumaPractica = <span class="n">0</span>;
+            <span class="k">int</span> sumaTeorica = <span class="n">0</span>;
+            <span class="k">int</span> maxPractica = -<span class="n">1</span>;
+            <span class="t">String</span> sexoMaxPractica = <span class="s">""</span>;
+            <span class="k">for</span> (<span class="k">int</span> alumno = <span class="n">1</span>; alumno &lt;= alumnos; alumno++) {
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Alumno "</span> + alumno + <span class="s">", sexo (H/M): "</span>);
+                <span class="t">String</span> sexo = entrada.<span class="f">next</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Alumno "</span> + alumno + <span class="s">", nota práctica: "</span>);
+                <span class="k">int</span> practica = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Alumno "</span> + alumno + <span class="s">", nota teórica: "</span>);
+                <span class="k">int</span> teorica = entrada.<span class="f">nextInt</span>();
+                sumaPractica += practica;
+                sumaTeorica += teorica;
+                <span class="k">if</span> (practica &gt; maxPractica) {
+                    maxPractica = practica;
+                    sexoMaxPractica = sexo;
+                }
+                <span class="k">if</span> (horas &gt;= <span class="n">5</span> &amp;&amp; horas &lt;= <span class="n">15</span>) {
+                    <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"    -&gt; Alumno "</span> + alumno + <span class="s">": nota media "</span> + (practica + teorica) / <span class="n">2.0</span>);
+                }
+            }
+            <span class="k">if</span> (horas &gt; <span class="n">8</span> &amp;&amp; alumnos &gt; <span class="n">0</span>) {
+                <span class="t">System</span>.out.<span class="f">printf</span>(<span class="s">"  Asignatura %d: media práctica %.2f, media teórica %.2f\n"</span>, codigo, (<span class="k">double</span>) sumaPractica / alumnos, (<span class="k">double</span>) sumaTeorica / alumnos);
+            }
+            <span class="k">if</span> (alumnos &gt; <span class="n">0</span>) {
+                <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"  Asignatura "</span> + codigo + <span class="s">": sexo del alumno con máxima nota práctica = "</span> + sexoMaxPractica);
+            }
+        }
+        <span class="t">System</span>.out.<span class="f">printf</span>(<span class="s">"Media de horas de todas las asignaturas: %.2f\n"</span>, (<span class="k">double</span>) sumaHoras / <span class="n">NUM_ASIGNATURAS</span>);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Código de la asignatura 1: <span class="in">1</span>
+  Número de horas: <span class="in">10</span>
+  Número de alumnos: <span class="in">2</span>
+    Alumno 1, sexo (H/M): <span class="in">H</span>
+    Alumno 1, nota práctica: <span class="in">7</span>
+    Alumno 1, nota teórica: <span class="in">8</span>
+    -&gt; Alumno 1: nota media 7.5
+    Alumno 2, sexo (H/M): <span class="in">M</span>
+    Alumno 2, nota práctica: <span class="in">9</span>
+    Alumno 2, nota teórica: <span class="in">6</span>
+    -&gt; Alumno 2: nota media 7.5
+  Asignatura 1: media práctica 8,00, media teórica 7,00
+  Asignatura 1: sexo del alumno con máxima nota práctica = M
+Código de la asignatura 2: <span class="in">2</span>
+  Número de horas: <span class="in">6</span>
+  Número de alumnos: <span class="in">2</span>
+    Alumno 1, sexo (H/M): <span class="in">M</span>
+    Alumno 1, nota práctica: <span class="in">5</span>
+    Alumno 1, nota teórica: <span class="in">7</span>
+    -&gt; Alumno 1: nota media 6.0
+    Alumno 2, sexo (H/M): <span class="in">H</span>
+    Alumno 2, nota práctica: <span class="in">8</span>
+    Alumno 2, nota teórica: <span class="in">9</span>
+    -&gt; Alumno 2: nota media 8.5
+  Asignatura 2: sexo del alumno con máxima nota práctica = H
+Código de la asignatura 3: <span class="in">3</span>
+  Número de horas: <span class="in">20</span>
+  Número de alumnos: <span class="in">1</span>
+    Alumno 1, sexo (H/M): <span class="in">H</span>
+    Alumno 1, nota práctica: <span class="in">10</span>
+    Alumno 1, nota teórica: <span class="in">9</span>
+  Asignatura 3: media práctica 10,00, media teórica 9,00
+  Asignatura 3: sexo del alumno con máxima nota práctica = H
+Media de horas de todas las asignaturas: 12,00</pre></figure><h5>Cómo funciona</h5><ul><li>El bucle exterior recorre las asignaturas y el interior sus alumnos; el número de alumnos es un dato leído por cada asignatura.</li><li>Como las horas se conocen antes de leer los alumnos, la nota media de cada alumno se escribe en cuanto se leen sus notas, solo si <code>horas &gt;= 5 &amp;&amp; horas &lt;= 15</code>.</li><li>Las medias práctica y teórica se calculan al terminar los alumnos de cada asignatura (si tiene más de 8 horas); el sexo del alumno con mayor nota práctica se guarda al comparar con el máximo de esa asignatura.</li><li>La media de horas acumula <code>sumaHoras</code> y se divide al final entre el número de asignaturas.</li><li>El enunciado pide 8 asignaturas; el ejemplo usa <code>NUM_ASIGNATURAS = 3</code> para ser breve. Al ser un programa de teclado, a los alumnos se les identifica por su orden dentro de cada asignatura.</li></ul></div></details></article><article class="ex" id="e5-n4" data-ex="5-n4" data-n="4"><div class="ex-h"><span class="ex-n">4</span><h4>Ejercicio 4</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Programa que pide repetitivamente la introducción de números por teclado (hasta introducir el número 0, en cuyo caso acaba). Por cada número introducido se deberá mostrar su sumatorio. Además, al final, se deberá visualizar: cuántos sumatorios han resultado ser mayores que 100 y la media de los números menores que 10.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Anid04.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Anid04</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="k">int</span> sumatorio = <span class="n">0</span>;
+        <span class="k">int</span> sumatoriosMayoresQue100 = <span class="n">0</span>;
+        <span class="k">int</span> sumaMenoresQue10 = <span class="n">0</span>;
+        <span class="k">int</span> cantidadMenoresQue10 = <span class="n">0</span>;
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Introduzca un número (0 para terminar): "</span>);
+        <span class="k">int</span> numero = entrada.<span class="f">nextInt</span>();
+        <span class="k">while</span> (numero != <span class="n">0</span>) {
+            sumatorio += numero;
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Sumatorio: "</span> + sumatorio);
+            <span class="k">if</span> (sumatorio &gt; <span class="n">100</span>) {
+                sumatoriosMayoresQue100++;
+            }
+            <span class="k">if</span> (numero &lt; <span class="n">10</span>) {
+                sumaMenoresQue10 += numero;
+                cantidadMenoresQue10++;
+            }
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Introduzca un número (0 para terminar): "</span>);
+            numero = entrada.<span class="f">nextInt</span>();
+        }
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Sumatorios mayores que 100: "</span> + sumatoriosMayoresQue100);
+        <span class="k">if</span> (cantidadMenoresQue10 &gt; <span class="n">0</span>) {
+            <span class="t">System</span>.out.<span class="f">printf</span>(<span class="s">"Media de los números menores que 10: %.2f\n"</span>, (<span class="k">double</span>) sumaMenoresQue10 / cantidadMenoresQue10);
+        } <span class="k">else</span> {
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"No se ha introducido ningún número menor que 10"</span>);
+        }
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Introduzca un número (0 para terminar): <span class="in">5</span>
+Sumatorio: 5
+Introduzca un número (0 para terminar): <span class="in">20</span>
+Sumatorio: 25
+Introduzca un número (0 para terminar): <span class="in">90</span>
+Sumatorio: 115
+Introduzca un número (0 para terminar): <span class="in">3</span>
+Sumatorio: 118
+Introduzca un número (0 para terminar): <span class="in">40</span>
+Sumatorio: 158
+Introduzca un número (0 para terminar): <span class="in">0</span>
+Sumatorios mayores que 100: 3
+Media de los números menores que 10: 4,00</pre></figure><h5>Cómo funciona</h5><ul><li>El bucle <code>while</code> lee un número, lo suma a <code>sumatorio</code> y muestra el sumatorio acumulado; termina al leer 0 (lectura anticipada: se lee antes del bucle y al final de cada vuelta).</li><li>Se cuenta cuántos sumatorios superan 100 y, en paralelo, se acumulan y cuentan los números menores que 10 para calcular su media.</li><li>Se comprueba que haya algún número menor que 10 antes de dividir.</li></ul></div></details></article><article class="ex" id="e5-n5" data-ex="5-n5" data-n="5"><div class="ex-h"><span class="ex-n">5</span><h4>Ejercicio 5</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Leer parejas de números positivos (a, b) y para cada pareja calcular y escribir a elevado a b, sin utilizar el operador potencia, mediante productos.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Anid05.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Anid05</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Introduzca parejas de números positivos (a, b). Para terminar, escriba 0 como valor de a."</span>);
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"a: "</span>);
+        <span class="k">int</span> a = entrada.<span class="f">nextInt</span>();
+        <span class="k">while</span> (a &gt; <span class="n">0</span>) {
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"b: "</span>);
+            <span class="k">int</span> b = entrada.<span class="f">nextInt</span>();
+            <span class="k">if</span> (b &gt; <span class="n">0</span>) {
+                <span class="k">long</span> resultado = <span class="n">1</span>;
+                <span class="k">for</span> (<span class="k">int</span> i = <span class="n">1</span>; i &lt;= b; i++) {
+                    resultado = resultado * a;
+                }
+                <span class="t">System</span>.out.<span class="f">println</span>(a + <span class="s">" elevado a "</span> + b + <span class="s">" = "</span> + resultado);
+            } <span class="k">else</span> {
+                <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"b debe ser positivo"</span>);
+            }
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"a: "</span>);
+            a = entrada.<span class="f">nextInt</span>();
+        }
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Introduzca parejas de números positivos (a, b). Para terminar, escriba 0 como valor de a.
+a: <span class="in">2</span>
+b: <span class="in">10</span>
+2 elevado a 10 = 1024
+a: <span class="in">3</span>
+b: <span class="in">4</span>
+3 elevado a 4 = 81
+a: <span class="in">5</span>
+b: <span class="in">3</span>
+5 elevado a 3 = 125
+a: <span class="in">7</span>
+b: <span class="in">0</span>
+b debe ser positivo
+a: <span class="in">0</span></pre></figure><h5>Cómo funciona</h5><ul><li>El bucle exterior lee parejas (a, b) hasta que a vale 0; el interior multiplica <code>a</code> por sí mismo <code>b</code> veces: es la potencia calculada con productos.</li><li>El resultado se guarda en un <code>long</code> que parte de 1, para que quepan potencias grandes.</li><li>El enunciado no indica cómo terminar; aquí se termina con a = 0. Si b no es positivo se avisa y se pide otra pareja.</li></ul></div></details></article><article class="ex" id="e5-n6" data-ex="5-n6" data-n="6"><div class="ex-h"><span class="ex-n">6</span><h4>Ejercicio 6</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Pedir la introducción de los siguientes datos de 4 provincias: código identificativo, prefijo y número de municipios. Por cada municipio de una provincia: código identificativo, extensión y número de familias. Por cada familia de un municipio: DNI del cabeza de familia, salario del cabeza de familia y número de hijos.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Anid06.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Anid06</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="k">final</span> <span class="k">int</span> <span class="n">NUM_PROVINCIAS</span> = <span class="n">2</span>;   <span class="c">// El enunciado pide 4; aquí se usa 2 para que el ejemplo sea corto</span>
+        <span class="k">int</span> totalMunicipios = <span class="n">0</span>;
+        <span class="k">int</span> totalFamilias = <span class="n">0</span>;
+        <span class="k">for</span> (<span class="k">int</span> provincia = <span class="n">1</span>; provincia &lt;= <span class="n">NUM_PROVINCIAS</span>; provincia++) {
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", código identificativo: "</span>);
+            <span class="k">int</span> codigoProvincia = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", prefijo: "</span>);
+            <span class="k">int</span> prefijo = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", número de municipios: "</span>);
+            <span class="k">int</span> municipios = entrada.<span class="f">nextInt</span>();
+            <span class="k">for</span> (<span class="k">int</span> municipio = <span class="n">1</span>; municipio &lt;= municipios; municipio++) {
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", código identificativo: "</span>);
+                <span class="k">int</span> codigoMunicipio = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", extensión (km²): "</span>);
+                <span class="k">int</span> extension = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", número de familias: "</span>);
+                <span class="k">int</span> familias = entrada.<span class="f">nextInt</span>();
+                totalMunicipios++;
+                <span class="k">for</span> (<span class="k">int</span> familia = <span class="n">1</span>; familia &lt;= familias; familia++) {
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", DNI del cabeza de familia: "</span>);
+                    <span class="t">String</span> dni = entrada.<span class="f">next</span>();
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", salario: "</span>);
+                    <span class="k">int</span> salario = entrada.<span class="f">nextInt</span>();
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", número de hijos: "</span>);
+                    <span class="k">int</span> hijos = entrada.<span class="f">nextInt</span>();
+                    totalFamilias++;
+                }
+            }
+        }
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Datos introducidos: "</span> + totalMunicipios + <span class="s">" municipios y "</span> + totalFamilias + <span class="s">" familias."</span>);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Provincia 1, código identificativo: <span class="in">1</span>
+Provincia 1, prefijo: <span class="in">41</span>
+Provincia 1, número de municipios: <span class="in">2</span>
+  Municipio 1, código identificativo: <span class="in">10</span>
+  Municipio 1, extensión (km²): <span class="in">120</span>
+  Municipio 1, número de familias: <span class="in">2</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">11111111A</span>
+    Familia 1, salario: <span class="in">1500</span>
+    Familia 1, número de hijos: <span class="in">2</span>
+    Familia 2, DNI del cabeza de familia: <span class="in">22222222B</span>
+    Familia 2, salario: <span class="in">2100</span>
+    Familia 2, número de hijos: <span class="in">4</span>
+  Municipio 2, código identificativo: <span class="in">11</span>
+  Municipio 2, extensión (km²): <span class="in">80</span>
+  Municipio 2, número de familias: <span class="in">1</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">33333333C</span>
+    Familia 1, salario: <span class="in">1800</span>
+    Familia 1, número de hijos: <span class="in">0</span>
+Provincia 2, código identificativo: <span class="in">2</span>
+Provincia 2, prefijo: <span class="in">29</span>
+Provincia 2, número de municipios: <span class="in">1</span>
+  Municipio 1, código identificativo: <span class="in">20</span>
+  Municipio 1, extensión (km²): <span class="in">300</span>
+  Municipio 1, número de familias: <span class="in">2</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">44444444D</span>
+    Familia 1, salario: <span class="in">2500</span>
+    Familia 1, número de hijos: <span class="in">5</span>
+    Familia 2, DNI del cabeza de familia: <span class="in">55555555E</span>
+    Familia 2, salario: <span class="in">1700</span>
+    Familia 2, número de hijos: <span class="in">1</span>
+Datos introducidos: 3 municipios y 5 familias.</pre></figure><h5>Cómo funciona</h5><ul><li>Tres niveles de bucles anidados: provincias → municipios → familias. El número de vueltas de cada bucle interior es el dato leído justo antes (<code>municipios</code>, <code>familias</code>).</li><li>Cada bucle tiene su propio contador (<code>provincia</code>, <code>municipio</code>, <code>familia</code>) y las preguntas indican en qué nivel se está.</li><li>Solo se pide leer los datos; al final se muestra cuántos municipios y familias se han introducido como comprobación. Se usa <code>NUM_PROVINCIAS = 2</code> (el enunciado pide 4) para que el ejemplo sea corto.</li></ul></div></details></article><article class="ex" id="e5-n7" data-ex="5-n7" data-n="7"><div class="ex-h"><span class="ex-n">7</span><h4>Ejercicio 7</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Modificar el programa anterior para que se visualice por cada municipio el salario medio de las familias de dicho municipio.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Anid07.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Anid07</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="k">final</span> <span class="k">int</span> <span class="n">NUM_PROVINCIAS</span> = <span class="n">2</span>;   <span class="c">// El enunciado pide 4; aquí se usa 2 para que el ejemplo sea corto</span>
+        <span class="k">int</span> totalMunicipios = <span class="n">0</span>;
+        <span class="k">int</span> totalFamilias = <span class="n">0</span>;
+        <span class="k">for</span> (<span class="k">int</span> provincia = <span class="n">1</span>; provincia &lt;= <span class="n">NUM_PROVINCIAS</span>; provincia++) {
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", código identificativo: "</span>);
+            <span class="k">int</span> codigoProvincia = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", prefijo: "</span>);
+            <span class="k">int</span> prefijo = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", número de municipios: "</span>);
+            <span class="k">int</span> municipios = entrada.<span class="f">nextInt</span>();
+            <span class="k">for</span> (<span class="k">int</span> municipio = <span class="n">1</span>; municipio &lt;= municipios; municipio++) {
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", código identificativo: "</span>);
+                <span class="k">int</span> codigoMunicipio = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", extensión (km²): "</span>);
+                <span class="k">int</span> extension = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", número de familias: "</span>);
+                <span class="k">int</span> familias = entrada.<span class="f">nextInt</span>();
+                totalMunicipios++;
+                <span class="k">int</span> sumaSalarios = <span class="n">0</span>;
+                <span class="k">for</span> (<span class="k">int</span> familia = <span class="n">1</span>; familia &lt;= familias; familia++) {
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", DNI del cabeza de familia: "</span>);
+                    <span class="t">String</span> dni = entrada.<span class="f">next</span>();
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", salario: "</span>);
+                    <span class="k">int</span> salario = entrada.<span class="f">nextInt</span>();
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", número de hijos: "</span>);
+                    <span class="k">int</span> hijos = entrada.<span class="f">nextInt</span>();
+                    totalFamilias++;
+                    sumaSalarios += salario;
+                }
+                <span class="k">if</span> (familias &gt; <span class="n">0</span>) {
+                    <span class="t">System</span>.out.<span class="f">printf</span>(<span class="s">"  Salario medio de las familias del municipio %d: %.2f\n"</span>, codigoMunicipio, (<span class="k">double</span>) sumaSalarios / familias);
+                } <span class="k">else</span> {
+                    <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"  El municipio "</span> + codigoMunicipio + <span class="s">" no tiene familias"</span>);
+                }
+            }
+        }
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Datos introducidos: "</span> + totalMunicipios + <span class="s">" municipios y "</span> + totalFamilias + <span class="s">" familias."</span>);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Provincia 1, código identificativo: <span class="in">1</span>
+Provincia 1, prefijo: <span class="in">41</span>
+Provincia 1, número de municipios: <span class="in">2</span>
+  Municipio 1, código identificativo: <span class="in">10</span>
+  Municipio 1, extensión (km²): <span class="in">120</span>
+  Municipio 1, número de familias: <span class="in">2</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">11111111A</span>
+    Familia 1, salario: <span class="in">1500</span>
+    Familia 1, número de hijos: <span class="in">2</span>
+    Familia 2, DNI del cabeza de familia: <span class="in">22222222B</span>
+    Familia 2, salario: <span class="in">2100</span>
+    Familia 2, número de hijos: <span class="in">4</span>
+  Salario medio de las familias del municipio 10: 1800,00
+  Municipio 2, código identificativo: <span class="in">11</span>
+  Municipio 2, extensión (km²): <span class="in">80</span>
+  Municipio 2, número de familias: <span class="in">1</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">33333333C</span>
+    Familia 1, salario: <span class="in">1800</span>
+    Familia 1, número de hijos: <span class="in">0</span>
+  Salario medio de las familias del municipio 11: 1800,00
+Provincia 2, código identificativo: <span class="in">2</span>
+Provincia 2, prefijo: <span class="in">29</span>
+Provincia 2, número de municipios: <span class="in">1</span>
+  Municipio 1, código identificativo: <span class="in">20</span>
+  Municipio 1, extensión (km²): <span class="in">300</span>
+  Municipio 1, número de familias: <span class="in">2</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">44444444D</span>
+    Familia 1, salario: <span class="in">2500</span>
+    Familia 1, número de hijos: <span class="in">5</span>
+    Familia 2, DNI del cabeza de familia: <span class="in">55555555E</span>
+    Familia 2, salario: <span class="in">1700</span>
+    Familia 2, número de hijos: <span class="in">1</span>
+  Salario medio de las familias del municipio 20: 2100,00
+Datos introducidos: 3 municipios y 5 familias.</pre></figure><h5>Cómo funciona</h5><ul><li>Se parte del programa anterior. Al empezar cada municipio se pone a 0 <code>sumaSalarios</code>; dentro del bucle de familias se acumula el salario.</li><li>Al terminar las familias del municipio se muestra la media: <code>sumaSalarios / familias</code> (como <code>double</code>). Si el municipio no tiene familias se avisa para no dividir entre 0.</li></ul></div></details></article><article class="ex" id="e5-n8" data-ex="5-n8" data-n="8"><div class="ex-h"><span class="ex-n">8</span><h4>Ejercicio 8</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Modificar el programa anterior para que se visualice por cada provincia, cuántas familias tienen más de 3 hijos.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Anid08.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Anid08</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="k">final</span> <span class="k">int</span> <span class="n">NUM_PROVINCIAS</span> = <span class="n">2</span>;   <span class="c">// El enunciado pide 4; aquí se usa 2 para que el ejemplo sea corto</span>
+        <span class="k">int</span> totalMunicipios = <span class="n">0</span>;
+        <span class="k">int</span> totalFamilias = <span class="n">0</span>;
+        <span class="k">for</span> (<span class="k">int</span> provincia = <span class="n">1</span>; provincia &lt;= <span class="n">NUM_PROVINCIAS</span>; provincia++) {
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", código identificativo: "</span>);
+            <span class="k">int</span> codigoProvincia = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", prefijo: "</span>);
+            <span class="k">int</span> prefijo = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", número de municipios: "</span>);
+            <span class="k">int</span> municipios = entrada.<span class="f">nextInt</span>();
+            <span class="k">int</span> familiasMasDe3Hijos = <span class="n">0</span>;
+            <span class="k">for</span> (<span class="k">int</span> municipio = <span class="n">1</span>; municipio &lt;= municipios; municipio++) {
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", código identificativo: "</span>);
+                <span class="k">int</span> codigoMunicipio = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", extensión (km²): "</span>);
+                <span class="k">int</span> extension = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", número de familias: "</span>);
+                <span class="k">int</span> familias = entrada.<span class="f">nextInt</span>();
+                totalMunicipios++;
+                <span class="k">int</span> sumaSalarios = <span class="n">0</span>;
+                <span class="k">for</span> (<span class="k">int</span> familia = <span class="n">1</span>; familia &lt;= familias; familia++) {
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", DNI del cabeza de familia: "</span>);
+                    <span class="t">String</span> dni = entrada.<span class="f">next</span>();
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", salario: "</span>);
+                    <span class="k">int</span> salario = entrada.<span class="f">nextInt</span>();
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", número de hijos: "</span>);
+                    <span class="k">int</span> hijos = entrada.<span class="f">nextInt</span>();
+                    totalFamilias++;
+                    sumaSalarios += salario;
+                    <span class="k">if</span> (hijos &gt; <span class="n">3</span>) {
+                        familiasMasDe3Hijos++;
+                    }
+                }
+                <span class="k">if</span> (familias &gt; <span class="n">0</span>) {
+                    <span class="t">System</span>.out.<span class="f">printf</span>(<span class="s">"  Salario medio de las familias del municipio %d: %.2f\n"</span>, codigoMunicipio, (<span class="k">double</span>) sumaSalarios / familias);
+                } <span class="k">else</span> {
+                    <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"  El municipio "</span> + codigoMunicipio + <span class="s">" no tiene familias"</span>);
+                }
+            }
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Provincia "</span> + codigoProvincia + <span class="s">": familias con más de 3 hijos = "</span> + familiasMasDe3Hijos);
+        }
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Datos introducidos: "</span> + totalMunicipios + <span class="s">" municipios y "</span> + totalFamilias + <span class="s">" familias."</span>);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Provincia 1, código identificativo: <span class="in">1</span>
+Provincia 1, prefijo: <span class="in">41</span>
+Provincia 1, número de municipios: <span class="in">2</span>
+  Municipio 1, código identificativo: <span class="in">10</span>
+  Municipio 1, extensión (km²): <span class="in">120</span>
+  Municipio 1, número de familias: <span class="in">2</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">11111111A</span>
+    Familia 1, salario: <span class="in">1500</span>
+    Familia 1, número de hijos: <span class="in">2</span>
+    Familia 2, DNI del cabeza de familia: <span class="in">22222222B</span>
+    Familia 2, salario: <span class="in">2100</span>
+    Familia 2, número de hijos: <span class="in">4</span>
+  Salario medio de las familias del municipio 10: 1800,00
+  Municipio 2, código identificativo: <span class="in">11</span>
+  Municipio 2, extensión (km²): <span class="in">80</span>
+  Municipio 2, número de familias: <span class="in">1</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">33333333C</span>
+    Familia 1, salario: <span class="in">1800</span>
+    Familia 1, número de hijos: <span class="in">0</span>
+  Salario medio de las familias del municipio 11: 1800,00
+Provincia 1: familias con más de 3 hijos = 1
+Provincia 2, código identificativo: <span class="in">2</span>
+Provincia 2, prefijo: <span class="in">29</span>
+Provincia 2, número de municipios: <span class="in">1</span>
+  Municipio 1, código identificativo: <span class="in">20</span>
+  Municipio 1, extensión (km²): <span class="in">300</span>
+  Municipio 1, número de familias: <span class="in">2</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">44444444D</span>
+    Familia 1, salario: <span class="in">2500</span>
+    Familia 1, número de hijos: <span class="in">5</span>
+    Familia 2, DNI del cabeza de familia: <span class="in">55555555E</span>
+    Familia 2, salario: <span class="in">1700</span>
+    Familia 2, número de hijos: <span class="in">1</span>
+  Salario medio de las familias del municipio 20: 2100,00
+Provincia 2: familias con más de 3 hijos = 1
+Datos introducidos: 3 municipios y 5 familias.</pre></figure><h5>Cómo funciona</h5><ul><li>Se añade <code>familiasMasDe3Hijos</code>, que se pone a 0 al empezar cada provincia (antes del bucle de municipios).</li><li>Dentro del bucle de familias se incrementa si <code>hijos &gt; 3</code>, y al acabar los municipios de la provincia se muestra el resultado.</li></ul></div></details></article><article class="ex" id="e5-n9" data-ex="5-n9" data-n="9"><div class="ex-h"><span class="ex-n">9</span><h4>Ejercicio 9</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body"><p>Modificar el programa anterior para que se visualice el prefijo del municipio con mayor extensión media.</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Anid09.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Anid09</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="k">final</span> <span class="k">int</span> <span class="n">NUM_PROVINCIAS</span> = <span class="n">2</span>;   <span class="c">// El enunciado pide 4; aquí se usa 2 para que el ejemplo sea corto</span>
+        <span class="k">int</span> totalMunicipios = <span class="n">0</span>;
+        <span class="k">int</span> totalFamilias = <span class="n">0</span>;
+        <span class="k">double</span> mayorExtensionMedia = -<span class="n">1</span>;
+        <span class="k">int</span> prefijoMayorExtensionMedia = <span class="n">0</span>;
+        <span class="k">for</span> (<span class="k">int</span> provincia = <span class="n">1</span>; provincia &lt;= <span class="n">NUM_PROVINCIAS</span>; provincia++) {
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", código identificativo: "</span>);
+            <span class="k">int</span> codigoProvincia = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", prefijo: "</span>);
+            <span class="k">int</span> prefijo = entrada.<span class="f">nextInt</span>();
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Provincia "</span> + provincia + <span class="s">", número de municipios: "</span>);
+            <span class="k">int</span> municipios = entrada.<span class="f">nextInt</span>();
+            <span class="k">int</span> familiasMasDe3Hijos = <span class="n">0</span>;
+            <span class="k">int</span> sumaExtensiones = <span class="n">0</span>;
+            <span class="k">for</span> (<span class="k">int</span> municipio = <span class="n">1</span>; municipio &lt;= municipios; municipio++) {
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", código identificativo: "</span>);
+                <span class="k">int</span> codigoMunicipio = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", extensión (km²): "</span>);
+                <span class="k">int</span> extension = entrada.<span class="f">nextInt</span>();
+                <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  Municipio "</span> + municipio + <span class="s">", número de familias: "</span>);
+                <span class="k">int</span> familias = entrada.<span class="f">nextInt</span>();
+                totalMunicipios++;
+                sumaExtensiones += extension;
+                <span class="k">int</span> sumaSalarios = <span class="n">0</span>;
+                <span class="k">for</span> (<span class="k">int</span> familia = <span class="n">1</span>; familia &lt;= familias; familia++) {
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", DNI del cabeza de familia: "</span>);
+                    <span class="t">String</span> dni = entrada.<span class="f">next</span>();
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", salario: "</span>);
+                    <span class="k">int</span> salario = entrada.<span class="f">nextInt</span>();
+                    <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"    Familia "</span> + familia + <span class="s">", número de hijos: "</span>);
+                    <span class="k">int</span> hijos = entrada.<span class="f">nextInt</span>();
+                    totalFamilias++;
+                    sumaSalarios += salario;
+                    <span class="k">if</span> (hijos &gt; <span class="n">3</span>) {
+                        familiasMasDe3Hijos++;
+                    }
+                }
+                <span class="k">if</span> (familias &gt; <span class="n">0</span>) {
+                    <span class="t">System</span>.out.<span class="f">printf</span>(<span class="s">"  Salario medio de las familias del municipio %d: %.2f\n"</span>, codigoMunicipio, (<span class="k">double</span>) sumaSalarios / familias);
+                } <span class="k">else</span> {
+                    <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"  El municipio "</span> + codigoMunicipio + <span class="s">" no tiene familias"</span>);
+                }
+            }
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Provincia "</span> + codigoProvincia + <span class="s">": familias con más de 3 hijos = "</span> + familiasMasDe3Hijos);
+            <span class="k">double</span> extensionMedia = <span class="n">0</span>;
+            <span class="k">if</span> (municipios &gt; <span class="n">0</span>) {
+                extensionMedia = (<span class="k">double</span>) sumaExtensiones / municipios;
+            }
+            <span class="t">System</span>.out.<span class="f">printf</span>(<span class="s">"Provincia %d: extensión media de sus municipios = %.2f km²\n"</span>, codigoProvincia, extensionMedia);
+            <span class="k">if</span> (extensionMedia &gt; mayorExtensionMedia) {
+                mayorExtensionMedia = extensionMedia;
+                prefijoMayorExtensionMedia = prefijo;
+            }
+        }
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Datos introducidos: "</span> + totalMunicipios + <span class="s">" municipios y "</span> + totalFamilias + <span class="s">" familias."</span>);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Prefijo con mayor extensión media: "</span> + prefijoMayorExtensionMedia);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Provincia 1, código identificativo: <span class="in">1</span>
+Provincia 1, prefijo: <span class="in">41</span>
+Provincia 1, número de municipios: <span class="in">2</span>
+  Municipio 1, código identificativo: <span class="in">10</span>
+  Municipio 1, extensión (km²): <span class="in">120</span>
+  Municipio 1, número de familias: <span class="in">2</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">11111111A</span>
+    Familia 1, salario: <span class="in">1500</span>
+    Familia 1, número de hijos: <span class="in">2</span>
+    Familia 2, DNI del cabeza de familia: <span class="in">22222222B</span>
+    Familia 2, salario: <span class="in">2100</span>
+    Familia 2, número de hijos: <span class="in">4</span>
+  Salario medio de las familias del municipio 10: 1800,00
+  Municipio 2, código identificativo: <span class="in">11</span>
+  Municipio 2, extensión (km²): <span class="in">80</span>
+  Municipio 2, número de familias: <span class="in">1</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">33333333C</span>
+    Familia 1, salario: <span class="in">1800</span>
+    Familia 1, número de hijos: <span class="in">0</span>
+  Salario medio de las familias del municipio 11: 1800,00
+Provincia 1: familias con más de 3 hijos = 1
+Provincia 1: extensión media de sus municipios = 100,00 km²
+Provincia 2, código identificativo: <span class="in">2</span>
+Provincia 2, prefijo: <span class="in">29</span>
+Provincia 2, número de municipios: <span class="in">1</span>
+  Municipio 1, código identificativo: <span class="in">20</span>
+  Municipio 1, extensión (km²): <span class="in">300</span>
+  Municipio 1, número de familias: <span class="in">2</span>
+    Familia 1, DNI del cabeza de familia: <span class="in">44444444D</span>
+    Familia 1, salario: <span class="in">2500</span>
+    Familia 1, número de hijos: <span class="in">5</span>
+    Familia 2, DNI del cabeza de familia: <span class="in">55555555E</span>
+    Familia 2, salario: <span class="in">1700</span>
+    Familia 2, número de hijos: <span class="in">1</span>
+  Salario medio de las familias del municipio 20: 2100,00
+Provincia 2: familias con más de 3 hijos = 1
+Provincia 2: extensión media de sus municipios = 300,00 km²
+Datos introducidos: 3 municipios y 5 familias.
+Prefijo con mayor extensión media: 29</pre></figure><h5>Cómo funciona</h5><ul><li>Cada municipio tiene una extensión, así que lo que tiene sentido calcular es la <strong>extensión media</strong> de los municipios de cada provincia. Se interpreta el enunciado así: se visualiza el prefijo (que es un dato de la provincia) de la provincia cuyos municipios tienen mayor extensión media.</li><li>Por provincia se suman las extensiones (<code>sumaExtensiones</code>) y se divide entre su número de municipios.</li><li>Se guarda el mayor valor encontrado y el prefijo de esa provincia; con <code>&gt;</code> en un empate gana la primera. Resultado del ejemplo: provincia 1 → 100 km², provincia 2 → 300 km², prefijo 29.</li></ul></div></details></article></div></div></section><nav class="pager" aria-label="Cambiar de unidad"><a class="prev" href="#u4"><small>← Unidad anterior</small><b>4. Sentencia condicional (if y switch)</b></a><a class="next" href="#u6"><small>Unidad siguiente →</small><b>6. Números aleatorios</b></a></nav></article><article class="unit" id="unit-6" data-unit="6" hidden><header class="unit-head"><span class="unit-num" aria-hidden="true">06</span><div><p class="eyebrow">Unidad 6</p><h1>Números aleatorios</h1><p class="blurb">Math.random(), enteros y decimales, rangos y palabras al azar.</p><p class="meta">2 apartados · 32 ejercicios</p></div></header><section class="sec" id="s6-0" data-spy data-title="Introducción"><h2><a href="#u6-s6-0">Introducción</a></h2><div class="sec-body"><p>Los números aleatorios se utilizan con frecuencia en programación para emular el comportamiento de algún fenómeno natural, el resultado de un juego de azar o, en general, para generar cualquier valor impredecible a priori.</p><p>Por ejemplo, se pueden utilizar números aleatorios para generar tiradas de dados de tal forma que, de antemano, no se puede saber el resultado. Antes de tirar un dado no sabemos si saldrá un 3 o un 5; se tratará pues de un número impredecible; lo que sí sabemos es que saldrá un número entre el 1 y el 6, es decir, podemos acotar el rango de los valores que vamos a obtener de forma aleatoria.</p></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li>Un número aleatorio es <strong>impredecible a priori</strong>, pero se puede acotar el rango de valores posibles (un dado: del 1 al 6).</li></ul></aside></section><section class="sec" id="s6-1" data-spy data-title="6.1 Generación de números aleatorios con y sin decimales"><h2><a href="#u6-s6-1">6.1 Generación de números aleatorios con y sin decimales</a></h2><div class="sec-body"><p>Para generar valores aleatorios utilizaremos <code>Math.random()</code>. Esta función genera un número con decimales (de tipo <code>double</code>) en el intervalo [0 - 1), es decir, genera un número mayor o igual que 0 y menor que 1.</p><p>El siguiente programa genera diez números aleatorios:</p><figure class="code"><figcaption><span>Aleatorio01.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Aleatorio01</span> {
     <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
         <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Diez números aleatorios:\n"</span>);
         for (<span class="k">int</span> i = <span class="n">1</span>; i &lt; <span class="n">11</span>; i++) {
