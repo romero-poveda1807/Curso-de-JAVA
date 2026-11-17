@@ -490,6 +490,24 @@ caption{color:var(--accent)}
 .ex.has-hw{border-top-color:var(--accent)}
 @media (max-width:520px){.hw-list li{flex-wrap:wrap}.hw-list small{order:3;width:100%}}
 
+
+.cs-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:5}
+.cs-bar input{flex:1 1 260px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);font:inherit}
+.cs-chips{display:flex;flex-wrap:wrap;gap:6px}
+.cs-chip{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:99px;padding:5px 11px;font:600 13px var(--font-mono);cursor:pointer}
+.cs-chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.cs-tab{width:100%;border-collapse:separate;border-spacing:0;font-size:14.5px}
+.cs-tab thead th{text-align:left;font:700 12px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:6px 10px}
+.cs-tab .cs-u th{background:var(--accent);color:#fff;padding:9px 12px;font:700 15px var(--font-body,inherit);text-align:left;border-radius:8px}
+.cs-tab td{vertical-align:top;padding:10px;border-bottom:1px solid var(--line)}
+.cs-c{width:19%;font-weight:600}.cs-k{width:44%}.cs-t{width:37%;color:var(--text)}
+.cs-k pre{margin:0;background:#0d0d0d;color:#eaeaea;border-radius:8px;padding:10px 12px;font:13px/1.5 var(--font-mono);white-space:pre;overflow-x:auto}
+.cs-tab code{font-family:var(--font-mono);font-size:.92em}
+@media (max-width:820px){.cs-tab thead{display:none}.cs-tab,.cs-tab tbody,.cs-tab tr,.cs-tab td{display:block;width:100%}.cs-tab td{border:0;padding:4px 2px}.cs-c,.cs-k,.cs-t{width:100%}.cs-tab tbody tr:not(.cs-u){border:1px solid var(--line);border-radius:12px;padding:10px;margin:10px 0;background:var(--surface)}.cs-tab .cs-u{margin-top:18px}.cs-tab .cs-u th{display:block}}
+.cs-wrap{max-width:100%;min-width:0}.cs-tab td,.cs-k{min-width:0;max-width:100%}.cs-chips{max-width:100%}.cs-bar input{min-width:0}@media (max-width:820px){.cs-t,.cs-c{overflow-wrap:anywhere}}
+.cs-k{overflow:hidden}.cs-k pre{display:block;width:100%;max-width:100%;box-sizing:border-box}@media (max-width:820px){.cs-tab tbody,.cs-tab tr{overflow:hidden}.cs-tab .cs-u th{box-sizing:border-box}}
+.cs-tab th{white-space:normal;overflow-wrap:anywhere}@media (max-width:820px){.cs-tab .cs-u th{width:100%}}
+.cs-link{display:flex;align-items:center;gap:8px;font-weight:700}
 </style>
 
 <div class="app">
@@ -504,8 +522,8 @@ caption{color:var(--accent)}
     <div class="overall"><span id="overall-txt">0 de 0 ejercicios hechos</span><div class="bar"><i id="overall-bar"></i></div></div>
     <div id="results" hidden></div>
     <div id="tree">
-      <a class="nav-home" href="#inicio" data-t="inicio">Inicio</a>
-      <div class="ng" data-unit="1"><a class="ng-t" href="#u1" data-t="u1"><span class="n">1</span><span class="t">¡Hola mundo! - Salida de datos por pantalla</span><span class="cnt" data-cnt="1"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 1" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u1-s1-1" data-t="s1-1">1.1 ¡Hola mundo! - Mi primer programa</a></li><li><a href="#u1-s1-2" data-t="s1-2">1.2 Coloreado de texto</a></li><li><a href="#u1-s1-3" data-t="s1-3">1.3 Sangría</a></li><li><a href="#u1-s1-4" data-t="s1-4">1.4 Caracteres especiales</a></li><li><a href="#u1-s1-5" data-t="s1-5">1.5 Salida formateada</a></li><li><a href="#u1-q1" data-t="q1">Autoevaluación</a></li><li class="has-sub"><a href="#u1-x1" data-t="x1">Ejercicios</a></li><li class="sub"><a href="#u1-x1-libro" data-t="x1-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u1-x1-clase" data-t="x1-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="2"><a class="ng-t" href="#u2" data-t="u2"><span class="n">2</span><span class="t">Variables</span><span class="cnt" data-cnt="2"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 2" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u2-s2-1" data-t="s2-1">2.1 Definición y tipos de variables</a></li><li class="sub"><a href="#u2-s2-1-1" data-t="s2-1-1">2.1.1 Enteros (int y long)</a></li><li class="sub"><a href="#u2-s2-1-2" data-t="s2-1-2">2.1.2 Números decimales (double y float)</a></li><li class="sub"><a href="#u2-s2-1-3" data-t="s2-1-3">2.1.3 Cadenas de caracteres (String)</a></li><li class="sub"><a href="#u2-s2-1-4" data-t="s2-1-4">2.1.4 Caracteres (char)</a></li><li><a href="#u2-s2-2" data-t="s2-2">2.2 Resumen de tipos primitivos</a></li><li><a href="#u2-s2-3" data-t="s2-3">2.3 Operadores aritméticos</a></li><li><a href="#u2-s2-4" data-t="s2-4">2.4 Asignación de valores a variables</a></li><li><a href="#u2-s2-5" data-t="s2-5">2.5 Conversión de tipo (casting)</a></li><li><a href="#u2-q2" data-t="q2">Autoevaluación</a></li><li class="has-sub"><a href="#u2-x2" data-t="x2">Ejercicios</a></li><li class="sub"><a href="#u2-x2-libro" data-t="x2-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u2-x2-clase" data-t="x2-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="3"><a class="ng-t" href="#u3" data-t="u3"><span class="n">3</span><span class="t">Lectura de datos desde teclado</span><span class="cnt" data-cnt="3"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 3" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u3-s3-0" data-t="s3-0">Introducción</a></li><li><a href="#u3-s3-1" data-t="s3-1">3.1 Lectura de texto</a></li><li><a href="#u3-s3-2" data-t="s3-2">3.2 Lectura de números</a></li><li><a href="#u3-s3-3" data-t="s3-3">3.3 La clase Scanner</a></li><li><a href="#u3-q3" data-t="q3">Autoevaluación</a></li><li class="has-sub"><a href="#u3-x3" data-t="x3">Ejercicios</a></li><li class="sub"><a href="#u3-x3-libro" data-t="x3-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u3-x3-clase" data-t="x3-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="4"><a class="ng-t" href="#u4" data-t="u4"><span class="n">4</span><span class="t">Sentencia condicional (if y switch)</span><span class="cnt" data-cnt="4"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 4" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u4-s4-0" data-t="s4-0">Introducción</a></li><li><a href="#u4-s4-1" data-t="s4-1">4.1 Sentencia if</a></li><li><a href="#u4-s4-2" data-t="s4-2">4.2 Operadores de comparación</a></li><li><a href="#u4-s4-3" data-t="s4-3">4.3 Operadores lógicos</a></li><li><a href="#u4-s4-4" data-t="s4-4">4.4 Sentencia switch</a></li><li><a href="#u4-q4" data-t="q4">Autoevaluación</a></li><li class="has-sub"><a href="#u4-x4" data-t="x4">Ejercicios</a></li><li class="sub"><a href="#u4-x4-libro" data-t="x4-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u4-x4-clase" data-t="x4-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="5"><a class="ng-t" href="#u5" data-t="u5"><span class="n">5</span><span class="t">Bucles</span><span class="cnt" data-cnt="5"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 5" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u5-s5-0" data-t="s5-0">Introducción</a></li><li><a href="#u5-s5-1" data-t="s5-1">5.1 Bucle for</a></li><li><a href="#u5-s5-2" data-t="s5-2">5.2 Bucle while</a></li><li><a href="#u5-s5-3" data-t="s5-3">5.3 Bucle do-while</a></li><li><a href="#u5-q5" data-t="q5">Autoevaluación</a></li><li class="has-sub"><a href="#u5-x5" data-t="x5">Ejercicios</a></li><li class="sub"><a href="#u5-x5-libro" data-t="x5-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u5-x5-clase" data-t="x5-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="6"><a class="ng-t" href="#u6" data-t="u6"><span class="n">6</span><span class="t">Números aleatorios</span><span class="cnt" data-cnt="6"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 6" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u6-s6-0" data-t="s6-0">Introducción</a></li><li><a href="#u6-s6-1" data-t="s6-1">6.1 Generación de números aleatorios con y sin decimales</a></li><li><a href="#u6-s6-2" data-t="s6-2">6.2 Generación de palabras de forma aleatoria de un conjunto dado</a></li><li><a href="#u6-q6" data-t="q6">Autoevaluación</a></li><li class="has-sub"><a href="#u6-x6" data-t="x6">Ejercicios</a></li><li class="sub"><a href="#u6-x6-libro" data-t="x6-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u6-x6-clase" data-t="x6-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="7"><a class="ng-t" href="#u7" data-t="u7"><span class="n">7</span><span class="t">Arrays</span><span class="cnt" data-cnt="7"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 7" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u7-s7-1" data-t="s7-1">7.1 Arrays de una dimensión</a></li><li><a href="#u7-s7-2" data-t="s7-2">7.2 Arrays bidimensionales</a></li><li><a href="#u7-s7-3" data-t="s7-3">7.3 Recorrer arrays con for al estilo foreach</a></li><li><a href="#u7-q7" data-t="q7">Autoevaluación</a></li><li class="has-sub"><a href="#u7-x7" data-t="x7">Ejercicios</a></li><li class="sub"><a href="#u7-x7-libro" data-t="x7-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u7-x7-clase" data-t="x7-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="8"><a class="ng-t" href="#u8" data-t="u8"><span class="n">8</span><span class="t">Funciones</span><span class="cnt" data-cnt="8"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 8" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u8-s8-1" data-t="s8-1">8.1 Implementando funciones para reutilizar código</a></li><li><a href="#u8-s8-2" data-t="s8-2">8.2 Comentarios de funciones</a></li><li><a href="#u8-s8-3" data-t="s8-3">8.3 Creación de bibliotecas de rutinas mediante paquetes</a></li><li><a href="#u8-s8-4" data-t="s8-4">8.4 Ámbito de las variables</a></li><li><a href="#u8-s8-5" data-t="s8-5">8.5 Paso de parámetros por valor y por referencia</a></li><li><a href="#u8-q8" data-t="q8">Autoevaluación</a></li><li class="has-sub"><a href="#u8-x8" data-t="x8">Ejercicios</a></li><li class="sub"><a href="#u8-x8-libro" data-t="x8-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u8-x8-clase" data-t="x8-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="9"><a class="ng-t" href="#u9" data-t="u9"><span class="n">9</span><span class="t">Programación orientada a objetos (POO)</span><span class="cnt" data-cnt="9"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 9" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u9-s9-1" data-t="s9-1">9.1 Clases y objetos</a></li><li><a href="#u9-s9-2" data-t="s9-2">9.2 Encapsulamiento y ocultación</a></li><li><a href="#u9-s9-3" data-t="s9-3">9.3 Métodos</a></li><li class="sub"><a href="#u9-s9-3-1" data-t="s9-3-1">9.3.1 Creí haber visto un lindo gatito</a></li><li class="sub"><a href="#u9-s9-3-2" data-t="s9-3-2">9.3.2 Métodos getter y setter</a></li><li class="sub"><a href="#u9-s9-3-3" data-t="s9-3-3">9.3.3 Método toString</a></li><li><a href="#u9-s9-4" data-t="s9-4">9.4 Ámbito/visibilidad: public, protected, private</a></li><li><a href="#u9-s9-5" data-t="s9-5">9.5 Herencia</a></li><li class="sub"><a href="#u9-s9-5-1" data-t="s9-5-1">9.5.1 Sobrecarga de métodos</a></li><li><a href="#u9-s9-6" data-t="s9-6">9.6 Atributos y métodos de clase (static)</a></li><li><a href="#u9-s9-7" data-t="s9-7">9.7 Interfaces</a></li><li><a href="#u9-s9-8" data-t="s9-8">9.8 Arrays de objetos</a></li><li><a href="#u9-q9" data-t="q9">Autoevaluación</a></li><li class="has-sub"><a href="#u9-x9" data-t="x9">Ejercicios</a></li><li class="sub"><a href="#u9-x9-libro" data-t="x9-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u9-x9-clase" data-t="x9-clase">Ejercicios de clase</a></li></ul></div>
+      <a class="nav-home" href="#inicio" data-t="inicio">Inicio</a><a class="nav-home" href="#u0" data-t="u0">★ Chuleta de examen</a>
+      <div class="ng" data-unit="1"><a class="ng-t" href="#u1" data-t="u1"><span class="n">1</span><span class="t">¡Hola mundo! - Salida de datos por pantalla</span><span class="cnt" data-cnt="1"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 1" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u1-s1-1" data-t="s1-1">1.1 ¡Hola mundo! - Mi primer programa</a></li><li><a href="#u1-s1-2" data-t="s1-2">1.2 Coloreado de texto</a></li><li><a href="#u1-s1-3" data-t="s1-3">1.3 Sangría</a></li><li><a href="#u1-s1-4" data-t="s1-4">1.4 Caracteres especiales</a></li><li><a href="#u1-s1-5" data-t="s1-5">1.5 Salida formateada</a></li><li><a href="#u1-q1" data-t="q1">Autoevaluación</a></li><li class="has-sub"><a href="#u1-x1" data-t="x1">Ejercicios</a></li><li class="sub"><a href="#u1-x1-libro" data-t="x1-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u1-x1-clase" data-t="x1-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="2"><a class="ng-t" href="#u2" data-t="u2"><span class="n">2</span><span class="t">Variables</span><span class="cnt" data-cnt="2"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 2" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u2-s2-1" data-t="s2-1">2.1 Definición y tipos de variables</a></li><li class="sub"><a href="#u2-s2-1-1" data-t="s2-1-1">2.1.1 Enteros (int y long)</a></li><li class="sub"><a href="#u2-s2-1-2" data-t="s2-1-2">2.1.2 Números decimales (double y float)</a></li><li class="sub"><a href="#u2-s2-1-3" data-t="s2-1-3">2.1.3 Cadenas de caracteres (String)</a></li><li class="sub"><a href="#u2-s2-1-4" data-t="s2-1-4">2.1.4 Caracteres (char)</a></li><li><a href="#u2-s2-2" data-t="s2-2">2.2 Resumen de tipos primitivos</a></li><li><a href="#u2-s2-3" data-t="s2-3">2.3 Operadores aritméticos</a></li><li><a href="#u2-s2-4" data-t="s2-4">2.4 Asignación de valores a variables</a></li><li><a href="#u2-s2-5" data-t="s2-5">2.5 Conversión de tipo (casting)</a></li><li><a href="#u2-q2" data-t="q2">Autoevaluación</a></li><li class="has-sub"><a href="#u2-x2" data-t="x2">Ejercicios</a></li><li class="sub"><a href="#u2-x2-libro" data-t="x2-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u2-x2-clase" data-t="x2-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="3"><a class="ng-t" href="#u3" data-t="u3"><span class="n">3</span><span class="t">Lectura de datos desde teclado</span><span class="cnt" data-cnt="3"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 3" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u3-s3-0" data-t="s3-0">Introducción</a></li><li><a href="#u3-s3-1" data-t="s3-1">3.1 Lectura de texto</a></li><li><a href="#u3-s3-2" data-t="s3-2">3.2 Lectura de números</a></li><li><a href="#u3-s3-3" data-t="s3-3">3.3 La clase Scanner</a></li><li><a href="#u3-q3" data-t="q3">Autoevaluación</a></li><li class="has-sub"><a href="#u3-x3" data-t="x3">Ejercicios</a></li><li class="sub"><a href="#u3-x3-libro" data-t="x3-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u3-x3-clase" data-t="x3-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="4"><a class="ng-t" href="#u4" data-t="u4"><span class="n">4</span><span class="t">Sentencia condicional (if y switch)</span><span class="cnt" data-cnt="4"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 4" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u4-s4-0" data-t="s4-0">Introducción</a></li><li><a href="#u4-s4-1" data-t="s4-1">4.1 Sentencia if</a></li><li><a href="#u4-s4-2" data-t="s4-2">4.2 Operadores de comparación</a></li><li><a href="#u4-s4-3" data-t="s4-3">4.3 Operadores lógicos</a></li><li><a href="#u4-s4-4" data-t="s4-4">4.4 Sentencia switch</a></li><li><a href="#u4-q4" data-t="q4">Autoevaluación</a></li><li class="has-sub"><a href="#u4-x4" data-t="x4">Ejercicios</a></li><li class="sub"><a href="#u4-x4-libro" data-t="x4-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u4-x4-clase" data-t="x4-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="5"><a class="ng-t" href="#u5" data-t="u5"><span class="n">5</span><span class="t">Bucles</span><span class="cnt" data-cnt="5"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 5" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u5-s5-0" data-t="s5-0">Introducción</a></li><li><a href="#u5-s5-1" data-t="s5-1">5.1 Bucle for</a></li><li><a href="#u5-s5-2" data-t="s5-2">5.2 Bucle while</a></li><li><a href="#u5-s5-3" data-t="s5-3">5.3 Bucle do-while</a></li><li><a href="#u5-q5" data-t="q5">Autoevaluación</a></li><li class="has-sub"><a href="#u5-x5" data-t="x5">Ejercicios</a></li><li class="sub"><a href="#u5-x5-libro" data-t="x5-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u5-x5-clase" data-t="x5-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="6"><a class="ng-t" href="#u6" data-t="u6"><span class="n">6</span><span class="t">Números aleatorios</span><span class="cnt" data-cnt="6"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 6" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u6-s6-0" data-t="s6-0">Introducción</a></li><li><a href="#u6-s6-1" data-t="s6-1">6.1 Generación de números aleatorios con y sin decimales</a></li><li><a href="#u6-s6-2" data-t="s6-2">6.2 Generación de palabras de forma aleatoria de un conjunto dado</a></li><li><a href="#u6-q6" data-t="q6">Autoevaluación</a></li><li class="has-sub"><a href="#u6-x6" data-t="x6">Ejercicios</a></li><li class="sub"><a href="#u6-x6-libro" data-t="x6-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u6-x6-clase" data-t="x6-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="7"><a class="ng-t" href="#u7" data-t="u7"><span class="n">7</span><span class="t">Arrays</span><span class="cnt" data-cnt="7"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 7" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u7-s7-1" data-t="s7-1">7.1 Arrays de una dimensión</a></li><li><a href="#u7-s7-2" data-t="s7-2">7.2 Arrays bidimensionales</a></li><li><a href="#u7-s7-3" data-t="s7-3">7.3 Recorrer arrays con for al estilo foreach</a></li><li><a href="#u7-q7" data-t="q7">Autoevaluación</a></li><li class="has-sub"><a href="#u7-x7" data-t="x7">Ejercicios</a></li><li class="sub"><a href="#u7-x7-libro" data-t="x7-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u7-x7-clase" data-t="x7-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="8"><a class="ng-t" href="#u8" data-t="u8"><span class="n">8</span><span class="t">Funciones</span><span class="cnt" data-cnt="8"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 8" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u8-s8-1" data-t="s8-1">8.1 Implementando funciones para reutilizar código</a></li><li><a href="#u8-s8-2" data-t="s8-2">8.2 Comentarios de funciones</a></li><li><a href="#u8-s8-3" data-t="s8-3">8.3 Creación de bibliotecas de rutinas mediante paquetes</a></li><li><a href="#u8-s8-4" data-t="s8-4">8.4 Ámbito de las variables</a></li><li><a href="#u8-s8-5" data-t="s8-5">8.5 Paso de parámetros por valor y por referencia</a></li><li><a href="#u8-q8" data-t="q8">Autoevaluación</a></li><li class="has-sub"><a href="#u8-x8" data-t="x8">Ejercicios</a></li><li class="sub"><a href="#u8-x8-libro" data-t="x8-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u8-x8-clase" data-t="x8-clase">Ejercicios de clase</a></li></ul></div><div class="ng" data-unit="9"><a class="ng-t" href="#u9" data-t="u9"><span class="n">9</span><span class="t">Programación orientada a objetos (POO)</span><span class="cnt" data-cnt="9"></span></a><button type="button" class="ng-x" aria-label="Mostrar u ocultar los apartados de la unidad 9" aria-expanded="false"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><ul class="ng-l"><li><a href="#u9-s9-0" data-t="s9-0">Introducción: referencias y copias</a></li><li class="sub"><a href="#u9-s9-0-1" data-t="s9-0-1">0.1 Primitivas y referencias</a></li><li class="sub"><a href="#u9-s9-0-2" data-t="s9-0-2">0.2 Alias</a></li><li class="sub"><a href="#u9-s9-0-3" data-t="s9-0-3">0.3 null y NullPointerException</a></li><li class="sub"><a href="#u9-s9-0-4" data-t="s9-0-4">0.4 == frente a equals</a></li><li class="sub"><a href="#u9-s9-0-5" data-t="s9-0-5">0.5 Paso de parámetros</a></li><li class="sub"><a href="#u9-s9-0-6" data-t="s9-0-6">0.6 Copiar arrays</a></li><li class="sub"><a href="#u9-s9-0-7" data-t="s9-0-7">0.7 Constructor copia</a></li><li class="sub"><a href="#u9-s9-0-8" data-t="s9-0-8">0.8 Copia superficial y profunda</a></li><li class="sub"><a href="#u9-s9-0-9" data-t="s9-0-9">0.9 Resumen</a></li><li class="sub"><a href="#u9-s9-0-10" data-t="s9-0-10">0.10 Actividades para practicar</a></li><li class="sub"><a href="#u9-s9-0-11" data-t="s9-0-11">0.11 Autoevaluación</a></li><li><a href="#u9-s9-1" data-t="s9-1">9.1 Clases y objetos</a></li><li><a href="#u9-s9-2" data-t="s9-2">9.2 Encapsulamiento y ocultación</a></li><li><a href="#u9-s9-3" data-t="s9-3">9.3 Métodos</a></li><li class="sub"><a href="#u9-s9-3-1" data-t="s9-3-1">9.3.1 Creí haber visto un lindo gatito</a></li><li class="sub"><a href="#u9-s9-3-2" data-t="s9-3-2">9.3.2 Métodos getter y setter</a></li><li class="sub"><a href="#u9-s9-3-3" data-t="s9-3-3">9.3.3 Método toString</a></li><li><a href="#u9-s9-4" data-t="s9-4">9.4 Ámbito/visibilidad: public, protected, private</a></li><li><a href="#u9-s9-5" data-t="s9-5">9.5 Herencia</a></li><li class="sub"><a href="#u9-s9-5-1" data-t="s9-5-1">9.5.1 Sobrecarga de métodos</a></li><li><a href="#u9-s9-6" data-t="s9-6">9.6 Atributos y métodos de clase (static)</a></li><li><a href="#u9-s9-7" data-t="s9-7">9.7 Interfaces</a></li><li><a href="#u9-s9-8" data-t="s9-8">9.8 Arrays de objetos</a></li><li><a href="#u9-q9" data-t="q9">Autoevaluación</a></li><li class="has-sub"><a href="#u9-x9" data-t="x9">Ejercicios</a></li><li class="sub"><a href="#u9-x9-libro" data-t="x9-libro">Ejercicios libro Java</a></li><li class="sub"><a href="#u9-x9-clase" data-t="x9-clase">Ejercicios de clase</a></li></ul></div>
     </div>
     <div class="nav-tools"><button id="expall" type="button" title="Mostrar todos los apartados">Expandir todo</button><button id="colall" type="button" title="Ocultar todos los apartados">Contraer</button><button id="theme" type="button" aria-label="Cambiar tema">Tema: auto</button></div>
   </aside>
@@ -515,8 +533,159 @@ caption{color:var(--accent)}
       <button class="top-btn" id="menu" type="button" aria-label="Abrir el índice">☰ Índice</button>
       <b>Curso de Java</b>
     </div>
-    <section class="home" id="home"><div class="hero"><div><p class="eyebrow">Programación · Java</p><h1>Aprende <em>Java</em> escribiendo código</h1><p class="lead">Un curso para entender cada concepto, probarlo en pequeño y resolver ejercicios con su solución explicada.</p><div class="hero-cta"><a class="btn primary" href="#u2">Empezar por Variables</a><a class="btn" href="#u4">Ir a las condicionales</a></div></div><div class="duel"><div><p class="lbl">¿Qué hace esta línea?</p><figure class="code"><figcaption><span>Java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code>x = vIp3 * <span class="t">Weerty</span> - zxc;</code></pre></figure></div><div><p class="lbl">¿Y esta otra?</p><figure class="code"><figcaption><span>Java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code>precioTotal = cantidad * precio - descuento;</code></pre></figure></div><p class="caption">Los buenos nombres de variables hacen que leer código sea tan natural como leer una novela.</p></div></div><div class="howto"><div><b>Encuentra cualquier apartado</b>Usa el índice de la izquierda o el buscador. Pulsa <code>/</code> para buscar.</div><div><b>Prueba los ejemplos</b>Los recuadros interactivos te dejan cambiar valores y ver el resultado.</div><div><b>Resuelve y comprueba</b>Marca cada ejercicio como hecho y abre su solución cuando termines.</div></div><h2 class="sect">Unidades</h2><div class="cards"><a class="card" href="#u1"><span class="big" aria-hidden="true">01</span><h3>¡Hola mundo! - Salida de datos por pantalla</h3><p>Tu primer programa y la salida de datos por pantalla.</p><span class="meta">5 apartados · 10 ejercicios</span><div class="bar"><i data-bar="1"></i></div><span class="meta" data-ptxt="1"></span></a><a class="card" href="#u2"><span class="big" aria-hidden="true">02</span><h3>Variables</h3><p>Tipos de variables, tipos primitivos, operadores aritméticos, asignación y casting.</p><span class="meta">9 apartados · 8 ejercicios</span><div class="bar"><i data-bar="2"></i></div><span class="meta" data-ptxt="2"></span></a><a class="card" href="#u3"><span class="big" aria-hidden="true">03</span><h3>Lectura de datos desde teclado</h3><p>Entrada de datos con System.console().readLine() y con la clase Scanner.</p><span class="meta">3 apartados · 12 ejercicios</span><div class="bar"><i data-bar="3"></i></div><span class="meta" data-ptxt="3"></span></a><a class="card" href="#u4"><span class="big" aria-hidden="true">04</span><h3>Sentencia condicional (if y switch)</h3><p>Bifurcar el flujo del programa con if, operadores de comparación y lógicos, y switch.</p><span class="meta">4 apartados · 29 ejercicios</span><div class="bar"><i data-bar="4"></i></div><span class="meta" data-ptxt="4"></span></a><a class="card" href="#u5"><span class="big" aria-hidden="true">05</span><h3>Bucles</h3><p>Repetir sentencias con for, while y do-while.</p><span class="meta">3 apartados · 69 ejercicios</span><div class="bar"><i data-bar="5"></i></div><span class="meta" data-ptxt="5"></span></a><a class="card" href="#u6"><span class="big" aria-hidden="true">06</span><h3>Números aleatorios</h3><p>Math.random(), enteros y decimales, rangos y palabras al azar.</p><span class="meta">2 apartados · 32 ejercicios</span><div class="bar"><i data-bar="6"></i></div><span class="meta" data-ptxt="6"></span></a><a class="card" href="#u7"><span class="big" aria-hidden="true">07</span><h3>Arrays</h3><p>Arrays de una y dos dimensiones y recorrido con for al estilo foreach.</p><span class="meta">3 apartados · 34 ejercicios</span><div class="bar"><i data-bar="7"></i></div><span class="meta" data-ptxt="7"></span></a><a class="card" href="#u8"><span class="big" aria-hidden="true">08</span><h3>Funciones</h3><p>Funciones, comentarios, paquetes, ámbito de variables y paso de parámetros.</p><span class="meta">5 apartados · 56 ejercicios</span><div class="bar"><i data-bar="8"></i></div><span class="meta" data-ptxt="8"></span></a><a class="card" href="#u9"><span class="big" aria-hidden="true">09</span><h3>Programación orientada a objetos (POO)</h3><p>Clases, objetos, encapsulamiento, herencia e interfaces.</p><span class="meta">12 apartados · 30 ejercicios</span><div class="bar"><i data-bar="9"></i></div><span class="meta" data-ptxt="9"></span></a></div></section>
-    <article class="unit" id="unit-1" data-unit="1" hidden><header class="unit-head"><span class="unit-num" aria-hidden="true">01</span><div><p class="eyebrow">Unidad 1</p><h1>¡Hola mundo! - Salida de datos por pantalla</h1><p class="blurb">Tu primer programa y la salida de datos por pantalla.</p><p class="meta">5 apartados · 10 ejercicios</p></div></header><section class="sec" id="s1-1" data-spy data-title="1.1 ¡Hola mundo! - Mi primer programa"><h2><a href="#u1-s1-1">1.1 ¡Hola mundo! - Mi primer programa</a></h2><div class="sec-body"><p>El primer programa que aprende a hacer cualquier aspirante a programador es un <strong>Hola mundo</strong>.</p><aside class="callout info"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><circle cx="16" cy="16" r="15"/><rect x="14" y="14" width="4" height="10" rx="1.5" fill="var(--surface)"/><circle cx="16" cy="9.5" r="2.3" fill="var(--surface)"/></svg><div><b class="t">Nota</b><p>En la página <a href="http://helloworldcollection.de/" target="_blank" rel="noopener">http://helloworldcollection.de/</a> se muestra el programa <strong><em>Hola mundo</em></strong> escrito en más de 400 lenguajes de programación.</p></div></aside><p>Es seguramente el programa más sencillo que se puede escribir. Se trata de un programa que muestra el mensaje «Hola mundo» por pantalla.</p><div class="pair"><div class="pair-bar"><span>Ver</span><button type="button" data-mode="both">Lado a lado</button><button type="button" data-mode="course">Versión anterior</button><button type="button" data-mode="eclipse">Versión Eclipse</button></div><div class="pair-cols"><div class="col course"><p><strong>Versión del curso (GEdit y terminal en Ubuntu).</strong> Abre el programa <strong>GEdit</strong> que, como hemos comentado en la sección <em>Instalación y configuración del entorno de programación Java</em>, viene instalado por defecto en Ubuntu y teclea el siguiente código:</p><figure class="code"><figcaption><span>HolaMundo.java · versión del curso</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="c">/**
+    <section class="home" id="home"><div class="hero"><div><p class="eyebrow">Programación · Java</p><h1>Aprende <em>Java</em> escribiendo código</h1><p class="lead">Un curso para entender cada concepto, probarlo en pequeño y resolver ejercicios con su solución explicada.</p><div class="hero-cta"><a class="btn primary" href="#u2">Empezar por Variables</a><a class="btn" href="#u4">Ir a las condicionales</a><a class="btn" href="#u0">★ Chuleta de examen</a></div></div><div class="duel"><div><p class="lbl">¿Qué hace esta línea?</p><figure class="code"><figcaption><span>Java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code>x = vIp3 * <span class="t">Weerty</span> - zxc;</code></pre></figure></div><div><p class="lbl">¿Y esta otra?</p><figure class="code"><figcaption><span>Java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code>precioTotal = cantidad * precio - descuento;</code></pre></figure></div><p class="caption">Los buenos nombres de variables hacen que leer código sea tan natural como leer una novela.</p></div></div><div class="howto"><div><b>Encuentra cualquier apartado</b>Usa el índice de la izquierda o el buscador. Pulsa <code>/</code> para buscar.</div><div><b>Prueba los ejemplos</b>Los recuadros interactivos te dejan cambiar valores y ver el resultado.</div><div><b>Resuelve y comprueba</b>Marca cada ejercicio como hecho y abre su solución cuando termines.</div></div><h2 class="sect">Unidades</h2><div class="cards"><a class="card" href="#u1"><span class="big" aria-hidden="true">01</span><h3>¡Hola mundo! - Salida de datos por pantalla</h3><p>Tu primer programa y la salida de datos por pantalla.</p><span class="meta">5 apartados · 10 ejercicios</span><div class="bar"><i data-bar="1"></i></div><span class="meta" data-ptxt="1"></span></a><a class="card" href="#u2"><span class="big" aria-hidden="true">02</span><h3>Variables</h3><p>Tipos de variables, tipos primitivos, operadores aritméticos, asignación y casting.</p><span class="meta">9 apartados · 8 ejercicios</span><div class="bar"><i data-bar="2"></i></div><span class="meta" data-ptxt="2"></span></a><a class="card" href="#u3"><span class="big" aria-hidden="true">03</span><h3>Lectura de datos desde teclado</h3><p>Entrada de datos con System.console().readLine() y con la clase Scanner.</p><span class="meta">3 apartados · 12 ejercicios</span><div class="bar"><i data-bar="3"></i></div><span class="meta" data-ptxt="3"></span></a><a class="card" href="#u4"><span class="big" aria-hidden="true">04</span><h3>Sentencia condicional (if y switch)</h3><p>Bifurcar el flujo del programa con if, operadores de comparación y lógicos, y switch.</p><span class="meta">4 apartados · 29 ejercicios</span><div class="bar"><i data-bar="4"></i></div><span class="meta" data-ptxt="4"></span></a><a class="card" href="#u5"><span class="big" aria-hidden="true">05</span><h3>Bucles</h3><p>Repetir sentencias con for, while y do-while.</p><span class="meta">3 apartados · 69 ejercicios</span><div class="bar"><i data-bar="5"></i></div><span class="meta" data-ptxt="5"></span></a><a class="card" href="#u6"><span class="big" aria-hidden="true">06</span><h3>Números aleatorios</h3><p>Math.random(), enteros y decimales, rangos y palabras al azar.</p><span class="meta">2 apartados · 32 ejercicios</span><div class="bar"><i data-bar="6"></i></div><span class="meta" data-ptxt="6"></span></a><a class="card" href="#u7"><span class="big" aria-hidden="true">07</span><h3>Arrays</h3><p>Arrays de una y dos dimensiones y recorrido con for al estilo foreach.</p><span class="meta">3 apartados · 34 ejercicios</span><div class="bar"><i data-bar="7"></i></div><span class="meta" data-ptxt="7"></span></a><a class="card" href="#u8"><span class="big" aria-hidden="true">08</span><h3>Funciones</h3><p>Funciones, comentarios, paquetes, ámbito de variables y paso de parámetros.</p><span class="meta">5 apartados · 56 ejercicios</span><div class="bar"><i data-bar="8"></i></div><span class="meta" data-ptxt="8"></span></a><a class="card" href="#u9"><span class="big" aria-hidden="true">09</span><h3>Programación orientada a objetos (POO)</h3><p>Clases, objetos, encapsulamiento, herencia e interfaces.</p><span class="meta">13 apartados · 42 ejercicios</span><div class="bar"><i data-bar="9"></i></div><span class="meta" data-ptxt="9"></span></a></div></section>
+    <article class="unit" id="unit-0" data-unit="0" hidden><header class="unit-head"><span class="unit-num" aria-hidden="true">★</span><div><p class="eyebrow">Repaso</p><h1>Chuleta de examen: todos los códigos</h1><p class="blurb">Tabla con el código imprescindible de cada tema, con lo que hay que recordar de cada uno.</p><p class="meta">63 códigos · 9 temas</p></div></header><section class="sec cheat" id="s0-1" data-title="Tabla de códigos"><div class="cs-bar"><input id="cs-q" type="search" placeholder="Filtrar (por ejemplo: for, Scanner, equals…)" aria-label="Filtrar la tabla"><div class="cs-chips"><button type="button" class="cs-chip on" data-f="all">Todos</button><button type="button" class="cs-chip" data-f="1">Tema 1</button><button type="button" class="cs-chip" data-f="2">Tema 2</button><button type="button" class="cs-chip" data-f="3">Tema 3</button><button type="button" class="cs-chip" data-f="4">Tema 4</button><button type="button" class="cs-chip" data-f="5">Tema 5</button><button type="button" class="cs-chip" data-f="6">Tema 6</button><button type="button" class="cs-chip" data-f="7">Tema 7</button><button type="button" class="cs-chip" data-f="8">Tema 8</button><button type="button" class="cs-chip" data-f="9a">Refs.</button><button type="button" class="cs-chip" data-f="9">Tema 9</button></div></div><div class="cs-wrap"><table class="cs-tab"><thead><tr><th>Qué quiero hacer</th><th>Código</th><th>Para recordar</th></tr></thead><tbody data-u="1"><tr class="cs-u"><th colspan="3">Tema 1 · ¡Hola mundo! · Salida por pantalla</th></tr><tr><td class="cs-c">Estructura mínima de un programa</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">class</span> Hola {
+  <span style="color:#729fcf">public</span> <span style="color:#729fcf">static</span> <span style="color:#729fcf">void</span> main(<span style="color:#729fcf">String</span>[] args) {
+    System.out.println(<span style="color:#fce94f">&quot;Hola mundo&quot;</span>);
+  }
+}</pre></td><td class="cs-t">El nombre de la clase = nombre del fichero (<code>Hola.java</code>).</td></tr><tr><td class="cs-c">Mostrar con y sin salto de línea</td><td class="cs-k"><pre>System.out.println(<span style="color:#fce94f">&quot;Con salto&quot;</span>);
+System.out.print(<span style="color:#fce94f">&quot;Sin salto &quot;</span>);</pre></td><td class="cs-t"><code>println</code> añade salto de línea; <code>print</code> no.</td></tr><tr><td class="cs-c">Concatenar texto y variables</td><td class="cs-k"><pre>System.out.println(<span style="color:#fce94f">&quot;Edad: &quot;</span> + edad + <span style="color:#fce94f">&quot; años&quot;</span>);</pre></td><td class="cs-t">El <code>+</code> con un texto concatena.</td></tr><tr><td class="cs-c">Salida formateada (printf)</td><td class="cs-k"><pre>System.out.printf(<span style="color:#fce94f">&quot;%d %f %.2f %s\n&quot;</span>, 21, 21.0, 4.5, <span style="color:#fce94f">&quot;texto&quot;</span>);</pre></td><td class="cs-t"><code>%d</code> entero · <code>%f</code> decimal · <code>%.2f</code> 2 decimales · <code>%s</code> texto. <code>printf</code> no añade salto: pon <code>\n</code>.</td></tr><tr><td class="cs-c">Anchura y alineación</td><td class="cs-k"><pre>System.out.printf(<span style="color:#fce94f">&quot;%-10s %8.2f %6d\n&quot;</span>, <span style="color:#fce94f">&quot;peras&quot;</span>, 2.75, 120);</pre></td><td class="cs-t">El número es la anchura mínima; <code>-</code> alinea a la izquierda.</td></tr><tr><td class="cs-c">Caracteres especiales</td><td class="cs-k"><pre>\n  \t  \&quot;  \&#x27;  \\</pre></td><td class="cs-t">Salto · tabulador · comillas dobles · comilla simple · barra inclinada.</td></tr><tr><td class="cs-c">Color del texto (ANSI)</td><td class="cs-k"><pre>System.out.print(<span style="color:#fce94f">&quot;\033[31m rojo \033[39;49m&quot;</span>);</pre></td><td class="cs-t">30-37 colores, 90-97 claros; <code>\033[39;49m</code> restablece. En Eclipse puede no verse.</td></tr><tr><td class="cs-c">Comentarios</td><td class="cs-k"><pre><span style="color:#8a8a8a">// una línea</span>
+/* varias
+   líneas */
+/** Javadoc */</pre></td><td class="cs-t">No se ejecutan.</td></tr></tbody><tbody data-u="2"><tr class="cs-u"><th colspan="3">Tema 2 · Variables</th></tr><tr><td class="cs-c">Declarar y asignar</td><td class="cs-k"><pre><span style="color:#729fcf">int</span> x;
+x = 100;
+<span style="color:#729fcf">int</span> y = 9;
+<span style="color:#729fcf">double</span> precio = 3.5;
+<span style="color:#729fcf">String</span> palabra = <span style="color:#fce94f">&quot;cerveza&quot;</span>;
+<span style="color:#729fcf">char</span> letra = <span style="color:#fce94f">&#x27;c&#x27;</span>;
+<span style="color:#729fcf">boolean</span> ok = <span style="color:#729fcf">true</span>;</pre></td><td class="cs-t">Texto entre comillas dobles <code>"</code>, un carácter entre simples <code>'</code>.</td></tr><tr><td class="cs-c">Tipos primitivos</td><td class="cs-k"><pre><span style="color:#729fcf">byte</span>  <span style="color:#729fcf">short</span>  <span style="color:#729fcf">int</span>  <span style="color:#729fcf">long</span>   <span style="color:#8a8a8a">// enteros</span>
+<span style="color:#729fcf">float</span>  <span style="color:#729fcf">double</span>          <span style="color:#8a8a8a">// decimales</span>
+<span style="color:#729fcf">char</span>   <span style="color:#729fcf">boolean</span></pre></td><td class="cs-t"><code>String</code> no es primitivo: es una clase (referencia).</td></tr><tr><td class="cs-c">Operadores aritméticos</td><td class="cs-k"><pre><span style="color:#729fcf">int</span> suma = x + y;
+<span style="color:#729fcf">int</span> mul = x * y;
+<span style="color:#729fcf">int</span> resto = x % y;
+x++;  x--;</pre></td><td class="cs-t"><code>%</code> es el resto. Con enteros, <code>9 / 2</code> da <code>4</code>.</td></tr><tr><td class="cs-c">Casting (conversión de tipo)</td><td class="cs-k"><pre><span style="color:#729fcf">double</span> media = (<span style="color:#729fcf">double</span>) suma / n;
+<span style="color:#729fcf">int</span> entero = (<span style="color:#729fcf">int</span>) 3.9;     <span style="color:#8a8a8a">// 3</span></pre></td><td class="cs-t">Convertir a <code>double</code> antes de dividir para conservar los decimales; <code>(int)</code> corta, no redondea.</td></tr></tbody><tbody data-u="3"><tr class="cs-u"><th colspan="3">Tema 3 · Lectura de datos desde teclado</th></tr><tr><td class="cs-c">Preparar el Scanner</td><td class="cs-k"><pre><span style="color:#729fcf">import</span> java.util.Scanner;
+...
+Scanner entrada = <span style="color:#729fcf">new</span> Scanner(System.in);</pre></td><td class="cs-t">El <code>import</code> va encima de la clase. En Eclipse usa <code>Scanner</code>: <code>System.console()</code> da <code>null</code>.</td></tr><tr><td class="cs-c">Leer un texto</td><td class="cs-k"><pre><span style="color:#729fcf">String</span> nombre = entrada.nextLine();</pre></td><td class="cs-t">Lee toda la línea hasta el Intro.</td></tr><tr><td class="cs-c">Leer números</td><td class="cs-k"><pre><span style="color:#729fcf">int</span> edad = Integer.parseInt(entrada.nextLine());
+<span style="color:#729fcf">double</span> nota = Double.parseDouble(entrada.nextLine());</pre></td><td class="cs-t">Se lee la línea y se convierte. Con <code>nextInt()</code> queda el Intro sin leer y un <code>nextLine()</code> posterior lee una línea vacía.</td></tr><tr><td class="cs-c">Con System.console() (consola real)</td><td class="cs-k"><pre><span style="color:#729fcf">String</span> nombre = System.console().readLine();
+<span style="color:#729fcf">int</span> n = Integer.parseInt(System.console().readLine());</pre></td><td class="cs-t">Equivale a <code>entrada.nextLine()</code>, pero sólo funciona fuera de Eclipse.</td></tr></tbody><tbody data-u="4"><tr class="cs-u"><th colspan="3">Tema 4 · Condicionales (if y switch)</th></tr><tr><td class="cs-c">if / else if / else</td><td class="cs-k"><pre><span style="color:#729fcf">if</span> (nota &gt;= 9) {
+  System.out.println(<span style="color:#fce94f">&quot;Sobresaliente&quot;</span>);
+} <span style="color:#729fcf">else</span> <span style="color:#729fcf">if</span> (nota &gt;= 5) {
+  System.out.println(<span style="color:#fce94f">&quot;Aprobado&quot;</span>);
+} <span style="color:#729fcf">else</span> {
+  System.out.println(<span style="color:#fce94f">&quot;Suspenso&quot;</span>);
+}</pre></td><td class="cs-t">Las condiciones se evalúan de arriba abajo y se ejecuta la primera que es verdadera.</td></tr><tr><td class="cs-c">Operadores de comparación</td><td class="cs-k"><pre>==   !=   &lt;   &gt;   &lt;=   &gt;=</pre></td><td class="cs-t">Igualdad con <code>==</code> (dos signos). Con textos NO se usa.</td></tr><tr><td class="cs-c">Operadores lógicos</td><td class="cs-k"><pre><span style="color:#729fcf">if</span> ((n &lt; 1) || (n &gt; 100)) { ... }
+<span style="color:#729fcf">if</span> (a &amp;&amp; b) { ... }
+<span style="color:#729fcf">if</span> (!a) { ... }</pre></td><td class="cs-t"><code>&&</code> y · <code>||</code> o · <code>!</code> no.</td></tr><tr><td class="cs-c">Comparar textos</td><td class="cs-k"><pre><span style="color:#729fcf">if</span> (respuesta.equals(<span style="color:#fce94f">&quot;Tarawa&quot;</span>)) { ... }
+<span style="color:#729fcf">if</span> (<span style="color:#fce94f">&quot;naranja&quot;</span>.equals(fruta)) { ... }</pre></td><td class="cs-t">Siempre <code>equals</code>, nunca <code>==</code>.</td></tr><tr><td class="cs-c">switch</td><td class="cs-k"><pre><span style="color:#729fcf">switch</span> (opcion) {
+  <span style="color:#729fcf">case</span> 1:
+    <span style="color:#8a8a8a">// ...</span>
+    <span style="color:#729fcf">break</span>;
+  <span style="color:#729fcf">case</span> 2:
+    <span style="color:#8a8a8a">// ...</span>
+    <span style="color:#729fcf">break</span>;
+  <span style="color:#729fcf">default</span>:
+    <span style="color:#8a8a8a">// ...</span>
+}</pre></td><td class="cs-t">Sin <code>break</code> el código "cae" al siguiente <code>case</code>.</td></tr></tbody><tbody data-u="5"><tr class="cs-u"><th colspan="3">Tema 5 · Bucles</th></tr><tr><td class="cs-c">for (nº de repeticiones conocido)</td><td class="cs-k"><pre><span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> i = 1; i &lt; 11; i++) {
+  System.out.println(i);
+}</pre></td><td class="cs-t">Inicio ; condición ; incremento.</td></tr><tr><td class="cs-c">while (puede no ejecutarse)</td><td class="cs-k"><pre><span style="color:#729fcf">int</span> i = 1;
+<span style="color:#729fcf">while</span> (i &lt; 11) {
+  i++;
+}</pre></td><td class="cs-t">Comprueba la condición <em>antes</em>. Cuidado con los bucles infinitos.</td></tr><tr><td class="cs-c">do-while (al menos una vez)</td><td class="cs-k"><pre><span style="color:#729fcf">do</span> {
+  numero = Integer.parseInt(entrada.nextLine());
+} <span style="color:#729fcf">while</span> (numero &lt; 0);</pre></td><td class="cs-t">Comprueba la condición <em>después</em>: típico para validar datos de entrada.</td></tr><tr><td class="cs-c">Contador, acumulador y par/impar</td><td class="cs-k"><pre>suma += numero;      <span style="color:#8a8a8a">// acumulador</span>
+cuenta++;            <span style="color:#8a8a8a">// contador</span>
+<span style="color:#729fcf">if</span> (numero % 2 == 0) { ... }  <span style="color:#8a8a8a">// par</span></pre></td><td class="cs-t">Inicializa siempre contador y acumulador (a 0) antes del bucle.</td></tr><tr><td class="cs-c">Bucles anidados</td><td class="cs-k"><pre><span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> f = 1; f &lt;= 4; f++) {
+  <span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> c = 1; c &lt;= f; c++) {
+    System.out.print(<span style="color:#fce94f">&quot;*&quot;</span>);
+  }
+  System.out.println();
+}</pre></td><td class="cs-t">El bucle interior se repite completo por cada vuelta del exterior. El <code>println()</code> va fuera del interior.</td></tr></tbody><tbody data-u="6"><tr class="cs-u"><th colspan="3">Tema 6 · Números aleatorios</th></tr><tr><td class="cs-c">Decimal entre 0 y 1</td><td class="cs-k"><pre><span style="color:#729fcf">double</span> r = Math.random();</pre></td><td class="cs-t">Nunca llega a 1.</td></tr><tr><td class="cs-c">Entero entre 0 y N-1</td><td class="cs-k"><pre><span style="color:#729fcf">int</span> n = (<span style="color:#729fcf">int</span>)(Math.random() * 10);   <span style="color:#8a8a8a">// 0..9</span></pre></td><td class="cs-t">Multiplica por N y quita los decimales con <code>(int)</code>.</td></tr><tr><td class="cs-c">Entero entre 1 y N</td><td class="cs-k"><pre><span style="color:#729fcf">int</span> dia = (<span style="color:#729fcf">int</span>)(Math.random() * 7) + 1;   <span style="color:#8a8a8a">// 1..7</span></pre></td><td class="cs-t">Suma el valor inicial.</td></tr><tr><td class="cs-c">Entero entre a y b (ambos incluidos)</td><td class="cs-k"><pre><span style="color:#729fcf">int</span> n = (<span style="color:#729fcf">int</span>)(Math.random() * (b - a + 1)) + a;</pre></td><td class="cs-t">Ejemplo: 50..60 → <code>(int)(Math.random()*11) + 50</code>.</td></tr><tr><td class="cs-c">Palabra al azar de un conjunto</td><td class="cs-k"><pre><span style="color:#729fcf">String</span>[] color = {<span style="color:#fce94f">&quot;rojo&quot;</span>, <span style="color:#fce94f">&quot;verde&quot;</span>, <span style="color:#fce94f">&quot;azul&quot;</span>};
+<span style="color:#729fcf">String</span> c = color[(<span style="color:#729fcf">int</span>)(Math.random() * color.length)];</pre></td><td class="cs-t">El índice al azar va de 0 a <code>length - 1</code>.</td></tr></tbody><tbody data-u="7"><tr class="cs-u"><th colspan="3">Tema 7 · Arrays</th></tr><tr><td class="cs-c">Declarar y crear</td><td class="cs-k"><pre><span style="color:#729fcf">int</span>[] x = <span style="color:#729fcf">new</span> <span style="color:#729fcf">int</span>[5];        <span style="color:#8a8a8a">// 5 ceros</span>
+<span style="color:#729fcf">int</span>[] y = {8, 33, 200, 150, 11};
+<span style="color:#729fcf">String</span>[] color = {<span style="color:#fce94f">&quot;rojo&quot;</span>, <span style="color:#fce94f">&quot;verde&quot;</span>};</pre></td><td class="cs-t">Índices de 0 a <code>length - 1</code>. Salirse da <code>ArrayIndexOutOfBoundsException</code>.</td></tr><tr><td class="cs-c">Acceder y longitud</td><td class="cs-k"><pre>x[0] = 7;
+<span style="color:#729fcf">int</span> suma = x[0] + x[3];
+<span style="color:#729fcf">int</span> tam = x.length;</pre></td><td class="cs-t"><code>length</code> sin paréntesis.</td></tr><tr><td class="cs-c">Recorrer con for</td><td class="cs-k"><pre><span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> i = 0; i &lt; x.length; i++) {
+  System.out.println(x[i]);
+}</pre></td><td class="cs-t">Condición <code>i &lt; x.length</code>, no <code>&lt;=</code>.</td></tr><tr><td class="cs-c">Recorrer con foreach</td><td class="cs-k"><pre><span style="color:#729fcf">for</span> (<span style="color:#729fcf">double</span> n : nota) {
+  suma += n;
+}</pre></td><td class="cs-t">Sólo para leer: no sirve para modificar elementos ni usar el índice.</td></tr><tr><td class="cs-c">Máximo de un array</td><td class="cs-k"><pre><span style="color:#729fcf">int</span> max = x[0];
+<span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> i = 1; i &lt; x.length; i++) {
+  <span style="color:#729fcf">if</span> (x[i] &gt; max) max = x[i];
+}</pre></td><td class="cs-t">Parte del primer elemento. Para el mínimo, cambia el <code>&gt;</code> por <code>&lt;</code>.</td></tr><tr><td class="cs-c">Array bidimensional</td><td class="cs-k"><pre><span style="color:#729fcf">int</span>[][] n = <span style="color:#729fcf">new</span> <span style="color:#729fcf">int</span>[3][2];   <span style="color:#8a8a8a">// 3 filas, 2 columnas</span>
+<span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> f = 0; f &lt; n.length; f++) {
+  <span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> c = 0; c &lt; n[0].length; c++) {
+    System.out.print(n[f][c] + <span style="color:#fce94f">&quot; &quot;</span>);
+  }
+  System.out.println();
+}</pre></td><td class="cs-t"><code>n.length</code> = filas · <code>n[0].length</code> = columnas. Literal: <code>{{20, 4}, {67, 33}}</code>.</td></tr><tr><td class="cs-c">Constantes</td><td class="cs-k"><pre><span style="color:#729fcf">final</span> <span style="color:#729fcf">int</span> VACIO = 0;</pre></td><td class="cs-t">Con <code>final</code> el valor no se puede cambiar; se escriben en MAYÚSCULAS.</td></tr></tbody><tbody data-u="8"><tr class="cs-u"><th colspan="3">Tema 8 · Funciones (métodos estáticos)</th></tr><tr><td class="cs-c">Función que devuelve un valor</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">static</span> <span style="color:#729fcf">int</span> suma(<span style="color:#729fcf">int</span> a, <span style="color:#729fcf">int</span> b) {
+  <span style="color:#729fcf">return</span> a + b;
+}
+<span style="color:#8a8a8a">// llamada:</span>
+<span style="color:#729fcf">int</span> r = suma(3, 4);</pre></td><td class="cs-t">Tipo devuelto, nombre, parámetros con su tipo, <code>return</code>.</td></tr><tr><td class="cs-c">Función sin valor (void)</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">static</span> <span style="color:#729fcf">void</span> saluda(<span style="color:#729fcf">String</span> nombre) {
+  System.out.println(<span style="color:#fce94f">&quot;Hola &quot;</span> + nombre);
+}</pre></td><td class="cs-t"><code>void</code> = no devuelve nada, no lleva <code>return valor</code>.</td></tr><tr><td class="cs-c">Función con array</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">static</span> <span style="color:#729fcf">void</span> muestraArray(<span style="color:#729fcf">int</span> x[]) {
+  <span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> i = 0; i &lt; x.length; i++) {
+    System.out.println(x[i]);
+  }
+}
+<span style="color:#8a8a8a">// array 2D: int x[][]  → x.length filas, x[0].length columnas</span></pre></td><td class="cs-t">Se puede devolver un array: <code>static int[] copiar(int[] v)</code>.</td></tr><tr><td class="cs-c">Comentario de función (Javadoc)</td><td class="cs-k"><pre>/**
+ * Indica si un número es primo.
+ * @param x un número entero positivo
+ * @<span style="color:#729fcf">return</span> <span style="color:#729fcf">true</span> si es primo, <span style="color:#729fcf">false</span> en caso contrario
+ */</pre></td><td class="cs-t"><code>@param</code> uno por parámetro y <code>@return</code> para lo devuelto.</td></tr><tr><td class="cs-c">Paquetes (bibliotecas propias)</td><td class="cs-k"><pre><span style="color:#729fcf">package</span> matematicas;      <span style="color:#8a8a8a">// primera línea del fichero</span>
+...
+<span style="color:#729fcf">import</span> matematicas.Geometria;</pre></td><td class="cs-t">Los ficheros de un paquete van en la carpeta con su nombre.</td></tr><tr><td class="cs-c">Ámbito de las variables</td><td class="cs-k"><pre><span style="color:#8a8a8a">// Una variable declarada dentro de un bloque { }</span>
+<span style="color:#8a8a8a">// sólo existe dentro de ese bloque.</span></pre></td><td class="cs-t">Una función no ve las variables locales de otra: se pasan como parámetros.</td></tr><tr><td class="cs-c">Paso de parámetros</td><td class="cs-k"><pre><span style="color:#729fcf">static</span> <span style="color:#729fcf">void</span> incrementa(<span style="color:#729fcf">int</span> x) { x++; }       <span style="color:#8a8a8a">// NO cambia la original</span>
+<span style="color:#729fcf">static</span> <span style="color:#729fcf">void</span> incrementa(<span style="color:#729fcf">int</span> x[]) { x[0]++; }  <span style="color:#8a8a8a">// SÍ cambia el array</span></pre></td><td class="cs-t">Primitivos: se copia el valor. Arrays y objetos: se copia la referencia y se modifica el mismo objeto.</td></tr></tbody><tbody data-u="9a"><tr class="cs-u"><th colspan="3">Tema 9 · POO · Referencias y copias (introducción)</th></tr><tr><td class="cs-c">Alias: dos nombres, un objeto</td><td class="cs-k"><pre>Persona p2 = p1;     <span style="color:#8a8a8a">// NO copia</span>
+p2.edad = 31;        <span style="color:#8a8a8a">// también cambia p1.edad</span></pre></td><td class="cs-t">Asignar con objetos o arrays copia la referencia.</td></tr><tr><td class="cs-c">Comparar</td><td class="cs-k"><pre>a == b          <span style="color:#8a8a8a">// ¿mismo objeto?</span>
+a.equals(b)     <span style="color:#8a8a8a">// ¿mismo contenido? (textos)</span></pre></td><td class="cs-t">Con textos: siempre <code>equals</code>.</td></tr><tr><td class="cs-c">null y NullPointerException</td><td class="cs-k"><pre>Persona[] g = <span style="color:#729fcf">new</span> Persona[3];   <span style="color:#8a8a8a">// 3 posiciones null</span>
+g[0] = <span style="color:#729fcf">new</span> Persona(<span style="color:#fce94f">&quot;Ana&quot;</span>, 30);   <span style="color:#8a8a8a">// créalo antes de usarlo</span>
+<span style="color:#729fcf">if</span> (p != <span style="color:#729fcf">null</span>) { ... }</pre></td><td class="cs-t">Usar un atributo o método de <code>null</code> da <code>NullPointerException</code>.</td></tr><tr><td class="cs-c">Copiar un array</td><td class="cs-k"><pre><span style="color:#729fcf">int</span>[] copia = <span style="color:#729fcf">new</span> <span style="color:#729fcf">int</span>[original.length];
+<span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> i = 0; i &lt; original.length; i++) {
+  copia[i] = original[i];
+}</pre></td><td class="cs-t"><code>int[] b = a;</code> NO copia (alias). Atajo: <code>a.clone()</code>.</td></tr><tr><td class="cs-c">Constructor copia</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> Persona(Persona otra) {
+  <span style="color:#729fcf">this</span>(otra.nombre, otra.edad);
+}
+<span style="color:#8a8a8a">// uso:</span>
+Persona q = <span style="color:#729fcf">new</span> Persona(p);</pre></td><td class="cs-t">Crea un objeto nuevo con los mismos datos.</td></tr><tr><td class="cs-c">Copia profunda de array de objetos</td><td class="cs-k"><pre>Persona[] copia = <span style="color:#729fcf">new</span> Persona[origen.length];
+<span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> i = 0; i &lt; origen.length; i++) {
+  copia[i] = <span style="color:#729fcf">new</span> Persona(origen[i]);
+}</pre></td><td class="cs-t"><code>copia[i] = origen[i]</code> sería superficial (se comparten los objetos).</td></tr><tr><td class="cs-c">Copias defensivas</td><td class="cs-k"><pre><span style="color:#729fcf">this</span>.notas = <span style="color:#729fcf">new</span> <span style="color:#729fcf">int</span>[notas.length];   <span style="color:#8a8a8a">// al recibir</span>
+<span style="color:#8a8a8a">// ... copiar elementos</span>
+<span style="color:#8a8a8a">// y en el getter devolver también una copia</span></pre></td><td class="cs-t">Evita que desde fuera se modifique el array interno.</td></tr></tbody><tbody data-u="9"><tr class="cs-u"><th colspan="3">Tema 9 · Programación orientada a objetos</th></tr><tr><td class="cs-c">Clase con atributos y constructor</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">class</span> Gato {
+  <span style="color:#729fcf">private</span> <span style="color:#729fcf">String</span> nombre;
+  <span style="color:#729fcf">private</span> <span style="color:#729fcf">int</span> edad;
+
+  <span style="color:#729fcf">public</span> Gato(<span style="color:#729fcf">String</span> nombre, <span style="color:#729fcf">int</span> edad) {
+    <span style="color:#729fcf">this</span>.nombre = nombre;
+    <span style="color:#729fcf">this</span>.edad = edad;
+  }
+}</pre></td><td class="cs-t">Clases con mayúscula inicial; atributos <code>private</code>; <code>this</code> = el propio objeto.</td></tr><tr><td class="cs-c">Crear y usar un objeto</td><td class="cs-k"><pre>Gato miGato = <span style="color:#729fcf">new</span> Gato(<span style="color:#fce94f">&quot;Misi&quot;</span>, 3);
+miGato.maulla();</pre></td><td class="cs-t">Objetos con minúscula inicial. <code>new</code> crea el objeto.</td></tr><tr><td class="cs-c">Getters y setters</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">String</span> getNombre() {
+  <span style="color:#729fcf">return</span> nombre;
+}
+<span style="color:#729fcf">public</span> <span style="color:#729fcf">void</span> setNombre(<span style="color:#729fcf">String</span> nombre) {
+  <span style="color:#729fcf">this</span>.nombre = nombre;
+}</pre></td><td class="cs-t">Acceso controlado a atributos privados.</td></tr><tr><td class="cs-c">Método toString</td><td class="cs-k"><pre>@Override
+<span style="color:#729fcf">public</span> <span style="color:#729fcf">String</span> toString() {
+  <span style="color:#729fcf">return</span> nombre + <span style="color:#fce94f">&quot; (&quot;</span> + edad + <span style="color:#fce94f">&quot; años)&quot;</span>;
+}</pre></td><td class="cs-t">Se usa automáticamente al imprimir el objeto: <code>System.out.println(miGato)</code>.</td></tr><tr><td class="cs-c">Visibilidad</td><td class="cs-k"><pre><span style="color:#729fcf">private</span>    → sólo la propia clase
+(nada)     → clase y paquete
+<span style="color:#729fcf">protected</span>  → clase, paquete y subclases
+<span style="color:#729fcf">public</span>     → desde cualquier sitio</pre></td><td class="cs-t">Regla general: atributos <code>private</code>, métodos <code>public</code>.</td></tr><tr><td class="cs-c">Enumerado</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">enum</span> Sexo {
+  MACHO, HEMBRA, HERMAFRODITA
+}</pre></td><td class="cs-t">Limita los valores posibles de un atributo.</td></tr><tr><td class="cs-c">Herencia y super</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">abstract</span> <span style="color:#729fcf">class</span> Animal { ... }
+<span style="color:#729fcf">public</span> <span style="color:#729fcf">class</span> Gato <span style="color:#729fcf">extends</span> Animal {
+  <span style="color:#729fcf">public</span> Gato(Sexo s) {
+    <span style="color:#729fcf">super</span>(s);
+  }
+  @Override
+  <span style="color:#729fcf">public</span> <span style="color:#729fcf">void</span> come() {
+    <span style="color:#729fcf">super</span>.come();
+  }
+}</pre></td><td class="cs-t">Una clase <code>abstract</code> no se puede instanciar. <code>super(...)</code> llama al constructor de la superclase.</td></tr><tr><td class="cs-c">Sobrecarga</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">void</span> calcula() { ... }
+<span style="color:#729fcf">public</span> <span style="color:#729fcf">void</span> calcula(<span style="color:#729fcf">int</span> x) { ... }</pre></td><td class="cs-t">Mismo nombre, distintos parámetros.</td></tr><tr><td class="cs-c">Atributos y métodos static</td><td class="cs-k"><pre><span style="color:#729fcf">private</span> <span style="color:#729fcf">static</span> <span style="color:#729fcf">int</span> kilometrajeTotal = 0;
+<span style="color:#729fcf">public</span> <span style="color:#729fcf">static</span> <span style="color:#729fcf">int</span> getKilometrajeTotal() {
+  <span style="color:#729fcf">return</span> kilometrajeTotal;
+}</pre></td><td class="cs-t">Pertenecen a la clase, no a cada objeto: se llaman <code>Clase.metodo()</code>.</td></tr><tr><td class="cs-c">Interfaces</td><td class="cs-k"><pre><span style="color:#729fcf">public</span> <span style="color:#729fcf">interface</span> Mascota {
+  <span style="color:#729fcf">void</span> aseate();
+}
+<span style="color:#729fcf">public</span> <span style="color:#729fcf">class</span> Gato <span style="color:#729fcf">extends</span> Animal <span style="color:#729fcf">implements</span> Mascota { ... }</pre></td><td class="cs-t">Una clase hereda de una sola clase pero puede implementar varias interfaces.</td></tr><tr><td class="cs-c">Array de objetos</td><td class="cs-k"><pre>Disco[] discos = <span style="color:#729fcf">new</span> Disco[10];
+<span style="color:#729fcf">for</span> (<span style="color:#729fcf">int</span> i = 0; i &lt; discos.length; i++) {
+  discos[i] = <span style="color:#729fcf">new</span> Disco();   <span style="color:#8a8a8a">// ¡crear cada objeto!</span>
+}
+<span style="color:#729fcf">if</span> (discos[i].getCodigo().equals(codigo)) { ... }</pre></td><td class="cs-t">Sin el <code>new</code> de cada posición: <code>NullPointerException</code>.</td></tr></tbody></table></div><p id="cs-none" hidden style="color:var(--muted);margin-top:12px">Ningún resultado con ese filtro.</p></section></article><article class="unit" id="unit-1" data-unit="1" hidden><header class="unit-head"><span class="unit-num" aria-hidden="true">01</span><div><p class="eyebrow">Unidad 1</p><h1>¡Hola mundo! - Salida de datos por pantalla</h1><p class="blurb">Tu primer programa y la salida de datos por pantalla.</p><p class="meta">5 apartados · 10 ejercicios</p></div></header><section class="sec" id="s1-1" data-spy data-title="1.1 ¡Hola mundo! - Mi primer programa"><h2><a href="#u1-s1-1">1.1 ¡Hola mundo! - Mi primer programa</a></h2><div class="sec-body"><p>El primer programa que aprende a hacer cualquier aspirante a programador es un <strong>Hola mundo</strong>.</p><aside class="callout info"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><circle cx="16" cy="16" r="15"/><rect x="14" y="14" width="4" height="10" rx="1.5" fill="var(--surface)"/><circle cx="16" cy="9.5" r="2.3" fill="var(--surface)"/></svg><div><b class="t">Nota</b><p>En la página <a href="http://helloworldcollection.de/" target="_blank" rel="noopener">http://helloworldcollection.de/</a> se muestra el programa <strong><em>Hola mundo</em></strong> escrito en más de 400 lenguajes de programación.</p></div></aside><p>Es seguramente el programa más sencillo que se puede escribir. Se trata de un programa que muestra el mensaje «Hola mundo» por pantalla.</p><div class="pair"><div class="pair-bar"><span>Ver</span><button type="button" data-mode="both">Lado a lado</button><button type="button" data-mode="course">Versión anterior</button><button type="button" data-mode="eclipse">Versión Eclipse</button></div><div class="pair-cols"><div class="col course"><p><strong>Versión del curso (GEdit y terminal en Ubuntu).</strong> Abre el programa <strong>GEdit</strong> que, como hemos comentado en la sección <em>Instalación y configuración del entorno de programación Java</em>, viene instalado por defecto en Ubuntu y teclea el siguiente código:</p><figure class="code"><figcaption><span>HolaMundo.java · versión del curso</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="c">/**
  * Muestra por pantalla la frase "¡Hola mundo!"
  *
  */</span>
@@ -14488,7 +14657,824 @@ corteza(a) devuelve:
  35  72  24  45  42  60 
  32  42  64  23  41  39 
  98  45  94  11  18  48 
-corteza(a) = {45, 92, 14, 20, 25, 78, 60, 39, 48, 18, 11, 94, 45, 98, 32, 35}</pre></figure><h5>Cómo funciona</h5><ul><li>La capa exterior se recorre en cuatro tramos: la fila de arriba hacia la derecha, la última columna hacia abajo, la fila de abajo hacia la izquierda y la primera columna hacia arriba (sin repetir las esquinas).</li><li>El tamaño del resultado es <code>2 * filas + 2 * columnas − 4</code>.</li></ul></div></details></article></div><div class="ex-pane" data-pane="clase" hidden><div class="pending"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="16" cy="16" r="13"/><path d="M16 9v8l5 3"/></svg><p>Los ejercicios de clase se añadirán más adelante.</p></div></div></div></section><nav class="pager" aria-label="Cambiar de unidad"><a class="prev" href="#u7"><small>← Unidad anterior</small><b>7. Arrays</b></a><a class="next" href="#u9"><small>Unidad siguiente →</small><b>9. Programación orientada a objetos (POO)</b></a></nav></article><article class="unit" id="unit-9" data-unit="9" hidden><header class="unit-head"><span class="unit-num" aria-hidden="true">09</span><div><p class="eyebrow">Unidad 9</p><h1>Programación orientada a objetos (POO)</h1><p class="blurb">Clases, objetos, encapsulamiento, herencia e interfaces.</p><p class="meta">12 apartados · 30 ejercicios</p></div></header><section class="sec" id="s9-1" data-spy data-title="9.1 Clases y objetos"><h2><a href="#u9-s9-1">9.1 Clases y objetos</a></h2><div class="sec-body"><p>La programación orientada a objetos es un paradigma de programación que se basa, como su nombre indica, en la utilización de objetos. Estos objetos también se suelen llamar instancias.</p><p>Un objeto en términos de POO no se diferencia mucho de lo que conocemos como un objeto en la vida real. Pensemos por ejemplo en un coche. Nuestro coche sería un objeto concreto de la vida real, igual que el coche del vecino, o el coche de un compañero de trabajo, o un deportivo que vimos por la calle el fin de semana pasado... Todos esos coches son objetos concretos que podemos ver y tocar.</p><p>Tanto mi coche como el coche del vecino tienen algo en común, ambos son coches. En este caso mi coche y el coche del vecino serían <strong>instancias</strong> (objetos) y coche (a secas) sería una <strong>clase</strong>. La palabra coche define algo genérico, es una abstracción, no es un coche concreto sino que hace referencia a unos elementos que tienen una serie de propiedades como matrícula, marca, modelo, color, etc.; este conjunto de propiedades se denominan <strong>atributos</strong> o <strong>variables de instancia</strong>.</p><aside class="callout key"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg><div><b class="t">Clase</b><p>Concepto abstracto que denota una serie de cualidades, por ejemplo <strong>coche</strong>.</p></div></aside><aside class="callout key"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg><div><b class="t">Instancia</b><p>Objeto palpable, que se deriva de la concreción de una clase, por ejemplo <strong>mi coche</strong>.</p></div></aside><aside class="callout key"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg><div><b class="t">Atributos</b><p>Conjunto de características que comparten los objetos de una clase, por ejemplo para la clase <strong>coche</strong> tendríamos <strong>matrícula</strong>, <strong>marca</strong>, <strong>modelo</strong>, <strong>color</strong> y <strong>número de plazas</strong>.</p></div></aside><div class="widget" data-widget="claseinst"></div><p>En Java, los nombres de las clases se escriben con la primera letra en mayúscula mientras que los nombres de las instancias comienzan con una letra en minúscula. Por ejemplo, la clase coche se escribe en Java como <code>Coche</code> y el objeto «mi coche» se podría escribir como <code>miCoche</code>.</p><p>Definiremos cada clase en un fichero con el mismo nombre más la extensión <code>.java</code>, por tanto, la definición de la clase <code>Coche</code> debe estar contenida en un fichero con nombre <code>Coche.java</code></p><p>Vamos a definir a continuación la clase <code>Libro</code> con los atributos <code>isbn</code>, <code>autor</code>, <code>titulo</code> y <code>numeroPaginas</code>.</p><figure class="code"><figcaption><span>Libro.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="c">/**
+corteza(a) = {45, 92, 14, 20, 25, 78, 60, 39, 48, 18, 11, 94, 45, 98, 32, 35}</pre></figure><h5>Cómo funciona</h5><ul><li>La capa exterior se recorre en cuatro tramos: la fila de arriba hacia la derecha, la última columna hacia abajo, la fila de abajo hacia la izquierda y la primera columna hacia arriba (sin repetir las esquinas).</li><li>El tamaño del resultado es <code>2 * filas + 2 * columnas − 4</code>.</li></ul></div></details></article></div><div class="ex-pane" data-pane="clase" hidden><div class="pending"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="16" cy="16" r="13"/><path d="M16 9v8l5 3"/></svg><p>Los ejercicios de clase se añadirán más adelante.</p></div></div></div></section><nav class="pager" aria-label="Cambiar de unidad"><a class="prev" href="#u7"><small>← Unidad anterior</small><b>7. Arrays</b></a><a class="next" href="#u9"><small>Unidad siguiente →</small><b>9. Programación orientada a objetos (POO)</b></a></nav></article><article class="unit" id="unit-9" data-unit="9" hidden><header class="unit-head"><span class="unit-num" aria-hidden="true">09</span><div><p class="eyebrow">Unidad 9</p><h1>Programación orientada a objetos (POO)</h1><p class="blurb">Clases, objetos, encapsulamiento, herencia e interfaces.</p><p class="meta">13 apartados · 42 ejercicios</p></div></header><section class="sec" id="s9-0" data-spy data-title="Introducción: referencias y copias"><h2><a href="#u9-s9-0">Introducción: referencias y copias</a></h2><div class="sec-body"><p>Antes de meternos de lleno con las clases hay una idea que tienes que dominar, porque explica muchos “resultados raros” que ocurren al programar: <strong>en Java hay dos tipos de variables</strong>. Unas guardan directamente un valor (<code>int</code>, <code>double</code>…) y otras guardan <strong>una referencia</strong>, es decir, la “dirección” de un objeto que está en otra parte de la memoria. Los objetos, los arrays y los <code>String</code> funcionan así.</p><p>Entender esta diferencia te permite saber, sin probar el programa, qué ocurre cuando <strong>asignas</strong> una variable a otra, cuando <strong>comparas</strong> dos objetos, cuando <strong>pasas</strong> un objeto o un array a una función y cuando quieres <strong>copiar</strong> de verdad un array o un objeto.</p><aside class="callout info"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><circle cx="16" cy="16" r="15"/><rect x="14" y="14" width="4" height="10" rx="1.5" fill="var(--surface)"/><circle cx="16" cy="9.5" r="2.3" fill="var(--surface)"/></svg><div><b class="t">Cómo usar este bloque</b><p>Lee los apartados 0.1 a 0.8 en orden, juega con el visualizador de memoria y haz después las actividades para practicar y la autoevaluación. Algunas cosas (constructores, métodos, <code>toString</code>…) se explican con detalle más adelante en la unidad: aquí basta con una idea intuitiva y puedes volver a este bloque cuando termines 9.3.</p></div></aside><div class="widget" data-widget="refmem"></div></div><section class="sec sub" id="s9-0-1" data-spy data-title="0.1 Variables primitivas y variables de referencia"><h3><a href="#u9-s9-0-1">0.1 Variables primitivas y variables de referencia</a></h3><div class="sec-body"><p>Una <strong>variable primitiva</strong> contiene el propio valor. Si copias una en otra, cada una tiene su valor y cambiar una no afecta a la otra. Una <strong>variable de referencia</strong> no contiene el objeto, sino una <em>referencia</em> (como la dirección de una casa o el mando a distancia de un televisor): el objeto está en otra zona de la memoria y la variable sólo sabe dónde.</p><div class="tablewrap"><table><caption>Tipos primitivos y tipos de referencia</caption><thead><tr><th>Tipo de variable</th><th>Qué guarda</th><th>Ejemplos</th><th>Al hacer <code>b = a</code></th></tr></thead><tbody><tr><td>Primitiva</td><td>El valor</td><td><code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>char</code>, <code>boolean</code></td><td>Se copia el <strong>valor</strong>: dos valores independientes</td></tr><tr><td>Referencia</td><td>La dirección de un objeto</td><td><code>String</code>, arrays (<code>int[]</code>…), objetos de cualquier clase (<code>Persona</code>…)</td><td>Se copia la <strong>referencia</strong>: las dos variables apuntan al <strong>mismo</strong> objeto</td></tr></tbody></table></div><p>En el siguiente programa se ve la diferencia. <code>Persona</code> es una clase sencilla con un nombre y una edad (más adelante verás cómo se definen las clases).</p><figure class="code"><figcaption><span>Persona.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Persona</span> {
+    <span class="t">String</span> nombre;
+    <span class="k">int</span> edad;
+
+    <span class="c">// Constructor normal</span>
+    <span class="t">Persona</span>(<span class="t">String</span> nombre, <span class="k">int</span> edad) {
+        <span class="k">this</span>.nombre = nombre;
+        <span class="k">this</span>.edad = edad;
+    }
+
+    <span class="c">// Constructor copia: crea un objeto NUEVO con los mismos datos que otro</span>
+    <span class="t">Persona</span>(<span class="t">Persona</span> otra) {
+        <span class="k">this</span>(otra.nombre, otra.edad);
+    }
+
+    <span class="k">void</span> <span class="f">mostrar</span>() {
+        <span class="t">System</span>.out.<span class="f">println</span>(nombre + <span class="s">" ("</span> + edad + <span class="s">" años)"</span>);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Ref01.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ref01</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="c">// Variables primitivas: cada una guarda su propio valor</span>
+        <span class="k">int</span> a = <span class="n">5</span>;
+        <span class="k">int</span> b = a;      <span class="c">// se copia el VALOR</span>
+        b = <span class="n">10</span>;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"a = "</span> + a + <span class="s">", b = "</span> + b);
+
+        <span class="c">// Variables de objeto: guardan una REFERENCIA al objeto</span>
+        <span class="t">Persona</span> p1 = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>);
+        <span class="t">Persona</span> p2 = p1;    <span class="c">// se copia la REFERENCIA, no el objeto</span>
+        p2.edad = <span class="n">30</span>;
+        p1.<span class="f">mostrar</span>();
+        p2.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"¿p1 y p2 son el mismo objeto? "</span> + (p1 == p2));
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>a = 5, b = 10
+Ana (30 años)
+Ana (30 años)
+¿p1 y p2 son el mismo objeto? true</pre></figure><aside class="callout key"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg><div><b class="t">Pila y montón</b><p>Las variables locales (<code>a</code>, <code>b</code>, <code>p1</code>, <code>p2</code>…) viven en una zona de memoria llamada <strong>pila</strong>. Los objetos creados con <code>new</code> viven en otra zona llamada <strong>montón</strong>. Una variable de referencia está en la pila y contiene la dirección de un objeto del montón.</p></div></aside></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li>Una variable primitiva guarda el valor; una variable de referencia guarda la dirección de un objeto.</li><li><code>String</code>, arrays y objetos de cualquier clase son tipos de referencia.</li><li>Al asignar una variable de referencia a otra se copia la referencia, <strong>no</strong> el objeto.</li></ul></aside></section><section class="sec sub" id="s9-0-2" data-spy data-title="0.2 Asignar no es copiar: alias"><h3><a href="#u9-s9-0-2">0.2 Asignar no es copiar: alias</a></h3><div class="sec-body"><p>Cuando escribes <code>Persona p2 = p1;</code> <strong>no se crea ninguna persona nueva</strong>: sólo hay un objeto y dos variables que lo señalan. A esto se le llama <strong>alias</strong>. Si modificas el objeto a través de una variable, el cambio se ve también desde la otra.</p><p>Un objeto nuevo sólo se crea con <code>new</code>. Y una variable puede cambiar de objeto cuando quieras: si haces <code>p2 = p3</code>, <code>p2</code> deja de apuntar al objeto anterior y apunta al de <code>p3</code>. Cuando ya no queda <strong>ninguna</strong> variable apuntando a un objeto, éste ya no se puede usar y Java lo elimina automáticamente de la memoria (recolector de basura).</p><figure class="code"><figcaption><span>Ref02.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ref02</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span> p1 = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>);
+        <span class="t">Persona</span> p2 = p1;
+        <span class="t">Persona</span> p3 = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Luis"</span>, <span class="n">25</span>);
+
+        p2 = p3;    <span class="c">// p2 deja de apuntar a Ana y apunta ahora a Luis</span>
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"p1 apunta a "</span> + p1.nombre);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"p2 apunta a "</span> + p2.nombre);
+
+        p1 = <span class="k">null</span>;  <span class="c">// p1 no apunta a ningún objeto</span>
+        <span class="k">if</span> (p1 == <span class="k">null</span>) {
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"p1 vale null: no se puede usar p1.nombre"</span>);
+        }
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>p1 apunta a Ana
+p2 apunta a Luis
+p1 vale null: no se puede usar p1.nombre</pre></figure></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li>Asignar (<code>=</code>) con objetos crea un <strong>alias</strong>: dos nombres para el mismo objeto.</li><li>Sólo <code>new</code> crea un objeto nuevo.</li><li>Un objeto sin ninguna referencia desaparece de la memoria: lo hace Java solo.</li></ul></aside></section><section class="sec sub" id="s9-0-3" data-spy data-title="0.3 null y NullPointerException"><h3><a href="#u9-s9-0-3">0.3 null y NullPointerException</a></h3><div class="sec-body"><p><code>null</code> es el valor de una referencia que <strong>no apunta a ningún objeto</strong>. Es el valor que tiene una variable de objeto cuando todavía no se le ha asignado nada (por ejemplo, las posiciones de un array de objetos recién creado).</p><p>Si intentas usar un objeto a través de una variable que vale <code>null</code> (leer un atributo, llamar a un método…), el programa se detiene con el error <code>NullPointerException</code>. Para evitarlo, comprueba antes con <code>if (p != null)</code>.</p><figure class="code"><figcaption><span>Ref02b.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ref02b</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span> p = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>);
+        p = <span class="k">null</span>;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Vamos a leer la edad..."</span>);
+        <span class="t">System</span>.out.<span class="f">println</span>(p.edad);   <span class="c">// ERROR: p no apunta a ningún objeto</span>
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Esta línea no se llega a ejecutar"</span>);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse (el programa termina con un error)</span></figcaption><pre>Vamos a leer la edad...
+Exception in thread "main" java.lang.NullPointerException: Cannot read field "edad" because "p" is null
+	at Ref02b.main(Ref02b.java:6)</pre></figure><aside class="callout warn"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 2.5 31 29H1z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="14.4" y="12" width="3.2" height="9" rx="1.4" fill="var(--surface)"/><circle cx="16" cy="24.4" r="1.9" fill="var(--surface)"/></svg><div><b class="t">Cómo leer el error</b><p>Eclipse muestra el tipo de error (<code>NullPointerException</code>), qué se intentaba hacer (<code>Cannot read field "edad" because "p" is null</code>) y la línea del fichero donde ocurrió (<code>Ref02b.java:6</code>). Las líneas posteriores a la del error no se ejecutan.</p></div></aside></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li><code>null</code> significa “no apunta a ningún objeto”.</li><li>Usar un atributo o un método de una variable <code>null</code> produce <code>NullPointerException</code>.</li><li>Se evita comprobando <code>variable != null</code> o creando antes el objeto con <code>new</code>.</li></ul></aside></section><section class="sec sub" id="s9-0-4" data-spy data-title="0.4 Comparar: == frente a equals"><h3><a href="#u9-s9-0-4">0.4 Comparar: == frente a equals</a></h3><div class="sec-body"><p>El operador <code>==</code> compara el <strong>contenido de la variable</strong>. Con números, es el valor. Con objetos, es la referencia: dice si las dos variables apuntan <strong>al mismo objeto</strong>, no si los objetos “se parecen”. Dos objetos distintos con los mismos datos dan <code>false</code>.</p><p>Para comparar el <strong>contenido</strong> de dos textos se usa <code>equals</code>, como ya has hecho en unidades anteriores. Para comparar dos objetos propios se comparan sus atributos uno a uno (más adelante se verá cómo redefinir <code>equals</code> en tus clases).</p><figure class="code"><figcaption><span>Ref03.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ref03</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">String</span> a = <span class="s">"hola"</span>;
+        <span class="t">String</span> b = <span class="s">"hola"</span>;
+        <span class="t">String</span> c = <span class="k">new</span> <span class="t">String</span>(<span class="s">"hola"</span>);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"a == b       -&gt; "</span> + (a == b));
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"a == c       -&gt; "</span> + (a == c));
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"a.equals(c)  -&gt; "</span> + a.<span class="f">equals</span>(c));
+
+        <span class="t">Persona</span> p1 = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>);
+        <span class="t">Persona</span> p2 = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"p1 == p2     -&gt; "</span> + (p1 == p2));
+        <span class="k">boolean</span> mismosDatos = p1.nombre.<span class="f">equals</span>(p2.nombre) &amp;&amp; p1.edad == p2.edad;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"mismos datos -&gt; "</span> + mismosDatos);
+
+        <span class="c">// Los String son inmutables: "modificar" un texto crea otro objeto</span>
+        <span class="t">String</span> s1 = <span class="s">"hola"</span>;
+        <span class="t">String</span> s2 = s1;
+        s1 = s1 + <span class="s">" mundo"</span>;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"s1 = "</span> + s1);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"s2 = "</span> + s2);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>a == b       -&gt; true
+a == c       -&gt; false
+a.equals(c)  -&gt; true
+p1 == p2     -&gt; false
+mismos datos -&gt; true
+s1 = hola mundo
+s2 = hola</pre></figure><aside class="callout warn"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 2.5 31 29H1z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="14.4" y="12" width="3.2" height="9" rx="1.4" fill="var(--surface)"/><circle cx="16" cy="24.4" r="1.9" fill="var(--surface)"/></svg><div><b class="t">¿Por qué <code>a == b</code> da <code>true</code> con "hola"?</b><p>Java reutiliza los textos literales iguales (los escritos entre comillas en el código): <code>a</code> y <code>b</code> apuntan al mismo objeto. Pero un texto creado con <code>new String(...)</code> o leído con <code>Scanner</code> es un objeto distinto. <strong>Nunca compares textos con <code>==</code></strong>: usa siempre <code>equals</code>.</p></div></aside><p>Además, los <code>String</code> son <strong>inmutables</strong>: no se pueden modificar. Al hacer <code>s1 = s1 + " mundo"</code> se crea un texto nuevo y <code>s1</code> pasa a apuntar a él; <code>s2</code> sigue apuntando al texto original.</p></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li><code>==</code> con objetos compara referencias (¿son el mismo objeto?), no contenido.</li><li>Para textos usa <code>equals</code>; para tus objetos, compara sus atributos.</li><li>Los <code>String</code> no se modifican: “cambiar” un texto crea otro objeto.</li></ul></aside></section><section class="sec sub" id="s9-0-5" data-spy data-title="0.5 Paso de parámetros de objetos y arrays"><h3><a href="#u9-s9-0-5">0.5 Paso de parámetros de objetos y arrays</a></h3><div class="sec-body"><p>En el apartado 8.5 viste el paso de parámetros por valor y por referencia. Aquí queda la regla exacta: <strong>Java siempre pasa los parámetros por valor</strong>, es decir, la función recibe una <em>copia</em> de lo que le pasas. Con tipos primitivos esa copia es el número; con objetos y arrays, esa copia es <strong>la referencia</strong>.</p><ul><li>La función <strong>puede modificar el objeto o el array</strong> al que apunta la referencia (el cambio se ve fuera, porque es el mismo objeto).</li><li>La función <strong>no puede cambiar a qué objeto apunta</strong> la variable original: si dentro hace <code>p = new Persona(...)</code>, sólo cambia su copia local de la referencia.</li></ul><figure class="code"><figcaption><span>Ref04.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ref04</span> {
+    <span class="k">static</span> <span class="k">void</span> <span class="f">incrementa</span>(<span class="k">int</span> x) {
+        x++;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">cumpleAnios</span>(<span class="t">Persona</span> p) {
+        p.edad++;                          <span class="c">// modifica el objeto original</span>
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">reemplaza</span>(<span class="t">Persona</span> p) {
+        p = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Otra"</span>, <span class="n">99</span>);       <span class="c">// solo cambia la copia de la referencia</span>
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">ponPrimeroACero</span>(<span class="k">int</span>[] v) {
+        v[<span class="n">0</span>] = <span class="n">0</span>;                          <span class="c">// modifica el array original</span>
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">nuevoArray</span>(<span class="k">int</span>[] v) {
+        v = <span class="k">new</span> <span class="k">int</span>[] {<span class="n">7</span>, <span class="n">7</span>, <span class="n">7</span>};           <span class="c">// solo cambia la copia de la referencia</span>
+    }
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span> n = <span class="n">5</span>;
+        <span class="f">incrementa</span>(n);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"n = "</span> + n);
+
+        <span class="t">Persona</span> p = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>);
+        <span class="f">cumpleAnios</span>(p);
+        p.<span class="f">mostrar</span>();
+        <span class="f">reemplaza</span>(p);
+        p.<span class="f">mostrar</span>();
+
+        <span class="k">int</span>[] v = {<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>};
+        <span class="f">ponPrimeroACero</span>(v);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"v[0] = "</span> + v[<span class="n">0</span>]);
+        <span class="f">nuevoArray</span>(v);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"v[0] = "</span> + v[<span class="n">0</span>] + <span class="s">", longitud "</span> + v.length);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>n = 5
+Ana (21 años)
+Ana (21 años)
+v[0] = 0
+v[0] = 0, longitud 3</pre></figure></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li>La función recibe una copia del valor: del número, o de la referencia.</li><li>Puede modificar el contenido de un objeto o array recibido; el cambio se ve fuera.</li><li>Reasignar el parámetro (<code>p = new …</code>) no afecta a la variable de fuera.</li></ul></aside></section><section class="sec sub" id="s9-0-6" data-spy data-title="0.6 Copiar arrays"><h3><a href="#u9-s9-0-6">0.6 Copiar arrays</a></h3><div class="sec-body"><p>Como un array es un objeto, <code>int[] b = a;</code> <strong>no copia el array</strong>: crea un alias. Para tener una copia independiente hay que crear un array nuevo del mismo tamaño y copiar los elementos uno a uno con un <code>for</code>.</p><p>Los arrays también tienen el método <code>clone()</code>, que hace esa copia por ti (<code>int[] copia = original.clone();</code>). Es un atajo; en los ejercicios de este bloque haz la copia con el <code>for</code> para dominar el mecanismo.</p><figure class="code"><figcaption><span>Ref05.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ref05</span> {
+    <span class="k">static</span> <span class="t">String</span> <span class="f">mostrar</span>(<span class="k">int</span>[] v) {
+        <span class="t">String</span> texto = <span class="s">"["</span>;
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; v.length; i++) {
+            texto += v[i];
+            <span class="k">if</span> (i &lt; v.length - <span class="n">1</span>) {
+                texto += <span class="s">", "</span>;
+            }
+        }
+        <span class="k">return</span> texto + <span class="s">"]"</span>;
+    }
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span>[] original = {<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>};
+
+        <span class="c">// 1) Esto NO es una copia: los dos nombres apuntan al mismo array</span>
+        <span class="k">int</span>[] alias = original;
+        alias[<span class="n">0</span>] = <span class="n">99</span>;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"original = "</span> + <span class="f">mostrar</span>(original));
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"alias    = "</span> + <span class="f">mostrar</span>(alias));
+
+        <span class="c">// 2) Copia real, elemento a elemento</span>
+        <span class="k">int</span>[] copia = <span class="k">new</span> <span class="k">int</span>[original.length];
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; original.length; i++) {
+            copia[i] = original[i];
+        }
+        copia[<span class="n">1</span>] = -<span class="n">5</span>;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"original = "</span> + <span class="f">mostrar</span>(original));
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"copia    = "</span> + <span class="f">mostrar</span>(copia));
+
+        <span class="c">// 3) Otra forma: el método clone() de los arrays</span>
+        <span class="k">int</span>[] copia2 = original.<span class="f">clone</span>();
+        copia2[<span class="n">2</span>] = <span class="n">0</span>;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"original = "</span> + <span class="f">mostrar</span>(original));
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"copia2   = "</span> + <span class="f">mostrar</span>(copia2));
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>original = [99, 2, 3]
+alias    = [99, 2, 3]
+original = [99, 2, 3]
+copia    = [99, -5, 3]
+original = [99, 2, 3]
+copia2   = [99, 2, 0]</pre></figure></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li><code>int[] b = a;</code> no copia: <code>a</code> y <code>b</code> son el mismo array.</li><li>Copia real = <code>new int[a.length]</code> + un <code>for</code> que copia cada elemento (o <code>a.clone()</code>).</li><li><code>a == b</code> con arrays sólo dice si son el mismo array, no si tienen los mismos valores.</li></ul></aside></section><section class="sec sub" id="s9-0-7" data-spy data-title="0.7 Copiar objetos: el constructor copia"><h3><a href="#u9-s9-0-7">0.7 Copiar objetos: el constructor copia</a></h3><div class="sec-body"><p>Con objetos ocurre lo mismo que con los arrays: <code>p2 = p1</code> es un alias. Para copiar un objeto se crea uno nuevo con <code>new</code> que tenga los mismos datos. Lo más cómodo es escribir en la clase un <strong>constructor copia</strong>: un constructor que recibe otro objeto de la misma clase y copia sus atributos.</p><figure class="code"><figcaption><span>Persona.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Persona</span> {
+    <span class="t">String</span> nombre;
+    <span class="k">int</span> edad;
+
+    <span class="c">// Constructor normal</span>
+    <span class="t">Persona</span>(<span class="t">String</span> nombre, <span class="k">int</span> edad) {
+        <span class="k">this</span>.nombre = nombre;
+        <span class="k">this</span>.edad = edad;
+    }
+
+    <span class="c">// Constructor copia: crea un objeto NUEVO con los mismos datos que otro</span>
+    <span class="t">Persona</span>(<span class="t">Persona</span> otra) {
+        <span class="k">this</span>(otra.nombre, otra.edad);
+    }
+
+    <span class="k">void</span> <span class="f">mostrar</span>() {
+        <span class="t">System</span>.out.<span class="f">println</span>(nombre + <span class="s">" ("</span> + edad + <span class="s">" años)"</span>);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Ref06.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ref06</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span> original = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>);
+        <span class="t">Persona</span> alias = original;                  <span class="c">// misma persona</span>
+        <span class="t">Persona</span> copia = <span class="k">new</span> <span class="t">Persona</span>(original);     <span class="c">// persona nueva con los mismos datos</span>
+
+        original.edad = <span class="n">21</span>;
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"original: "</span>);
+        original.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"alias:    "</span>);
+        alias.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"copia:    "</span>);
+        copia.<span class="f">mostrar</span>();
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>original: Ana (21 años)
+alias:    Ana (21 años)
+copia:    Ana (20 años)</pre></figure><p>Fíjate en la clase <code>Persona</code> de arriba: tiene un constructor normal y, justo debajo, el constructor copia <code>Persona(Persona otra)</code>. La primera línea, <code>this(otra.nombre, otra.edad)</code>, llama al otro constructor con los datos del objeto original.</p></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li>Un constructor copia recibe un objeto de la misma clase y crea otro con los mismos datos.</li><li>El alias comparte objeto; la copia es un objeto distinto con los mismos valores iniciales.</li><li>Después de copiar, modificar uno no afecta al otro.</li></ul></aside></section><section class="sec sub" id="s9-0-8" data-spy data-title="0.8 Copia superficial y copia profunda"><h3><a href="#u9-s9-0-8">0.8 Copia superficial y copia profunda</a></h3><div class="sec-body"><p>Si un objeto <strong>contiene otros objetos</strong> (una <code>Linea</code> tiene dos <code>Punto</code>; un array de <code>Persona</code> contiene varias personas) hay dos formas de copiarlo:</p><ul><li><strong>Copia superficial</strong>: se copian las referencias, así que la copia y el original <strong>comparten</strong> los objetos interiores.</li><li><strong>Copia profunda</strong>: se crean también copias de los objetos interiores, así que original y copia son totalmente independientes.</li></ul><p>Ejemplo con una línea formada por dos puntos:</p><figure class="code"><figcaption><span>Punto.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Punto</span> {
+    <span class="k">int</span> x;
+    <span class="k">int</span> y;
+
+    <span class="t">Punto</span>(<span class="k">int</span> x, <span class="k">int</span> y) {
+        <span class="k">this</span>.x = x;
+        <span class="k">this</span>.y = y;
+    }
+
+    <span class="c">// Constructor copia</span>
+    <span class="t">Punto</span>(<span class="t">Punto</span> otro) {
+        <span class="k">this</span>(otro.x, otro.y);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Linea.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Linea</span> {
+    <span class="t">Punto</span> inicio;
+    <span class="t">Punto</span> fin;
+
+    <span class="t">Linea</span>(<span class="t">Punto</span> inicio, <span class="t">Punto</span> fin) {
+        <span class="k">this</span>.inicio = inicio;
+        <span class="k">this</span>.fin = fin;
+    }
+
+    <span class="c">// Copia SUPERFICIAL: la nueva línea comparte los mismos objetos Punto</span>
+    <span class="t">Linea</span> <span class="f">copiaSuperficial</span>() {
+        <span class="k">return</span> <span class="k">new</span> <span class="t">Linea</span>(inicio, fin);
+    }
+
+    <span class="c">// Copia PROFUNDA: se crean también nuevos objetos Punto</span>
+    <span class="t">Linea</span> <span class="f">copiaProfunda</span>() {
+        <span class="k">return</span> <span class="k">new</span> <span class="t">Linea</span>(<span class="k">new</span> <span class="t">Punto</span>(inicio), <span class="k">new</span> <span class="t">Punto</span>(fin));
+    }
+
+    <span class="k">void</span> <span class="f">mostrar</span>() {
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"("</span> + inicio.x + <span class="s">","</span> + inicio.y + <span class="s">") -&gt; ("</span> + fin.x + <span class="s">","</span> + fin.y + <span class="s">")"</span>);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Ref07.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ref07</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Linea</span> l1 = <span class="k">new</span> <span class="t">Linea</span>(<span class="k">new</span> <span class="t">Punto</span>(<span class="n">0</span>, <span class="n">0</span>), <span class="k">new</span> <span class="t">Punto</span>(<span class="n">3</span>, <span class="n">4</span>));
+        <span class="t">Linea</span> superficial = l1.<span class="f">copiaSuperficial</span>();
+        <span class="t">Linea</span> profunda = l1.<span class="f">copiaProfunda</span>();
+
+        l1.fin.x = <span class="n">10</span>;      <span class="c">// movemos el punto final de la línea original</span>
+
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"original:    "</span>);
+        l1.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"superficial: "</span>);
+        superficial.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"profunda:    "</span>);
+        profunda.<span class="f">mostrar</span>();
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>original:    (0,0) -&gt; (10,4)
+superficial: (0,0) -&gt; (10,4)
+profunda:    (0,0) -&gt; (3,4)</pre></figure><p>Y lo mismo con un array de objetos: copiar el array elemento a elemento con <code>copia[i] = grupo[i]</code> es una copia superficial; para una copia profunda hay que crear un objeto nuevo en cada posición con el constructor copia.</p><figure class="code"><figcaption><span>Ref08.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Ref08</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span>[] grupo = {<span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>), <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Luis"</span>, <span class="n">25</span>)};
+
+        <span class="c">// Copia SUPERFICIAL del array: se copian las referencias</span>
+        <span class="t">Persona</span>[] superficial = <span class="k">new</span> <span class="t">Persona</span>[grupo.length];
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; grupo.length; i++) {
+            superficial[i] = grupo[i];
+        }
+
+        <span class="c">// Copia PROFUNDA del array: se crea un objeto nuevo por cada elemento</span>
+        <span class="t">Persona</span>[] profunda = <span class="k">new</span> <span class="t">Persona</span>[grupo.length];
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; grupo.length; i++) {
+            profunda[i] = <span class="k">new</span> <span class="t">Persona</span>(grupo[i]);
+        }
+
+        grupo[<span class="n">0</span>].edad = <span class="n">50</span>;     <span class="c">// cambiamos a Ana en el array original</span>
+
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"grupo[0]:      "</span>);
+        grupo[<span class="n">0</span>].<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"superficial[0]: "</span>);
+        superficial[<span class="n">0</span>].<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"profunda[0]:    "</span>);
+        profunda[<span class="n">0</span>].<span class="f">mostrar</span>();
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>grupo[0]:      Ana (50 años)
+superficial[0]: Ana (50 años)
+profunda[0]:    Ana (20 años)</pre></figure><aside class="callout key"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg><div><b class="t">Regla práctica</b><p>Si el objeto sólo contiene tipos primitivos (y <code>String</code>, que es inmutable) basta con un constructor copia normal. Si contiene otros objetos o arrays y quieres independencia total, la copia debe ser <strong>profunda</strong>: copiar también esos objetos interiores.</p></div></aside></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li>Copia superficial: se copian las referencias y se comparten los objetos interiores.</li><li>Copia profunda: se crean también copias de los objetos interiores.</li><li>Con arrays de objetos, <code>copia[i] = grupo[i]</code> es superficial; <code>copia[i] = new Persona(grupo[i])</code> es profunda.</li></ul></aside></section><section class="sec sub" id="s9-0-9" data-spy data-title="0.9 Resumen: ¿qué quiero hacer?"><h3><a href="#u9-s9-0-9">0.9 Resumen: ¿qué quiero hacer?</a></h3><div class="sec-body"><div class="tablewrap"><table><caption>¿Qué quiero hacer?</caption><thead><tr><th>Quiero…</th><th>Cómo se hace</th></tr></thead><tbody><tr><td>Dos nombres para el mismo objeto o array</td><td><code>b = a;</code> (alias)</td></tr><tr><td>Saber si dos variables apuntan al mismo objeto</td><td><code>a == b</code></td></tr><tr><td>Saber si dos textos son iguales</td><td><code>a.equals(b)</code></td></tr><tr><td>Copiar un array de números o de textos</td><td><code>new int[a.length]</code> + <code>for</code>, o <code>a.clone()</code></td></tr><tr><td>Copiar un objeto sencillo</td><td>Constructor copia: <code>new Persona(p)</code></td></tr><tr><td>Copiar un objeto que contiene otros objetos</td><td>Copia profunda: copiar también los objetos interiores</td></tr><tr><td>Que una función no modifique mi array u objeto</td><td>Pasarle una copia, o que la función devuelva una nueva</td></tr><tr><td>Evitar <code>NullPointerException</code></td><td>Crear el objeto con <code>new</code> o comprobar <code>!= null</code></td></tr></tbody></table></div></div><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li>Alias, copia superficial y copia profunda dan resultados distintos: elige según lo que necesites.</li><li>Pregúntate siempre: ¿quiero el <strong>mismo</strong> objeto o <strong>otro igual</strong>?</li></ul></aside></section><section class="sec sub" id="s9-0-10" data-spy data-title="0.10 Actividades para practicar"><h3><a href="#u9-s9-0-10">0.10 Actividades para practicar</a></h3><div class="sec-body"><p style="color:var(--muted)">Doce actividades para dominar referencias, alias, comparaciones y copias. En las de “predice”, intenta responder y dibujar la memoria <strong>antes</strong> de ver la solución.</p><div class="ex-list"><article class="ex" id="e9-r1" data-ex="9-r1" data-n="1"><div class="ex-h"><span class="ex-n">1</span><h4>Actividad 1</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Predice qué muestra este programa y dibuja las variables y los objetos que hay en memoria. Después ejecútalo y comprueba tu respuesta.<p><code>Persona</code> es la clase del apartado 0.1 (atributos públicos <code>nombre</code> y <code>edad</code>, constructor normal, constructor copia y método <code>mostrar()</code>).</p><figure class="code"><figcaption><span>Fragmento del programa</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span> a = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Marta"</span>, <span class="n">30</span>);
+        <span class="t">Persona</span> b = a;
+        <span class="t">Persona</span> c = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Marta"</span>, <span class="n">30</span>);
+        b.edad = <span class="n">31</span>;
+        c.edad = c.edad + <span class="n">5</span>;
+        a.<span class="f">mostrar</span>();
+        b.<span class="f">mostrar</span>();
+        c.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">println</span>(a == b);
+        <span class="t">System</span>.out.<span class="f">println</span>(a == c);
+    }</code></pre></figure></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Persona.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Persona</span> {
+    <span class="t">String</span> nombre;
+    <span class="k">int</span> edad;
+
+    <span class="c">// Constructor normal</span>
+    <span class="t">Persona</span>(<span class="t">String</span> nombre, <span class="k">int</span> edad) {
+        <span class="k">this</span>.nombre = nombre;
+        <span class="k">this</span>.edad = edad;
+    }
+
+    <span class="c">// Constructor copia: crea un objeto NUEVO con los mismos datos que otro</span>
+    <span class="t">Persona</span>(<span class="t">Persona</span> otra) {
+        <span class="k">this</span>(otra.nombre, otra.edad);
+    }
+
+    <span class="k">void</span> <span class="f">mostrar</span>() {
+        <span class="t">System</span>.out.<span class="f">println</span>(nombre + <span class="s">" ("</span> + edad + <span class="s">" años)"</span>);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Pract01.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract01</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span> a = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Marta"</span>, <span class="n">30</span>);
+        <span class="t">Persona</span> b = a;
+        <span class="t">Persona</span> c = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Marta"</span>, <span class="n">30</span>);
+        b.edad = <span class="n">31</span>;
+        c.edad = c.edad + <span class="n">5</span>;
+        a.<span class="f">mostrar</span>();
+        b.<span class="f">mostrar</span>();
+        c.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">println</span>(a == b);
+        <span class="t">System</span>.out.<span class="f">println</span>(a == c);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>Marta (31 años)
+Marta (31 años)
+Marta (35 años)
+true
+false</pre></figure><h5>Cómo funciona</h5><ul><li><code>b = a</code> no crea otra persona: <code>a</code> y <code>b</code> son dos nombres del mismo objeto, así que <code>b.edad = 31</code> cambia también lo que ve <code>a</code> (31).</li><li><code>c</code> es un objeto distinto creado con <code>new</code>, con los mismos datos al principio; sólo cambia su propia edad (35).</li><li><code>a == b</code> es <code>true</code> (mismo objeto) y <code>a == c</code> es <code>false</code> (objetos distintos aunque tuvieran los mismos datos).</li></ul></div></details></article><article class="ex" id="e9-r2" data-ex="9-r2" data-n="2"><div class="ex-h"><span class="ex-n">2</span><h4>Actividad 2</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Predice qué se imprime. ¿Cambia <code>n</code>? ¿Cambia la edad de <code>p</code>? ¿Y su nombre?<p><code>Persona</code> es la clase del apartado 0.1 (atributos públicos <code>nombre</code> y <code>edad</code>, constructor normal, constructor copia y método <code>mostrar()</code>).</p><figure class="code"><figcaption><span>Fragmento del programa</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">static</span> <span class="k">void</span> <span class="f">metodo1</span>(<span class="k">int</span> x, <span class="t">Persona</span> p) {
+        x = x * <span class="n">2</span>;
+        p.edad = p.edad * <span class="n">2</span>;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">metodo2</span>(<span class="t">Persona</span> p) {
+        p = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Nuevo"</span>, <span class="n">1</span>);
+        p.edad = <span class="n">100</span>;
+    }
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span> n = <span class="n">4</span>;
+        <span class="t">Persona</span> p = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Eva"</span>, <span class="n">10</span>);
+        <span class="f">metodo1</span>(n, p);
+        <span class="t">System</span>.out.<span class="f">println</span>(n + <span class="s">" "</span> + p.edad);
+        <span class="f">metodo2</span>(p);
+        <span class="t">System</span>.out.<span class="f">println</span>(p.nombre + <span class="s">" "</span> + p.edad);
+    }</code></pre></figure></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Persona.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Persona</span> {
+    <span class="t">String</span> nombre;
+    <span class="k">int</span> edad;
+
+    <span class="c">// Constructor normal</span>
+    <span class="t">Persona</span>(<span class="t">String</span> nombre, <span class="k">int</span> edad) {
+        <span class="k">this</span>.nombre = nombre;
+        <span class="k">this</span>.edad = edad;
+    }
+
+    <span class="c">// Constructor copia: crea un objeto NUEVO con los mismos datos que otro</span>
+    <span class="t">Persona</span>(<span class="t">Persona</span> otra) {
+        <span class="k">this</span>(otra.nombre, otra.edad);
+    }
+
+    <span class="k">void</span> <span class="f">mostrar</span>() {
+        <span class="t">System</span>.out.<span class="f">println</span>(nombre + <span class="s">" ("</span> + edad + <span class="s">" años)"</span>);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Pract02.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract02</span> {
+    <span class="k">static</span> <span class="k">void</span> <span class="f">metodo1</span>(<span class="k">int</span> x, <span class="t">Persona</span> p) {
+        x = x * <span class="n">2</span>;
+        p.edad = p.edad * <span class="n">2</span>;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">metodo2</span>(<span class="t">Persona</span> p) {
+        p = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Nuevo"</span>, <span class="n">1</span>);
+        p.edad = <span class="n">100</span>;
+    }
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span> n = <span class="n">4</span>;
+        <span class="t">Persona</span> p = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Eva"</span>, <span class="n">10</span>);
+        <span class="f">metodo1</span>(n, p);
+        <span class="t">System</span>.out.<span class="f">println</span>(n + <span class="s">" "</span> + p.edad);
+        <span class="f">metodo2</span>(p);
+        <span class="t">System</span>.out.<span class="f">println</span>(p.nombre + <span class="s">" "</span> + p.edad);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>4 20
+Eva 20</pre></figure><h5>Cómo funciona</h5><ul><li><code>metodo1</code> recibe una copia del número (<code>x</code> se duplica, <code>n</code> sigue valiendo 4) y una copia de la referencia (modifica el mismo objeto: la edad pasa de 10 a 20).</li><li><code>metodo2</code> reasigna su parámetro <code>p</code> a un objeto nuevo: cambia sólo su copia de la referencia. El <code>p</code> de <code>main</code> sigue apuntando a Eva con 20 años.</li></ul></div></details></article><article class="ex" id="e9-r3" data-ex="9-r3" data-n="3"><div class="ex-h"><span class="ex-n">3</span><h4>Actividad 3</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Dado <code>int[] a = {1, 2, 3, 4}; int[] b = a; b[0] = 100;</code>, ¿cuánto vale <code>a[0]</code>? Después haz que el array <code>c</code> sea una copia <strong>independiente</strong> de <code>a</code> y demuestra que modificar <code>c</code> no cambia <code>a</code>.</div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Pract03.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract03</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span>[] a = {<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>, <span class="n">4</span>};
+        <span class="k">int</span>[] b = a;
+        b[<span class="n">0</span>] = <span class="n">100</span>;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Con alias:   a[0] = "</span> + a[<span class="n">0</span>] + <span class="s">", b[0] = "</span> + b[<span class="n">0</span>]);
+
+        <span class="c">// Solución: b debe ser una copia independiente</span>
+        <span class="k">int</span>[] c = <span class="k">new</span> <span class="k">int</span>[a.length];
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; a.length; i++) {
+            c[i] = a[i];
+        }
+        c[<span class="n">1</span>] = <span class="n">200</span>;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Con copia:   a[1] = "</span> + a[<span class="n">1</span>] + <span class="s">", c[1] = "</span> + c[<span class="n">1</span>]);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>Con alias:   a[0] = 100, b[0] = 100
+Con copia:   a[1] = 2, c[1] = 200</pre></figure><h5>Cómo funciona</h5><ul><li><code>b = a</code> es un alias: <code>a[0]</code> y <code>b[0]</code> son la misma posición, valen 100.</li><li><code>c</code> es un array nuevo del mismo tamaño en el que se copia cada elemento con un <code>for</code>; cambiar <code>c[1]</code> no altera <code>a[1]</code>.</li></ul></div></details></article><article class="ex" id="e9-r4" data-ex="9-r4" data-n="4"><div class="ex-h"><span class="ex-n">4</span><h4>Actividad 4</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Escribe una función <code>static int[] copiar(int[] v)</code> que devuelva una copia independiente del array recibido. Pruébala con <code>{4, 8, 15, 16, 23, 42}</code>: modifica la copia y comprueba que el original no cambia.</div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Pract04.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract04</span> {
+    <span class="k">static</span> <span class="k">int</span>[] <span class="f">copiar</span>(<span class="k">int</span>[] v) {
+        <span class="k">int</span>[] copia = <span class="k">new</span> <span class="k">int</span>[v.length];
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; v.length; i++) {
+            copia[i] = v[i];
+        }
+        <span class="k">return</span> copia;
+    }
+
+    <span class="k">static</span> <span class="t">String</span> <span class="f">mostrar</span>(<span class="k">int</span>[] v) {
+        <span class="t">String</span> texto = <span class="s">""</span>;
+        <span class="k">for</span> (<span class="k">int</span> elemento : v) {
+            texto += elemento + <span class="s">" "</span>;
+        }
+        <span class="k">return</span> texto.<span class="f">trim</span>();
+    }
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span>[] original = {<span class="n">4</span>, <span class="n">8</span>, <span class="n">15</span>, <span class="n">16</span>, <span class="n">23</span>, <span class="n">42</span>};
+        <span class="k">int</span>[] copia = <span class="f">copiar</span>(original);
+        copia[<span class="n">0</span>] = <span class="n">0</span>;
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"original: "</span> + <span class="f">mostrar</span>(original));
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"copia:    "</span> + <span class="f">mostrar</span>(copia));
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"¿Son el mismo array? "</span> + (original == copia));
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>original: 4 8 15 16 23 42
+copia:    0 8 15 16 23 42
+¿Son el mismo array? false</pre></figure><h5>Cómo funciona</h5><ul><li>La función crea un array nuevo (<code>new int[v.length]</code>), copia los elementos y devuelve su referencia.</li><li><code>original == copia</code> es <code>false</code>: son dos arrays distintos con los mismos valores.</li></ul></div></details></article><article class="ex" id="e9-r5" data-ex="9-r5" data-n="5"><div class="ex-h"><span class="ex-n">5</span><h4>Actividad 5</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Escribe dos funciones: <code>static void invertir(int[] v)</code>, que invierte el array recibido (lo modifica), y <code>static int[] invertido(int[] v)</code>, que devuelve un array nuevo con los elementos al revés <strong>sin modificar</strong> el original. Pruébalas y explica la diferencia.</div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Pract05.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract05</span> {
+    <span class="k">static</span> <span class="t">String</span> <span class="f">mostrar</span>(<span class="k">int</span>[] v) {
+        <span class="t">String</span> texto = <span class="s">""</span>;
+        <span class="k">for</span> (<span class="k">int</span> elemento : v) {
+            texto += elemento + <span class="s">" "</span>;
+        }
+        <span class="k">return</span> texto.<span class="f">trim</span>();
+    }
+
+    <span class="c">// Invierte el array recibido (lo MODIFICA)</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="f">invertir</span>(<span class="k">int</span>[] v) {
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; v.length / <span class="n">2</span>; i++) {
+            <span class="k">int</span> auxiliar = v[i];
+            v[i] = v[v.length - <span class="n">1</span> - i];
+            v[v.length - <span class="n">1</span> - i] = auxiliar;
+        }
+    }
+
+    <span class="c">// Devuelve un array nuevo invertido (NO modifica el original)</span>
+    <span class="k">static</span> <span class="k">int</span>[] <span class="f">invertido</span>(<span class="k">int</span>[] v) {
+        <span class="k">int</span>[] resultado = <span class="k">new</span> <span class="k">int</span>[v.length];
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; v.length; i++) {
+            resultado[i] = v[v.length - <span class="n">1</span> - i];
+        }
+        <span class="k">return</span> resultado;
+    }
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span>[] a = {<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>, <span class="n">4</span>, <span class="n">5</span>};
+        <span class="k">int</span>[] b = <span class="f">invertido</span>(a);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"a = "</span> + <span class="f">mostrar</span>(a) + <span class="s">"   b = "</span> + <span class="f">mostrar</span>(b));
+        <span class="f">invertir</span>(a);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"a = "</span> + <span class="f">mostrar</span>(a) + <span class="s">"   b = "</span> + <span class="f">mostrar</span>(b));
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>a = 1 2 3 4 5   b = 5 4 3 2 1
+a = 5 4 3 2 1   b = 5 4 3 2 1</pre></figure><h5>Cómo funciona</h5><ul><li><code>invertido</code> trabaja sobre un array nuevo: el original sigue igual en la primera línea.</li><li><code>invertir</code> intercambia los extremos dentro del propio array recibido (una función puede modificar el array al que apunta su parámetro), por eso <code>a</code> queda invertido. <code>b</code> era un array distinto y no se ve afectado.</li></ul></div></details></article><article class="ex" id="e9-r6" data-ex="9-r6" data-n="6"><div class="ex-h"><span class="ex-n">6</span><h4>Actividad 6</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Pide dos palabras por teclado y muestra el resultado de compararlas con <code>==</code> y con <code>equals</code>. Escribe las dos veces la misma palabra. ¿Por qué no coinciden los resultados?</div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Pract06.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">import</span> java.util.<span class="t">Scanner</span>;
+
+<span class="k">public</span> <span class="k">class</span> <span class="t">Pract06</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Scanner</span> entrada = <span class="k">new</span> <span class="t">Scanner</span>(<span class="t">System</span>.in);
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Escribe una palabra: "</span>);
+        <span class="t">String</span> palabra1 = entrada.<span class="f">next</span>();
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"Escribe otra palabra: "</span>);
+        <span class="t">String</span> palabra2 = entrada.<span class="f">next</span>();
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"palabra1 == palabra2      -&gt; "</span> + (palabra1 == palabra2));
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"palabra1.equals(palabra2) -&gt; "</span> + palabra1.<span class="f">equals</span>(palabra2));
+        <span class="k">if</span> (palabra1.<span class="f">equals</span>(palabra2)) {
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Las palabras son iguales"</span>);
+        } <span class="k">else</span> {
+            <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Las palabras son distintas"</span>);
+        }
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span><span class="legend"><span class="in">entrada del usuario</span></span></figcaption><pre>Escribe una palabra: <span class="in">java</span>
+Escribe otra palabra: <span class="in">java</span>
+palabra1 == palabra2      -&gt; false
+palabra1.equals(palabra2) -&gt; true
+Las palabras son iguales</pre></figure><h5>Cómo funciona</h5><ul><li>Los dos textos se leen del teclado con <code>entrada.next()</code>: son dos objetos <code>String</code> distintos aunque tengan las mismas letras.</li><li><code>==</code> compara referencias (<code>false</code>) y <code>equals</code> compara el contenido (<code>true</code>). Por eso, para textos, se usa siempre <code>equals</code>.</li></ul></div></details></article><article class="ex" id="e9-r7" data-ex="9-r7" data-n="7"><div class="ex-h"><span class="ex-n">7</span><h4>Actividad 7</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Añade a la clase <code>Persona</code> un constructor copia (ya lo tiene el ejemplo del apartado 0.1). Crea una persona, haz una copia, modifica los datos de la copia y muestra las dos. Comprueba con <code>==</code> que son objetos distintos.</div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Persona.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Persona</span> {
+    <span class="t">String</span> nombre;
+    <span class="k">int</span> edad;
+
+    <span class="c">// Constructor normal</span>
+    <span class="t">Persona</span>(<span class="t">String</span> nombre, <span class="k">int</span> edad) {
+        <span class="k">this</span>.nombre = nombre;
+        <span class="k">this</span>.edad = edad;
+    }
+
+    <span class="c">// Constructor copia: crea un objeto NUEVO con los mismos datos que otro</span>
+    <span class="t">Persona</span>(<span class="t">Persona</span> otra) {
+        <span class="k">this</span>(otra.nombre, otra.edad);
+    }
+
+    <span class="k">void</span> <span class="f">mostrar</span>() {
+        <span class="t">System</span>.out.<span class="f">println</span>(nombre + <span class="s">" ("</span> + edad + <span class="s">" años)"</span>);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Pract07.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract07</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span> original = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Pablo"</span>, <span class="n">40</span>);
+        <span class="t">Persona</span> copia = <span class="k">new</span> <span class="t">Persona</span>(original);
+        copia.nombre = <span class="s">"Pablo (copia)"</span>;
+        copia.edad = <span class="n">41</span>;
+        original.<span class="f">mostrar</span>();
+        copia.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"¿Son el mismo objeto? "</span> + (original == copia));
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>Pablo (40 años)
+Pablo (copia) (41 años)
+¿Son el mismo objeto? false</pre></figure><h5>Cómo funciona</h5><ul><li><code>new Persona(original)</code> llama al constructor copia y crea un objeto nuevo con el mismo nombre y la misma edad.</li><li>Como son objetos independientes, cambiar la copia no modifica el original.</li></ul></div></details></article><article class="ex" id="e9-r8" data-ex="9-r8" data-n="8"><div class="ex-h"><span class="ex-n">8</span><h4>Actividad 8</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Predice qué muestra el programa: ¿cuáles de las cuatro funciones consiguen realmente intercambiar los valores? (enteros, elementos de un array, referencias a <code>Persona</code> y datos de dos <code>Persona</code>). Después compruébalo.<p><code>Persona</code> es la clase del apartado 0.1 (atributos públicos <code>nombre</code> y <code>edad</code>, constructor normal, constructor copia y método <code>mostrar()</code>).</p><figure class="code"><figcaption><span>Fragmento del programa</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">static</span> <span class="k">void</span> <span class="f">intercambiaInt</span>(<span class="k">int</span> x, <span class="k">int</span> y) {
+        <span class="k">int</span> auxiliar = x;
+        x = y;
+        y = auxiliar;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">intercambiaElementos</span>(<span class="k">int</span>[] v, <span class="k">int</span> i, <span class="k">int</span> j) {
+        <span class="k">int</span> auxiliar = v[i];
+        v[i] = v[j];
+        v[j] = auxiliar;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">intercambiaReferencias</span>(<span class="t">Persona</span> p, <span class="t">Persona</span> q) {
+        <span class="t">Persona</span> auxiliar = p;
+        p = q;
+        q = auxiliar;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">intercambiaDatos</span>(<span class="t">Persona</span> p, <span class="t">Persona</span> q) {
+        <span class="t">String</span> nombre = p.nombre;
+        <span class="k">int</span> edad = p.edad;
+        p.nombre = q.nombre;
+        p.edad = q.edad;
+        q.nombre = nombre;
+        q.edad = edad;
+    }
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span> a = <span class="n">1</span>;
+        <span class="k">int</span> b = <span class="n">2</span>;
+        <span class="f">intercambiaInt</span>(a, b);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Enteros:      a = "</span> + a + <span class="s">", b = "</span> + b);
+
+        <span class="k">int</span>[] v = {<span class="n">10</span>, <span class="n">20</span>, <span class="n">30</span>};
+        <span class="f">intercambiaElementos</span>(v, <span class="n">0</span>, <span class="n">2</span>);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Array:        "</span> + v[<span class="n">0</span>] + <span class="s">" "</span> + v[<span class="n">1</span>] + <span class="s">" "</span> + v[<span class="n">2</span>]);
+
+        <span class="t">Persona</span> ana = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>);
+        <span class="t">Persona</span> luis = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Luis"</span>, <span class="n">25</span>);
+        <span class="f">intercambiaReferencias</span>(ana, luis);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Referencias:  ana = "</span> + ana.nombre + <span class="s">", luis = "</span> + luis.nombre);
+        <span class="f">intercambiaDatos</span>(ana, luis);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Datos:        ana = "</span> + ana.nombre + <span class="s">", luis = "</span> + luis.nombre);
+    }</code></pre></figure></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Persona.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Persona</span> {
+    <span class="t">String</span> nombre;
+    <span class="k">int</span> edad;
+
+    <span class="c">// Constructor normal</span>
+    <span class="t">Persona</span>(<span class="t">String</span> nombre, <span class="k">int</span> edad) {
+        <span class="k">this</span>.nombre = nombre;
+        <span class="k">this</span>.edad = edad;
+    }
+
+    <span class="c">// Constructor copia: crea un objeto NUEVO con los mismos datos que otro</span>
+    <span class="t">Persona</span>(<span class="t">Persona</span> otra) {
+        <span class="k">this</span>(otra.nombre, otra.edad);
+    }
+
+    <span class="k">void</span> <span class="f">mostrar</span>() {
+        <span class="t">System</span>.out.<span class="f">println</span>(nombre + <span class="s">" ("</span> + edad + <span class="s">" años)"</span>);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Pract08.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract08</span> {
+    <span class="k">static</span> <span class="k">void</span> <span class="f">intercambiaInt</span>(<span class="k">int</span> x, <span class="k">int</span> y) {
+        <span class="k">int</span> auxiliar = x;
+        x = y;
+        y = auxiliar;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">intercambiaElementos</span>(<span class="k">int</span>[] v, <span class="k">int</span> i, <span class="k">int</span> j) {
+        <span class="k">int</span> auxiliar = v[i];
+        v[i] = v[j];
+        v[j] = auxiliar;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">intercambiaReferencias</span>(<span class="t">Persona</span> p, <span class="t">Persona</span> q) {
+        <span class="t">Persona</span> auxiliar = p;
+        p = q;
+        q = auxiliar;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">intercambiaDatos</span>(<span class="t">Persona</span> p, <span class="t">Persona</span> q) {
+        <span class="t">String</span> nombre = p.nombre;
+        <span class="k">int</span> edad = p.edad;
+        p.nombre = q.nombre;
+        p.edad = q.edad;
+        q.nombre = nombre;
+        q.edad = edad;
+    }
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span> a = <span class="n">1</span>;
+        <span class="k">int</span> b = <span class="n">2</span>;
+        <span class="f">intercambiaInt</span>(a, b);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Enteros:      a = "</span> + a + <span class="s">", b = "</span> + b);
+
+        <span class="k">int</span>[] v = {<span class="n">10</span>, <span class="n">20</span>, <span class="n">30</span>};
+        <span class="f">intercambiaElementos</span>(v, <span class="n">0</span>, <span class="n">2</span>);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Array:        "</span> + v[<span class="n">0</span>] + <span class="s">" "</span> + v[<span class="n">1</span>] + <span class="s">" "</span> + v[<span class="n">2</span>]);
+
+        <span class="t">Persona</span> ana = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">20</span>);
+        <span class="t">Persona</span> luis = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Luis"</span>, <span class="n">25</span>);
+        <span class="f">intercambiaReferencias</span>(ana, luis);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Referencias:  ana = "</span> + ana.nombre + <span class="s">", luis = "</span> + luis.nombre);
+        <span class="f">intercambiaDatos</span>(ana, luis);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Datos:        ana = "</span> + ana.nombre + <span class="s">", luis = "</span> + luis.nombre);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>Enteros:      a = 1, b = 2
+Array:        30 20 10
+Referencias:  ana = Ana, luis = Luis
+Datos:        ana = Luis, luis = Ana</pre></figure><h5>Cómo funciona</h5><ul><li><code>intercambiaInt</code> y <code>intercambiaReferencias</code> sólo intercambian <strong>copias locales</strong> (el valor o la referencia) y no tienen efecto fuera.</li><li><code>intercambiaElementos</code> modifica el contenido del array recibido y <code>intercambiaDatos</code> modifica los atributos de los objetos: esos cambios sí se ven fuera, porque se hacen sobre los objetos originales.</li></ul></div></details></article><article class="ex" id="e9-r9" data-ex="9-r9" data-n="9"><div class="ex-h"><span class="ex-n">9</span><h4>Actividad 9</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">La clase <code>Linea</code> tiene dos objetos <code>Punto</code> (<code>inicio</code> y <code>fin</code>). Escribe en ella un <strong>constructor copia profundo</strong> y demuestra que modificar los puntos de la copia no afecta al original.</div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Punto.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Punto</span> {
+    <span class="k">int</span> x;
+    <span class="k">int</span> y;
+
+    <span class="t">Punto</span>(<span class="k">int</span> x, <span class="k">int</span> y) {
+        <span class="k">this</span>.x = x;
+        <span class="k">this</span>.y = y;
+    }
+
+    <span class="c">// Constructor copia</span>
+    <span class="t">Punto</span>(<span class="t">Punto</span> otro) {
+        <span class="k">this</span>(otro.x, otro.y);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>LineaP9.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">LineaP9</span> {
+    <span class="t">Punto</span> inicio;
+    <span class="t">Punto</span> fin;
+
+    <span class="t">LineaP9</span>(<span class="t">Punto</span> inicio, <span class="t">Punto</span> fin) {
+        <span class="k">this</span>.inicio = inicio;
+        <span class="k">this</span>.fin = fin;
+    }
+
+    <span class="c">// Constructor copia PROFUNDO: crea también nuevos objetos Punto</span>
+    <span class="t">LineaP9</span>(<span class="t">LineaP9</span> otra) {
+        <span class="k">this</span>(<span class="k">new</span> <span class="t">Punto</span>(otra.inicio), <span class="k">new</span> <span class="t">Punto</span>(otra.fin));
+    }
+
+    <span class="k">void</span> <span class="f">mostrar</span>() {
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"("</span> + inicio.x + <span class="s">","</span> + inicio.y + <span class="s">") -&gt; ("</span> + fin.x + <span class="s">","</span> + fin.y + <span class="s">")"</span>);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Pract09.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract09</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">LineaP9</span> original = <span class="k">new</span> <span class="t">LineaP9</span>(<span class="k">new</span> <span class="t">Punto</span>(<span class="n">1</span>, <span class="n">1</span>), <span class="k">new</span> <span class="t">Punto</span>(<span class="n">5</span>, <span class="n">5</span>));
+        <span class="t">LineaP9</span> copia = <span class="k">new</span> <span class="t">LineaP9</span>(original);
+
+        copia.inicio.x = <span class="n">0</span>;
+        copia.fin.y = <span class="n">9</span>;
+
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"original: "</span>);
+        original.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"copia:    "</span>);
+        copia.<span class="f">mostrar</span>();
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"¿Comparten el punto inicial? "</span> + (original.inicio == copia.inicio));
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>original: (1,1) -&gt; (5,5)
+copia:    (0,1) -&gt; (5,9)
+¿Comparten el punto inicial? false</pre></figure><h5>Cómo funciona</h5><ul><li>El constructor copia crea nuevos <code>Punto</code> con el constructor copia de <code>Punto</code> y llama al constructor normal con ellos.</li><li>Al modificar <code>copia.inicio.x</code> y <code>copia.fin.y</code> el original no cambia, y <code>original.inicio == copia.inicio</code> es <code>false</code>: no comparten ningún punto.</li></ul></div></details></article><article class="ex" id="e9-r10" data-ex="9-r10" data-n="10"><div class="ex-h"><span class="ex-n">10</span><h4>Actividad 10</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Escribe una función <code>static Persona[] copiaProfunda(Persona[] origen)</code> que devuelva una copia profunda de un array de personas. Comprueba qué ocurre al modificar a la primera persona del array original comparándolo con un simple alias del array y con la copia profunda.<p><code>Persona</code> es la clase del apartado 0.1 (atributos públicos <code>nombre</code> y <code>edad</code>, constructor normal, constructor copia y método <code>mostrar()</code>).</p></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Persona.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Persona</span> {
+    <span class="t">String</span> nombre;
+    <span class="k">int</span> edad;
+
+    <span class="c">// Constructor normal</span>
+    <span class="t">Persona</span>(<span class="t">String</span> nombre, <span class="k">int</span> edad) {
+        <span class="k">this</span>.nombre = nombre;
+        <span class="k">this</span>.edad = edad;
+    }
+
+    <span class="c">// Constructor copia: crea un objeto NUEVO con los mismos datos que otro</span>
+    <span class="t">Persona</span>(<span class="t">Persona</span> otra) {
+        <span class="k">this</span>(otra.nombre, otra.edad);
+    }
+
+    <span class="k">void</span> <span class="f">mostrar</span>() {
+        <span class="t">System</span>.out.<span class="f">println</span>(nombre + <span class="s">" ("</span> + edad + <span class="s">" años)"</span>);
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Pract10.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract10</span> {
+    <span class="k">static</span> <span class="t">Persona</span>[] <span class="f">copiaProfunda</span>(<span class="t">Persona</span>[] origen) {
+        <span class="t">Persona</span>[] copia = <span class="k">new</span> <span class="t">Persona</span>[origen.length];
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; origen.length; i++) {
+            copia[i] = <span class="k">new</span> <span class="t">Persona</span>(origen[i]);
+        }
+        <span class="k">return</span> copia;
+    }
+
+    <span class="k">static</span> <span class="k">void</span> <span class="f">mostrarTodos</span>(<span class="t">String</span> titulo, <span class="t">Persona</span>[] grupo) {
+        <span class="t">System</span>.out.<span class="f">println</span>(titulo);
+        <span class="k">for</span> (<span class="t">Persona</span> p : grupo) {
+            <span class="t">System</span>.out.<span class="f">print</span>(<span class="s">"  "</span>);
+            p.<span class="f">mostrar</span>();
+        }
+    }
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span>[] clase = {<span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Ana"</span>, <span class="n">18</span>), <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Luis"</span>, <span class="n">19</span>), <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Eva"</span>, <span class="n">20</span>)};
+        <span class="t">Persona</span>[] mismos = clase;
+        <span class="t">Persona</span>[] copia = <span class="f">copiaProfunda</span>(clase);
+
+        clase[<span class="n">0</span>].edad = <span class="n">99</span>;
+        <span class="f">mostrarTodos</span>(<span class="s">"clase:"</span>, clase);
+        <span class="f">mostrarTodos</span>(<span class="s">"mismos (alias):"</span>, mismos);
+        <span class="f">mostrarTodos</span>(<span class="s">"copia profunda:"</span>, copia);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>clase:
+  Ana (99 años)
+  Luis (19 años)
+  Eva (20 años)
+mismos (alias):
+  Ana (99 años)
+  Luis (19 años)
+  Eva (20 años)
+copia profunda:
+  Ana (18 años)
+  Luis (19 años)
+  Eva (20 años)</pre></figure><h5>Cómo funciona</h5><ul><li>El alias <code>mismos</code> es el mismo array, así que ve el cambio.</li><li>La copia profunda crea una <code>Persona</code> nueva por cada posición con el constructor copia; es independiente del original.</li></ul></div></details></article><article class="ex" id="e9-r11" data-ex="9-r11" data-n="11"><div class="ex-h"><span class="ex-n">11</span><h4>Actividad 11</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Este programa se detiene con un error. Ejecútalo, lee el mensaje de Eclipse, explica qué ha pasado y corrígelo.<p><code>Persona</code> es la clase del apartado 0.1 (atributos públicos <code>nombre</code> y <code>edad</code>, constructor normal, constructor copia y método <code>mostrar()</code>).</p><figure class="code"><figcaption><span>Fragmento del programa</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span>[] grupo = <span class="k">new</span> <span class="t">Persona</span>[<span class="n">3</span>];    <span class="c">// se crea el array, pero NO las personas</span>
+        grupo[<span class="n">0</span>].nombre = <span class="s">"Ana"</span>;             <span class="c">// ERROR</span>
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Fin"</span>);
+    }</code></pre></figure></div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Pract11a.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract11a</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span>[] grupo = <span class="k">new</span> <span class="t">Persona</span>[<span class="n">3</span>];    <span class="c">// se crea el array, pero NO las personas</span>
+        grupo[<span class="n">0</span>].nombre = <span class="s">"Ana"</span>;             <span class="c">// ERROR</span>
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Fin"</span>);
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse (el programa termina con un error)</span></figcaption><pre>Exception in thread "main" java.lang.NullPointerException: Cannot assign field "nombre" because "grupo[0]" is null
+	at Pract11a.main(Pract11a.java:4)</pre></figure><h5>Cómo funciona</h5><ul><li><code>new Persona[3]</code> crea sólo el array, con tres posiciones que valen <code>null</code>. No se ha creado ninguna persona.</li><li><code>grupo[0].nombre = "Ana"</code> intenta usar un objeto que no existe: <code>NullPointerException</code>.</li></ul><p><strong>Corrección:</strong> crear una persona en cada posición antes de usarla.</p><figure class="code"><figcaption><span>Pract11b.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract11b</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Persona</span>[] grupo = <span class="k">new</span> <span class="t">Persona</span>[<span class="n">3</span>];
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; grupo.length; i++) {
+            grupo[i] = <span class="k">new</span> <span class="t">Persona</span>(<span class="s">"Sin nombre"</span>, <span class="n">0</span>);   <span class="c">// ahora cada posición apunta a un objeto</span>
+        }
+        grupo[<span class="n">0</span>].nombre = <span class="s">"Ana"</span>;
+        grupo[<span class="n">0</span>].edad = <span class="n">20</span>;
+        <span class="k">for</span> (<span class="t">Persona</span> p : grupo) {
+            p.<span class="f">mostrar</span>();
+        }
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>Ana (20 años)
+Sin nombre (0 años)
+Sin nombre (0 años)</pre></figure></div></details></article><article class="ex" id="e9-r12" data-ex="9-r12" data-n="12"><div class="ex-h"><span class="ex-n">12</span><h4>Actividad 12</h4><label class="done-l"><input type="checkbox"> Hecho</label></div><div class="ex-body">Una clase <code>Notas</code> guarda un array <code>private</code> de notas y ofrece <code>getNotas()</code>. Comprueba que, con <code>getNotas()</code> devolviendo el array interno, alguien de fuera puede modificar el estado interno (aunque el atributo sea <code>private</code>). Después corrige la clase haciendo <strong>copias defensivas</strong> al recibir y al devolver el array.</div><details class="sol"><summary>Ver solución</summary><div class="sol-in"><figure class="code"><figcaption><span>Notas.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Notas</span> {
+    <span class="k">private</span> <span class="k">int</span>[] notas;
+
+    <span class="t">Notas</span>(<span class="k">int</span>[] notas) {
+        <span class="k">this</span>.notas = notas;
+    }
+
+    <span class="k">int</span>[] <span class="f">getNotas</span>() {
+        <span class="k">return</span> notas;          <span class="c">// devuelve el array interno</span>
+    }
+
+    <span class="k">int</span> <span class="f">suma</span>() {
+        <span class="k">int</span> total = <span class="n">0</span>;
+        <span class="k">for</span> (<span class="k">int</span> n : notas) {
+            total += n;
+        }
+        <span class="k">return</span> total;
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Pract12a.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract12a</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="t">Notas</span> n = <span class="k">new</span> <span class="t">Notas</span>(<span class="k">new</span> <span class="k">int</span>[] {<span class="n">5</span>, <span class="n">6</span>, <span class="n">7</span>});
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Suma inicial: "</span> + n.<span class="f">suma</span>());
+        <span class="k">int</span>[] fuera = n.<span class="f">getNotas</span>();
+        fuera[<span class="n">0</span>] = <span class="n">100</span>;                 <span class="c">// ¡se ha modificado el estado interno!</span>
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Suma después: "</span> + n.<span class="f">suma</span>());
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>Suma inicial: 18
+Suma después: 113</pre></figure><p><strong>Corrección: copias defensivas.</strong></p><figure class="code"><figcaption><span>Notas.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Notas</span> {
+    <span class="k">private</span> <span class="k">int</span>[] notas;
+
+    <span class="t">Notas</span>(<span class="k">int</span>[] notas) {
+        <span class="k">this</span>.notas = <span class="k">new</span> <span class="k">int</span>[notas.length];       <span class="c">// copia de entrada</span>
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; notas.length; i++) {
+            <span class="k">this</span>.notas[i] = notas[i];
+        }
+    }
+
+    <span class="k">int</span>[] <span class="f">getNotas</span>() {
+        <span class="k">int</span>[] copia = <span class="k">new</span> <span class="k">int</span>[notas.length];      <span class="c">// copia de salida</span>
+        <span class="k">for</span> (<span class="k">int</span> i = <span class="n">0</span>; i &lt; notas.length; i++) {
+            copia[i] = notas[i];
+        }
+        <span class="k">return</span> copia;
+    }
+
+    <span class="k">int</span> <span class="f">suma</span>() {
+        <span class="k">int</span> total = <span class="n">0</span>;
+        <span class="k">for</span> (<span class="k">int</span> n : notas) {
+            total += n;
+        }
+        <span class="k">return</span> total;
+    }
+}</code></pre></figure><figure class="code"><figcaption><span>Pract12b.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="k">public</span> <span class="k">class</span> <span class="t">Pract12b</span> {
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="f">main</span>(<span class="t">String</span>[] args) {
+        <span class="k">int</span>[] datos = {<span class="n">5</span>, <span class="n">6</span>, <span class="n">7</span>};
+        <span class="t">Notas</span> n = <span class="k">new</span> <span class="t">Notas</span>(datos);
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Suma inicial: "</span> + n.<span class="f">suma</span>());
+        datos[<span class="n">0</span>] = <span class="n">100</span>;                 <span class="c">// no afecta al objeto</span>
+        <span class="k">int</span>[] fuera = n.<span class="f">getNotas</span>();
+        fuera[<span class="n">1</span>] = <span class="n">100</span>;                 <span class="c">// tampoco</span>
+        <span class="t">System</span>.out.<span class="f">println</span>(<span class="s">"Suma después: "</span> + n.<span class="f">suma</span>());
+    }
+}</code></pre></figure><figure class="out console"><figcaption><span>Resultado en la consola de Eclipse</span></figcaption><pre>Suma inicial: 18
+Suma después: 18</pre></figure><h5>Cómo funciona</h5><ul><li>Que el atributo sea <code>private</code> no basta: si el getter devuelve la referencia del array, quien la recibe puede modificarlo (la suma sube de 18 a 113).</li><li>La copia defensiva se hace en el constructor (para que quien creó la clase no pueda modificar el array después con su propia referencia) y en <code>getNotas()</code> (para que quien lo recibe sólo tenga una copia).</li></ul></div></details></article></div></div></section><section class="sec sub" id="s9-0-11" data-spy data-title="0.11 Autoevaluación del bloque"><h3><a href="#u9-s9-0-11">0.11 Autoevaluación del bloque</a></h3><div class="sec-body"><div class="qs"><div class="q" data-a="0"><p class="qt">Tras <code>int a = 5; int b = a; b = 10;</code>, ¿cuánto vale <code>a</code>?</p><div class="opts"><button type="button" class="opt">5</button><button type="button" class="opt">10</button><button type="button" class="opt">15</button><button type="button" class="opt">Da error</button></div><p class="why" hidden>Las variables primitivas guardan su propio valor: <code>b = a</code> copia el valor y después cada variable es independiente.</p></div><div class="q" data-a="1"><p class="qt">Tras <code>Persona p2 = p1; p2.edad = 30;</code>, ¿qué edad tiene <code>p1</code>?</p><div class="opts"><button type="button" class="opt">La que tenía antes</button><button type="button" class="opt">30, porque <code>p1</code> y <code>p2</code> son el mismo objeto</button><button type="button" class="opt">Da error</button><button type="button" class="opt"><code>null</code></button></div><p class="why" hidden><code>p2 = p1</code> copia la referencia, no el objeto: hay un único objeto con dos nombres.</p></div><div class="q" data-a="1"><p class="qt">¿Qué compara <code>==</code> cuando los dos operandos son objetos?</p><div class="opts"><button type="button" class="opt">Que tengan los mismos atributos</button><button type="button" class="opt">Que sean el mismo objeto (la misma referencia)</button><button type="button" class="opt">Su tamaño en memoria</button><button type="button" class="opt">Nada, no se puede usar</button></div><p class="why" hidden>Con objetos, <code>==</code> compara referencias. Para el contenido de dos textos se usa <code>equals</code>.</p></div><div class="q" data-a="1"><p class="qt">Una función recibe <code>int[] v</code> y ejecuta <code>v = new int[] {9};</code>. ¿Cambia el array de la variable original?</p><div class="opts"><button type="button" class="opt">Sí, siempre</button><button type="button" class="opt">No: sólo cambia su copia local de la referencia</button><button type="button" class="opt">Sólo si la función es <code>static</code></button><button type="button" class="opt">Depende del tamaño</button></div><p class="why" hidden>Java pasa una copia de la referencia: reasignarla dentro de la función no cambia la variable de fuera (aunque sí se puede modificar el contenido del array).</p></div><div class="q" data-a="1"><p class="qt">¿Cuál de estas opciones crea una copia independiente de un array <code>a</code>?</p><div class="opts"><button type="button" class="opt"><code>int[] b = a;</code></button><button type="button" class="opt"><code>int[] b = new int[a.length];</code> y copiar cada elemento con un <code>for</code></button><button type="button" class="opt"><code>a == b</code></button><button type="button" class="opt"><code>int[] b; b = a;</code></button></div><p class="why" hidden>Hay que crear un array nuevo y copiar los elementos. Las otras opciones sólo crean alias o comparan.</p></div><div class="q" data-a="1"><p class="qt">En una copia superficial de una <code>Linea</code> se modifica un <code>Punto</code>. ¿Qué ocurre?</p><div class="opts"><button type="button" class="opt">Sólo cambia la copia</button><button type="button" class="opt">Cambia también en el original, porque los dos comparten ese objeto <code>Punto</code></button><button type="button" class="opt">Da error de compilación</button><button type="button" class="opt">No ocurre nada</button></div><p class="why" hidden>La copia superficial copia las referencias a los puntos, no los puntos: ambos objetos <code>Linea</code> comparten los mismos <code>Punto</code>.</p></div><div class="q" data-a="0"><p class="qt">¿Cuándo se produce una <code>NullPointerException</code>?</p><div class="opts"><button type="button" class="opt">Al usar un atributo o método de una variable que vale <code>null</code></button><button type="button" class="opt">Al dividir entre cero</button><button type="button" class="opt">Al salirse de los límites de un array</button><button type="button" class="opt">Al compilar</button></div><p class="why" hidden>Ocurre al usar como objeto una referencia que no apunta a ninguno.</p></div></div><div class="score" hidden style="margin-top:14px"><span class="score-t"></span><button type="button" class="btn qreset">Repetir</button></div></div></section><aside class="ideas"><h4><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg> Ideas clave</h4><ul><li>Los tipos primitivos guardan valores; objetos, arrays y <code>String</code> se manejan mediante referencias.</li><li><code>b = a</code> con objetos o arrays crea un alias, no una copia.</li><li><code>==</code> compara referencias; <code>equals</code> compara contenido.</li><li>Una función puede modificar el objeto recibido, pero no cambiar a qué objeto apunta tu variable.</li><li>Para copiar de verdad: array nuevo + <code>for</code>, constructor copia y, si hay objetos dentro, copia profunda.</li></ul></aside></section><section class="sec" id="s9-1" data-spy data-title="9.1 Clases y objetos"><h2><a href="#u9-s9-1">9.1 Clases y objetos</a></h2><div class="sec-body"><p>La programación orientada a objetos es un paradigma de programación que se basa, como su nombre indica, en la utilización de objetos. Estos objetos también se suelen llamar instancias.</p><p>Un objeto en términos de POO no se diferencia mucho de lo que conocemos como un objeto en la vida real. Pensemos por ejemplo en un coche. Nuestro coche sería un objeto concreto de la vida real, igual que el coche del vecino, o el coche de un compañero de trabajo, o un deportivo que vimos por la calle el fin de semana pasado... Todos esos coches son objetos concretos que podemos ver y tocar.</p><p>Tanto mi coche como el coche del vecino tienen algo en común, ambos son coches. En este caso mi coche y el coche del vecino serían <strong>instancias</strong> (objetos) y coche (a secas) sería una <strong>clase</strong>. La palabra coche define algo genérico, es una abstracción, no es un coche concreto sino que hace referencia a unos elementos que tienen una serie de propiedades como matrícula, marca, modelo, color, etc.; este conjunto de propiedades se denominan <strong>atributos</strong> o <strong>variables de instancia</strong>.</p><aside class="callout key"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg><div><b class="t">Clase</b><p>Concepto abstracto que denota una serie de cualidades, por ejemplo <strong>coche</strong>.</p></div></aside><aside class="callout key"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg><div><b class="t">Instancia</b><p>Objeto palpable, que se deriva de la concreción de una clase, por ejemplo <strong>mi coche</strong>.</p></div></aside><aside class="callout key"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M21 3a9 9 0 0 0-8.6 11.6L3 24v5h5v-3h3v-3h3l3.4-3.4A9 9 0 1 0 21 3zm3.5 5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></svg><div><b class="t">Atributos</b><p>Conjunto de características que comparten los objetos de una clase, por ejemplo para la clase <strong>coche</strong> tendríamos <strong>matrícula</strong>, <strong>marca</strong>, <strong>modelo</strong>, <strong>color</strong> y <strong>número de plazas</strong>.</p></div></aside><div class="widget" data-widget="claseinst"></div><p>En Java, los nombres de las clases se escriben con la primera letra en mayúscula mientras que los nombres de las instancias comienzan con una letra en minúscula. Por ejemplo, la clase coche se escribe en Java como <code>Coche</code> y el objeto «mi coche» se podría escribir como <code>miCoche</code>.</p><p>Definiremos cada clase en un fichero con el mismo nombre más la extensión <code>.java</code>, por tanto, la definición de la clase <code>Coche</code> debe estar contenida en un fichero con nombre <code>Coche.java</code></p><p>Vamos a definir a continuación la clase <code>Libro</code> con los atributos <code>isbn</code>, <code>autor</code>, <code>titulo</code> y <code>numeroPaginas</code>.</p><figure class="code"><figcaption><span>Libro.java</span><button class="copy" type="button">Copiar</button></figcaption><pre><code><span class="c">/**
  * Libro.java
  * Definición de la clase Libro
  *
@@ -19803,6 +20789,49 @@ W.params=function(el){
   el.addEventListener('input',draw);el.addEventListener('change',draw);draw();
 };
 
+W.refmem=function(el){
+  var SC={
+   alias:{n:'Alias: Persona p2 = p1;',steps:[
+    {c:'Persona p1 = new Persona("Ana", 30);',st:[['p1','#o1']],hp:[['#o1','Ana, 30']],t:'Se crea un objeto en el montón y <code>p1</code> guarda su referencia.'},
+    {c:'Persona p2 = p1;',st:[['p1','#o1'],['p2','#o1']],hp:[['#o1','Ana, 30']],t:'No se crea ningún objeto: <code>p2</code> recibe una copia de la <strong>referencia</strong>. Dos nombres, un objeto.'},
+    {c:'p2.edad = 31;',st:[['p1','#o1'],['p2','#o1']],hp:[['#o1','Ana, 31']],t:'Se modifica el único objeto. <code>p1.edad</code> también vale 31.'}]},
+   copia:{n:'Copia: new Persona(p1)',steps:[
+    {c:'Persona p1 = new Persona("Ana", 30);',st:[['p1','#o1']],hp:[['#o1','Ana, 30']],t:'Un objeto y una referencia.'},
+    {c:'Persona p2 = new Persona(p1);',st:[['p1','#o1'],['p2','#o2']],hp:[['#o1','Ana, 30'],['#o2','Ana, 30']],t:'El constructor copia crea un <strong>objeto nuevo</strong> con los mismos datos.'},
+    {c:'p2.edad = 31;',st:[['p1','#o1'],['p2','#o2']],hp:[['#o1','Ana, 30'],['#o2','Ana, 31']],t:'Son independientes: <code>p1.edad</code> sigue valiendo 30.'}]},
+   sup:{n:'Copia superficial de una Linea',steps:[
+    {c:'Linea a = new Linea(...);  // con dos Punto',st:[['a','#L1']],hp:[['#L1','inicio → #P1, fin → #P2'],['#P1','(0, 0)'],['#P2','(10, 4)']],t:'La línea contiene dos referencias a puntos.'},
+    {c:'Linea b = a.copiaSuperficial();',st:[['a','#L1'],['b','#L2']],hp:[['#L1','inicio → #P1, fin → #P2'],['#L2','inicio → #P1, fin → #P2'],['#P1','(0, 0)'],['#P2','(10, 4)']],t:'Hay dos líneas, pero <strong>comparten</strong> los mismos dos puntos.'},
+    {c:'b.fin.x = 3;',st:[['a','#L1'],['b','#L2']],hp:[['#L1','inicio → #P1, fin → #P2'],['#L2','inicio → #P1, fin → #P2'],['#P1','(0, 0)'],['#P2','(3, 4)']],t:'El punto compartido cambia: <code>a</code> también lo ve.'}]},
+   prof:{n:'Copia profunda de una Linea',steps:[
+    {c:'Linea a = new Linea(...);  // con dos Punto',st:[['a','#L1']],hp:[['#L1','inicio → #P1, fin → #P2'],['#P1','(0, 0)'],['#P2','(10, 4)']],t:'Igual que antes.'},
+    {c:'Linea b = a.copiaProfunda();',st:[['a','#L1'],['b','#L2']],hp:[['#L1','inicio → #P1, fin → #P2'],['#L2','inicio → #P3, fin → #P4'],['#P1','(0, 0)'],['#P2','(10, 4)'],['#P3','(0, 0)'],['#P4','(10, 4)']],t:'Se copian también los puntos: cuatro puntos, dos líneas.'},
+    {c:'b.fin.x = 3;',st:[['a','#L1'],['b','#L2']],hp:[['#L1','inicio → #P1, fin → #P2'],['#L2','inicio → #P3, fin → #P4'],['#P1','(0, 0)'],['#P2','(10, 4)'],['#P3','(0, 0)'],['#P4','(3, 4)']],t:'Sólo cambia la copia: el original queda intacto.'}]}
+  };
+  var k='alias',i=0;
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  function draw(){var s=SC[k].steps[i];
+    var st=s.st.map(function(r){return '<div style="display:flex;gap:8px;align-items:center;margin:4px 0"><code style="min-width:34px">'+r[0]+'</code><span style="color:var(--accent)">→</span><span class="tok" style="padding:2px 8px;pointer-events:none">'+r[1]+'</span></div>'}).join('');
+    var hp=s.hp.map(function(r){return '<div style="border:1px solid var(--line);border-radius:8px;padding:5px 9px;margin:4px 0;display:flex;gap:8px"><b style="color:var(--accent);font-family:var(--font-mono)">'+r[0]+'</b><span>'+esc(r[1])+'</span></div>'}).join('');
+    $('#rm-c',el).innerHTML=SC[k].steps.map(function(x,j){return '<div style="'+(j===i?'font-weight:700;color:var(--accent)':'opacity:.55')+'"><code>'+esc(x.c)+'</code></div>'}).join('');
+    $('#rm-s',el).innerHTML=st;$('#rm-h',el).innerHTML=hp;$('#rm-t',el).innerHTML=s.t;
+    $('#rm-p',el).disabled=i===0;$('#rm-n',el).disabled=i===SC[k].steps.length-1;$('#rm-i',el).textContent='Paso '+(i+1)+' de '+SC[k].steps.length}
+  el.innerHTML='<h4>Visualizador de memoria: pila y montón</h4><p style="font-size:14.5px;color:var(--muted);margin-bottom:10px">Elige un escenario y avanza paso a paso para ver qué variables y qué objetos hay en memoria.</p>'+
+   '<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px"><select id="rm-k" aria-label="Escenario">'+Object.keys(SC).map(function(x){return '<option value="'+x+'">'+SC[x].n+'</option>'}).join('')+'</select><button type="button" class="btn" id="rm-p">← Anterior</button><button type="button" class="btn" id="rm-n">Siguiente →</button><span id="rm-i" style="color:var(--muted);font-size:14px"></span></div>'+
+   '<div style="margin-bottom:10px" id="rm-c"></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px"><div><p style="font-weight:700;margin-bottom:4px">Pila (variables)</p><div id="rm-s"></div></div><div><p style="font-weight:700;margin-bottom:4px">Montón (objetos)</p><div id="rm-h"></div></div></div><p id="rm-t" style="margin-top:10px"></p>';
+  $('#rm-k',el).addEventListener('change',function(){k=this.value;i=0;draw()});
+  $('#rm-p',el).addEventListener('click',function(){if(i>0){i--;draw()}});
+  $('#rm-n',el).addEventListener('click',function(){if(i<SC[k].steps.length-1){i++;draw()}});
+  draw();
+};
+
+(function(){var q=document.getElementById('cs-q');if(!q)return;var f='all',tb=document.querySelectorAll('.cs-tab tbody');
+function apply(){var t=q.value.trim().toLowerCase(),any=false;tb.forEach(function(b){var okU=f==='all'||b.dataset.u===f,n=0;
+ b.querySelectorAll('tr:not(.cs-u)').forEach(function(r){var ok=okU&&(!t||r.textContent.toLowerCase().indexOf(t)>=0);r.hidden=!ok;if(ok)n++});
+ b.hidden=!n;if(n)any=true});document.getElementById('cs-none').hidden=any}
+q.addEventListener('input',apply);
+document.querySelector('.cs-chips').addEventListener('click',function(e){var b=e.target.closest('.cs-chip');if(!b)return;f=b.dataset.f;document.querySelectorAll('.cs-chip').forEach(function(x){x.classList.toggle('on',x===b)});apply()});
+})();
 $$('.widget').forEach(function(w){var f=W[w.dataset.widget];if(f)f(w)});
 
 /* ---------- Vista de código: lado a lado / anterior / Eclipse ---------- */
